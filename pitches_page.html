@@ -455,7 +455,7 @@ langCodes.forEach(function(code) {
     document.getElementById('langDrop').classList.remove('open');
     document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === code); });
     applyLang(code);
-    localStorage.setItem('medoraLang', code); // Save the chosen language
+    localStorage.setItem('medoraLang', code); // Save chosen language
   });
   langMenu.appendChild(btn);
 });
@@ -470,6 +470,9 @@ document.addEventListener('click', function() { document.getElementById('langDro
 function applyLang(code) {
   var dict = T[code];
   if (!dict) return;
+  // Also update the button label and active state
+  document.getElementById('langCode').textContent = code;
+  document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === code); });
   // data-i18n = textContent
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
     var key = el.getAttribute('data-i18n');
@@ -484,14 +487,10 @@ function applyLang(code) {
   document.title = (dict.pageTitle || 'Pitches') + ' - Medora Orbis';
 }
 
-// ── LOAD SAVED LANGUAGE ON PAGE START ──
+// Load saved language on page start
 (function() {
   var saved = localStorage.getItem('medoraLang');
-  if (saved && saved !== 'EN') {
-    document.getElementById('langCode').textContent = saved;
-    document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === saved); });
-    applyLang(saved);
-  }
+  if (saved && saved !== 'EN') { applyLang(saved); }
 })();
 
 // ── FACILITIES TOGGLE ──

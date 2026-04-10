@@ -592,7 +592,7 @@ langCodes.forEach(function(code) {
   btn.addEventListener('click', function() {
     document.getElementById('langDrop').classList.remove('open');
     applyLang(code);
-    localStorage.setItem('medoraLang', code); // Save the chosen language
+    localStorage.setItem('medoraLang', code); // Save chosen language
   });
   langMenu.appendChild(btn);
 });
@@ -605,12 +605,10 @@ document.addEventListener('click', function() {
   document.getElementById('langDrop').classList.remove('open');
 });
 
-// ── LOAD SAVED LANGUAGE ON PAGE START ──
+// Load saved language on page start
 (function() {
   var saved = localStorage.getItem('medoraLang');
-  if (saved && saved !== 'EN') {
-    applyLang(saved);
-  }
+  if (saved && saved !== 'EN') { applyLang(saved); }
 })();
 
 // Guest filter
