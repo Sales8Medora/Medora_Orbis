@@ -271,20 +271,20 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 </footer>
 
 <script>
-// ── TRANSLATIONS ──
 var T = {
   EN: {
     bookNow:'Book Now', breadcrumb:'Home', pageTitle:'Pitches',
     heroTitle:'Camping <em>Pitches</em>',
-    secLbl:'Choose Your Pitch', secTitle:'Your space in nature',
-    introPara:'Bring your own tent, caravan or motorhome and settle into one of our shaded pitches surrounded by Mediterranean nature - just steps from the Adriatic coast.',
-    badgeCamping:'Camping Area', campName:'Camping Area',
-    campDesc:'Choose a holiday in a tent surrounded by gorgeous nature and a camping zone that offers everything you might need.',
+    secLbl:'Choose your pitch', secTitle:'Your space in nature',
+    introPara:'Bring your own tent, caravan or motorhome and settle into one of our shaded pitches surrounded by Mediterranean nature — just a few steps from the Adriatic coast.',
+    badgeCamping:'Camping Zone', campName:'Camping Zone',
+    campDesc:'Choose a holiday in a tent surrounded by beautiful nature and a camping zone that offers everything you need.',
     specType:'Tent / Caravan / Motorhome', facilities:'Facilities',
-    campFac1:'Shared water connections', campFac2:'Shared electrical connections', campFac3:'Free Wi-Fi',
-    bookRoom:'Book now &rarr;',
+    campFac1:'Shared water connections', campFac2:'Shared electricity connections', campFac3:'Free Wi-Fi',
+    bookRoom:'Book now \u2192',
     badgeSuperior:'Superior', supName:'Superior Pitch',
-    supDesc:'Settle yourself in the most attractive camping zone. Relax on the elevated terrain, in the vicinity of the Adriatic sea, while surrounded by the Mediterranean nature.',
+    supDesc:'Settle into the most attractive camping zone. Relax on elevated ground, close to the Adriatic Sea, surrounded by Mediterranean nature.',
+    supSpecType:'Tent / Caravan / Motorhome',
     supFac1:'Electrical connections', supFac2:'Water connections', supFac3:'Sewer connections',
     sanLbl:'On Site', sanTitle:'Sanitary Facilities',
     sanLead:'The campsite sanitary facilities are located next to the entrance zone and in the immediate vicinity of the pitch zone - equipped to the highest standards for all guests.',
@@ -310,140 +310,163 @@ var T = {
     campDesc:'Odaberite odmor u satoru okruzen prekrasnom prirodom i kamping zonom koja nudi sve sto vam treba.',
     specType:'Sator / Karavan / Kamper', facilities:'Sadrzaji',
     campFac1:'Zajednicke vodovodne prikljucke', campFac2:'Zajednicke elektricne prikljucke', campFac3:'Besplatan Wi-Fi',
-    bookRoom:'Rezerviraj &rarr;',
+    bookRoom:'Rezerviraj \u2192',
     badgeSuperior:'Superior', supName:'Superior parcela',
     supDesc:'Smjestite se u najatraktivniju kamping zonu. Opustite se na povisenoj tereni, u blizini Jadranskog mora, okruzeni mediteranskom prirodom.',
+    supSpecType:'Sator / Karavan / Kamper',
     supFac1:'Elektricni prikljucak', supFac2:'Vodovodni prikljucak', supFac3:'Kanalizacijski prikljucak',
     sanLbl:'Na lokaciji', sanTitle:'Sanitarni cvorovi',
-    sanLead:'Sanitarni cvorovi kampa nalaze se pokraj ulazne zone i u neposrednoj blizini zone parcela - opremljeni prema najvisim standardima za sve goste.',
-    san1:'Tusevi s toplom i hladnom vodom', san2:'Umivaonici s toplom i hladnom vodom',
-    san3:'Muski i zenski toaleti', san4:'Djecje higijenske prostorije s previjalistem',
-    san5:'Prostorije pristupacne osobama s posebnim potrebama', san6:'Perilica i susilica rublja',
-    san7:'Prostorija za rucno pranje odjece i posuda',
+    sanLead:'Sanitarni cvorovi kampa nalaze se uz ulaznu zonu i u neposrednoj blizini zone parcela - opremljeni prema najvisim standardima za sve goste.',
+    san1:'Tushevi s toplom i hladnom vodom', san2:'Umivaonici s toplom i hladnom vodom',
+    san3:'Muski i zenski WC-i', san4:'Djecje prostorije za higijenu s previjalistem',
+    san5:'Sadrzaji dostupni osobama s posebnim potrebama', san6:'Perilica i susilo rublja',
+    san7:'Prostorija za rucno pranje rublja i posuda',
     stripTitle:'Sve parcele ukljucuju',
-    strip1:'Privatni pristup plazi', strip2:'Besplatan Wi-Fi', strip3:'Mediteranska priroda', strip4:'Moderni sanitarni cvorovi',
-    strip5:'Pristup autom do parcele', strip6:'Rostilj zona', strip7:'Pristupacni sadrzaji', strip8:'Ljubimci dobrodosli',
-    fAbout:'4-zvjezdicasta kamping destinacija na Makarskoj rivijeri. Smjestena uz jadransku obalu, gdje se planine susrecu s morem.',
-    fc1Title:'Smjestaj', fc1a:'Kamping i mobilne kucice', fc1b:'Parcele',
-    fc2Title:'Istrazite', fc2a:'Sadrzaji', fc2b:'Foto galerija', fc2c:'Plaza i more', fc2d:'Aktivni odmor',
+    strip1:'Pristup privatnoj plazi', strip2:'Besplatni Wi-Fi', strip3:'Mediteranska priroda', strip4:'Moderni sanitarni cvorovi',
+    strip5:'Pristup autom do parcele', strip6:'Roštilj zona', strip7:'Pristupacni sadrzaji', strip8:'Ljubimci dobrodosli',
+    fAbout:'Kamp s 4 zvjezdice na Makarskoj rivijeri uz jadransku obalu.',
+    fc1Title:'Smjestaj', fc1a:'Kampiranje i mobilne kucice', fc1b:'Parcele',
+    fc2Title:'Istrazite', fc2a:'Sadrzaji', fc2b:'Foto galerija', fc2c:'Plaza i more', fc2d:'Aktivan odmor',
     fc3Title:'Informacije', fc3a:'Karta i upute', fc3b:'Kontakt', fc3c:'Klima',
     fCopy:'\u00A9 2025 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
   },
   DE: {
-    bookNow:'Jetzt buchen', breadcrumb:'Startseite', pageTitle:'Stellplatze',
-    heroTitle:'Camping <em>Stellplatze</em>',
-    secLbl:'Wahlen Sie Ihren Stellplatz', secTitle:'Ihr Platz in der Natur',
-    introPara:'Bringen Sie Ihr eigenes Zelt, Ihren Wohnwagen oder Ihr Wohnmobil mit und lassen Sie sich auf einem unserer schattigen Stellplatze nieder, umgeben von mediterraner Natur - nur wenige Schritte von der Adriakuste entfernt.',
-    badgeCamping:'Campingbereich', campName:'Campingbereich',
-    campDesc:'Wahlen Sie einen Urlaub im Zelt, umgeben von wunderschoner Natur und einer Campingzone, die alles bietet, was Sie brauchen.',
+    bookNow:'Jetzt buchen', breadcrumb:'Startseite', pageTitle:'Stellplätze',
+    heroTitle:'Camping <em>Stellplätze</em>',
+    secLbl:'Wählen Sie Ihren Stellplatz', secTitle:'Ihr Platz in der Natur',
+    introPara:'Bringen Sie Ihr eigenes Zelt, Wohnwagen oder Wohnmobil mit und lassen Sie sich auf einem unserer schattigen Stellplätze nieder, umgeben von mediterraner Natur — nur wenige Schritte vom Adriatischen Meer entfernt.',
+    badgeCamping:'Campingzone', campName:'Campingzone',
+    campDesc:'Wählen Sie einen Urlaub im Zelt inmitten schöner Natur und einer Campingzone, die alles bietet, was Sie brauchen.',
     specType:'Zelt / Wohnwagen / Wohnmobil', facilities:'Ausstattung',
-    campFac1:'Gemeinsame Wasseranschlusse', campFac2:'Gemeinsame Stromanschlusse', campFac3:'Kostenloses WLAN',
-    bookRoom:'Jetzt buchen &rarr;',
+    campFac1:'Gemeinsame Wasseranschlüsse', campFac2:'Gemeinsame Stromanschlüsse', campFac3:'Kostenloses WLAN',
+    bookRoom:'Jetzt buchen \u2192',
     badgeSuperior:'Superior', supName:'Superior Stellplatz',
-    supDesc:'Lassen Sie sich in der attraktivsten Campingzone nieder. Entspannen Sie auf dem erhohten Gelande in der Nahe der Adria, umgeben von mediterraner Natur.',
+    supDesc:'Lassen Sie sich in der attraktivsten Campingzone nieder. Erholen Sie sich auf erhöhtem Gelände nahe dem Adriatischen Meer.',
+    supSpecType:'Zelt / Wohnwagen / Wohnmobil',
     supFac1:'Stromanschluss', supFac2:'Wasseranschluss', supFac3:'Abwasseranschluss',
-    sanLbl:'Vor Ort', sanTitle:'Sanitaranlagen',
-    sanLead:'Die Sanitaranlagen des Campingplatzes befinden sich neben der Eingangszone und in unmittelbarer Nahe der Stellplatzzone - auf hochstem Niveau fur alle Gaste ausgestattet.',
-    san1:'Duschen mit Warm- und Kaltwasser', san2:'Waschbecken mit Warm- und Kaltwasser',
-    san3:'Herren- und Damentoiletten', san4:'Kinderhygieneraume mit Wickeltisch',
-    san5:'Einrichtungen fur Menschen mit besonderen Bedurfnissen', san6:'Waschmaschine und Trockner',
+    sanLbl:'Vor Ort', sanTitle:'Sanitäranlagen',
+    sanLead:'Die Sanitäranlagen des Campingplatzes befinden sich neben der Eingangszone und in unmittelbarer Nähe der Stellplatzzone.',
+    san1:'Duschen mit warm und kalt Wasser', san2:'Waschbecken mit warm und kalt Wasser',
+    san3:'Herren- und Damentoiletten', san4:'Kinderhygieneräume mit Wickeltisch',
+    san5:'Einrichtungen für Menschen mit besonderen Bedürfnissen', san6:'Waschmaschine und Trockner',
     san7:'Raum zum Handwaschen von Kleidung und Geschirr',
-    stripTitle:'Alle Stellplatze beinhalten',
-    strip1:'Privater Strandzugang', strip2:'Kostenloses WLAN', strip3:'Mediterrane Natur', strip4:'Moderne Sanitarblocks',
-    strip5:'Autozugang zum Stellplatz', strip6:'Grillbereich', strip7:'Barrierefreie Einrichtungen', strip8:'Haustierfreundlich',
-    fAbout:'Ein 4-Sterne-Campingziel an der Makarska Riviera. Eingebettet an der Adriakuste, wo die Berge auf das Meer treffen.',
-    fc1Title:'Unterkunft', fc1a:'Camping & Mobilheime', fc1b:'Stellplatze',
+    stripTitle:'Alle Stellplätze beinhalten',
+    strip1:'Privater Strandzugang', strip2:'Kostenloses WLAN', strip3:'Mediterrane Natur', strip4:'Moderne Sanitäranlagen',
+    strip5:'Zufahrt zum Stellplatz', strip6:'Grillzone', strip7:'Barrierefreie Einrichtungen', strip8:'Haustiere willkommen',
+    fAbout:'4-Sterne Camping an der Makarska Riviera.',
+    fc1Title:'Unterkunft', fc1a:'Camping & Mobilheime', fc1b:'Stellplätze',
     fc2Title:'Entdecken', fc2a:'Ausstattung', fc2b:'Fotogalerie', fc2c:'Strand & Meer', fc2d:'Aktiver Urlaub',
     fc3Title:'Informationen', fc3a:'Karte & Anfahrt', fc3b:'Kontakt', fc3c:'Klima',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4 Sterne \u00B7 Makarska Riviera'
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4-Sterne zertifiziert \u00B7 Makarska Riviera'
   },
   HU: {
-    bookNow:'Foglaljon most', breadcrumb:'Fooldal', pageTitle:'Parcellak',
-    heroTitle:'Kemping <em>Parcellak</em>',
-    secLbl:'Valassza ki parcellajat', secTitle:'Az On helye a termeszetben',
-    introPara:'Hozza sajat satrat, lakokocsijat vagy lakomotorjat, es telepedjen le az egyik arnyekos parcellankra, mediterran termeszet kozott - csak par lepesre az Adriai-tengertol.',
-    badgeCamping:'Kemping zona', campName:'Kemping zona',
-    campDesc:'Valasszon satras nyaralast gyonyoru termeszeti kornyezetben, egy kemping zonaban, amely mindent kinal, amire szuksege lehet.',
-    specType:'Sator / Lakoauto / Lakomotor', facilities:'Felszereltseg',
-    campFac1:'Kozos vizcsatlakozas', campFac2:'Kozos aramcsatlakozas', campFac3:'Ingyenes Wi-Fi',
-    bookRoom:'Foglaljon most &rarr;',
-    badgeSuperior:'Superior', supName:'Superior parcella',
-    supDesc:'Telepedjen le a legvonzobb kemping zonaban. Pihenjen az emelt terepen, az Adriai-tenger kozeleben, mediterran termeszet oleleleseben.',
-    supFac1:'Aramcsatlakozas', supFac2:'Vizcsatlakozas', supFac3:'Csatornacsonk',
-    sanLbl:'Helyszinen', sanTitle:'Szaniter letesitmenyek',
-    sanLead:'A kemping szaniter letesitmenyei a bejarat mellett es a parcella zona kozvetlen kozeleben talalhatok - a legmagasabb szinvonalon felszerelve minden vendeg szamara.',
-    san1:'Zuhanyzok meleg es hideg vizzel', san2:'Mosdok meleg es hideg vizzel',
-    san3:'Ferfi es noi mosdok', san4:'Gyermek higienes helyiseg pelenkazo asztallal',
-    san5:'Akadalymentes letesitmenyek', san6:'Mosogepes es szaritogep',
-    san7:'Helyiseg keziruha- es edenymosashoz',
+    bookNow:'Foglalás', breadcrumb:'Főoldal', pageTitle:'Parcellák',
+    heroTitle:'Kemping <em>Parcellák</em>',
+    secLbl:'Válassza ki parcelláját', secTitle:'Az Ön helye a természetben',
+    introPara:'Hozza saját sátrát, lakókocsiját vagy lakóautóját, és foglaljon helyet egyik árnyékos parcelláinkon, mediterrán természet által körülvéve — mindössze néhány lépésre az Adriai-tengertől.',
+    badgeCamping:'Kempingzóna', campName:'Kempingzóna',
+    campDesc:'Válasszon sátras nyaralást gyönyörű természetben és egy kempingzónában, amely mindent megkínál.',
+    specType:'Sátor / Lakókocsi / Lakóautó', facilities:'Létesítmények',
+    campFac1:'Közös vízcsatlakozások', campFac2:'Közös áramcsatlakozások', campFac3:'Ingyenes Wi-Fi',
+    bookRoom:'Foglalás \u2192',
+    badgeSuperior:'Superior', supName:'Superior Parcella',
+    supDesc:'Foglalja el a legvonzóbb kempingzónát. Pihenjen megemelt terepen, az Adriai-tenger közelében.',
+    supSpecType:'Sátor / Lakókocsi / Lakóautó',
+    supFac1:'Elektromos csatlakozás', supFac2:'Vízcsatlakozás', supFac3:'Csatornacsatlakozás',
+    sanLbl:'A helyszínen', sanTitle:'Szanitér létesítmények',
+    sanLead:'A kemping szanitér létesítményei a bejárati zóna mellett és a parcellazóna közvetlen közelében találhatók.',
+    san1:'Zuhanyok meleg és hideg vízzel', san2:'Mosdók meleg és hideg vízzel',
+    san3:'Férfi és női WC-k', san4:'Gyermek higiéniai helyiségek pelenkázóval',
+    san5:'Különleges igényű személyek számára hozzáférhető létesítmények', san6:'Mosógép és szárítógép',
+    san7:'Helyiség ruhák és edények kézi mosásához',
     stripTitle:'Minden parcella tartalmazza',
-    strip1:'Privat strandhozzaferes', strip2:'Ingyenes Wi-Fi', strip3:'Mediterran termeszet', strip4:'Modern szaniter blokkok',
-    strip5:'Auto bejutas a parcellahoz', strip6:'Grill zona', strip7:'Akadalymentes letesitmenyek', strip8:'Allatbarat',
-    fAbout:'4 csillagos kemping celallomas a Makarska Rivieran. Az Adriai-part menten, ahol a hegyek talalkoznak a tengerrel.',
-    fc1Title:'Szallas', fc1a:'Kemping es mobilhazak', fc1b:'Parcellak',
-    fc2Title:'Felfedezni', fc2a:'Szolgaltatasok', fc2b:'Fotogaleria', fc2c:'Strand es tenger', fc2d:'Aktiv nyaralas',
-    fc3Title:'Informacio', fc3a:'Terkep es utvonal', fc3b:'Kapcsolat', fc3c:'Eghajlat',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 Csillag \u00B7 Makarska Riviera'
+    strip1:'Privát strandhozzáférés', strip2:'Ingyenes Wi-Fi', strip3:'Mediterrán természet', strip4:'Modern szanitér blokkok',
+    strip5:'Autós hozzáférés a parcellához', strip6:'BBQ zóna', strip7:'Akadálymentes létesítmények', strip8:'Háziállatok üdvözlése',
+    fAbout:'4 csillagos kemping a Makarska Riviérán.',
+    fc1Title:'Szállás', fc1a:'Kemping és mobilházak', fc1b:'Parcellák',
+    fc2Title:'Felfedezés', fc2a:'Létesítmények', fc2b:'Fotógaléria', fc2c:'Strand és tenger', fc2d:'Aktív nyaralás',
+    fc3Title:'Információ', fc3a:'Térkép és útvonal', fc3b:'Kapcsolat', fc3c:'Éghajlat',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
   },
   RO: {
-    bookNow:'Rezerva acum', breadcrumb:'Acasa', pageTitle:'Parcele',
+    bookNow:'Rezervați', breadcrumb:'Acasă', pageTitle:'Parcele',
     heroTitle:'Camping <em>Parcele</em>',
-    secLbl:'Alege parcela ta', secTitle:'Spatiul tau in natura',
-    introPara:'Adu-ti propriul cort, caravana sau autorulota si instaleaza-te pe una dintre parcelele noastre umbroase, inconjurate de natura mediteraneana - la cativa pasi de coasta Adriaticii.',
-    badgeCamping:'Zona de camping', campName:'Zona de camping',
-    campDesc:'Alege o vacanta in cort, inconjurat de natura superba si o zona de camping care ofera tot ce ai nevoie.',
-    specType:'Cort / Caravana / Autorulota', facilities:'Facilitati',
-    campFac1:'Racorduri comune de apa', campFac2:'Racorduri comune de electricitate', campFac3:'Wi-Fi gratuit',
-    bookRoom:'Rezerva acum &rarr;',
-    badgeSuperior:'Superior', supName:'Parcela Superior',
-    supDesc:'Instaleaza-te in cea mai atractiva zona de camping. Relaxeaza-te pe terenul inalt, in vecinatatea Marii Adriatice, inconjurat de natura mediteraneana.',
-    supFac1:'Racord electric', supFac2:'Racord de apa', supFac3:'Racord de canalizare',
-    sanLbl:'Pe loc', sanTitle:'Facilitati sanitare',
-    sanLead:'Facilitatile sanitare ale campingului sunt situate langa zona de intrare si in imediata vecinatate a zonei de parcele - echipate la cele mai inalte standarde pentru toti oaspetii.',
-    san1:'Dusuri cu apa calda si rece', san2:'Chiuvete cu apa calda si rece',
-    san3:'Toalete pentru barbati si femei', san4:'Camere de igiena pentru copii cu masa de infasat',
-    san5:'Facilitati accesibile persoanelor cu nevoi speciale', san6:'Masina de spalat si uscator',
-    san7:'Camera pentru spalatul manual al hainelor si vaselor',
+    secLbl:'Alegeți parcela', secTitle:'Spațiul dvs. în natură',
+    introPara:'Aduceți propriul cort, rulotă sau autorulotă și instalați-vă pe una dintre parcelele noastre umbrite înconjurate de natură mediteraneană — la câțiva pași de coasta Adriaticii.',
+    badgeCamping:'Zonă camping', campName:'Zonă camping',
+    campDesc:'Alegeți o vacanță la cort în mijlocul naturii frumoase și al unei zone de camping care oferă tot ce aveți nevoie.',
+    specType:'Cort / Rulotă / Autorulotă', facilities:'Facilități',
+    campFac1:'Conexiuni comune la apă', campFac2:'Conexiuni comune la electricitate', campFac3:'Wi-Fi gratuit',
+    bookRoom:'Rezervați \u2192',
+    badgeSuperior:'Superior', supName:'Parcelă Superior',
+    supDesc:'Instalați-vă în cea mai atractivă zonă de camping. Relaxați-vă pe teren înălțat, aproape de Marea Adriatică.',
+    supSpecType:'Cort / Rulotă / Autorulotă',
+    supFac1:'Conexiune electrică', supFac2:'Conexiune la apă', supFac3:'Conexiune la canalizare',
+    sanLbl:'Pe loc', sanTitle:'Facilități sanitare',
+    sanLead:'Facilitățile sanitare ale campingului sunt situate lângă zona de intrare și în imediata vecinătate a zonei de parcele.',
+    san1:'Dușuri cu apă caldă și rece', san2:'Chiuvete cu apă caldă și rece',
+    san3:'Toalete pentru bărbați și femei', san4:'Camere de igienă pentru copii cu masă de înfășat',
+    san5:'Facilități accesibile pentru persoane cu nevoi speciale', san6:'Mașină de spălat și uscător',
+    san7:'Cameră pentru spălat manual haine și vase',
     stripTitle:'Toate parcelele includ',
-    strip1:'Acces privat la plaja', strip2:'Wi-Fi gratuit', strip3:'Natura mediteraneana', strip4:'Blocuri sanitare moderne',
-    strip5:'Acces cu masina la parcela', strip6:'Zona de gratar', strip7:'Facilitati accesibile', strip8:'Prietenos cu animalele',
-    fAbout:'O destinatie de camping de 4 stele pe Riviera Makarska. Asezata de-a lungul coastei Adriatice, unde muntii intalnesc marea.',
-    fc1Title:'Cazare', fc1a:'Camping si case mobile', fc1b:'Parcele',
-    fc2Title:'Explora', fc2a:'Facilitati', fc2b:'Galerie foto', fc2c:'Plaja si mare', fc2d:'Vacanta activa',
-    fc3Title:'Informatii', fc3a:'Harta si indicatii', fc3b:'Contact', fc3c:'Clima',
+    strip1:'Acces privat la plajă', strip2:'Wi-Fi gratuit', strip3:'Natură mediteraneană', strip4:'Blocuri sanitare moderne',
+    strip5:'Acces auto la parcelă', strip6:'Zonă BBQ', strip7:'Facilități accesibile', strip8:'Animale de companie binevenite',
+    fAbout:'Camping de 4 stele pe Riviera Makarska.',
+    fc1Title:'Cazare', fc1a:'Camping & Case mobile', fc1b:'Parcele',
+    fc2Title:'Explorați', fc2a:'Facilități', fc2b:'Galerie foto', fc2c:'Plajă & Mare', fc2d:'Vacanță activă',
+    fc3Title:'Informații', fc3a:'Hartă & Indicații', fc3b:'Contact', fc3c:'Climă',
     fCopy:'\u00A9 2025 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
   },
   UA: {
-    bookNow:'\u0417\u0430\u0431\u0440\u043E\u043D\u044E\u0432\u0430\u0442\u0438', breadcrumb:'\u0413\u043E\u043B\u043E\u0432\u043D\u0430', pageTitle:'\u041C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0438',
-    heroTitle:'\u041A\u0435\u043C\u043F\u0456\u043D\u0433 <em>\u041C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0438</em>',
-    secLbl:'\u041E\u0431\u0435\u0440\u0456\u0442\u044C \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A', secTitle:'\u0412\u0430\u0448 \u043F\u0440\u043E\u0441\u0442\u0456\u0440 \u043D\u0430 \u043F\u0440\u0438\u0440\u043E\u0434\u0456',
-    introPara:'\u041F\u0440\u0438\u0432\u0435\u0437\u0456\u0442\u044C \u0432\u043B\u0430\u0441\u043D\u0438\u0439 \u043D\u0430\u043C\u0435\u0442, \u043A\u0430\u0440\u0430\u0432\u0430\u043D \u0430\u0431\u043E \u043A\u0435\u043C\u043F\u0435\u0440 \u0456 \u0432\u043B\u0430\u0448\u0442\u0443\u0439\u0442\u0435\u0441\u044C \u043D\u0430 \u043E\u0434\u043D\u043E\u043C\u0443 \u0437 \u043D\u0430\u0448\u0438\u0445 \u0437\u0430\u0442\u0456\u043D\u0435\u043D\u0438\u0445 \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0456\u0432 \u0441\u0435\u0440\u0435\u0434 \u0441\u0435\u0440\u0435\u0434\u0437\u0435\u043C\u043D\u043E\u043C\u043E\u0440\u0441\u044C\u043A\u043E\u0457 \u043F\u0440\u0438\u0440\u043E\u0434\u0438 - \u043B\u0438\u0448\u0435 \u043A\u0456\u043B\u044C\u043A\u0430 \u043A\u0440\u043E\u043A\u0456\u0432 \u0432\u0456\u0434 \u0443\u0437\u0431\u0435\u0440\u0435\u0436\u0436\u044F \u0410\u0434\u0440\u0456\u0430\u0442\u0438\u043A\u0438.',
-    badgeCamping:'\u041A\u0435\u043C\u043F\u0456\u043D\u0433 \u0437\u043E\u043D\u0430', campName:'\u041A\u0435\u043C\u043F\u0456\u043D\u0433 \u0437\u043E\u043D\u0430',
-    campDesc:'\u041E\u0431\u0435\u0440\u0456\u0442\u044C \u0432\u0456\u0434\u043F\u043E\u0447\u0438\u043D\u043E\u043A \u0443 \u043D\u0430\u043C\u0435\u0442\u0456 \u0441\u0435\u0440\u0435\u0434 \u0447\u0443\u0434\u043E\u0432\u043E\u0457 \u043F\u0440\u0438\u0440\u043E\u0434\u0438 \u0442\u0430 \u043A\u0435\u043C\u043F\u0456\u043D\u0433 \u0437\u043E\u043D\u0438, \u044F\u043A\u0430 \u043F\u0440\u043E\u043F\u043E\u043D\u0443\u0454 \u0432\u0441\u0435 \u043D\u0435\u043E\u0431\u0445\u0456\u0434\u043D\u0435.',
-    specType:'\u041D\u0430\u043C\u0435\u0442 / \u041A\u0430\u0440\u0430\u0432\u0430\u043D / \u041A\u0435\u043C\u043F\u0435\u0440', facilities:'\u0417\u0440\u0443\u0447\u043D\u043E\u0441\u0442\u0456',
-    campFac1:'\u0421\u043F\u0456\u043B\u044C\u043D\u0456 \u0432\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u0456\u0434\u043D\u0456 \u043F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044F', campFac2:'\u0421\u043F\u0456\u043B\u044C\u043D\u0456 \u0435\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u043D\u0456 \u043F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044F', campFac3:'\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u0438\u0439 Wi-Fi',
-    bookRoom:'\u0417\u0430\u0431\u0440\u043E\u043D\u044E\u0432\u0430\u0442\u0438 &rarr;',
-    badgeSuperior:'Superior', supName:'Superior \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A',
-    supDesc:'\u0412\u043B\u0430\u0448\u0442\u0443\u0439\u0442\u0435\u0441\u044C \u0443 \u043D\u0430\u0439\u043F\u0440\u0438\u0432\u0430\u0431\u043B\u0438\u0432\u0456\u0448\u0456\u0439 \u043A\u0435\u043C\u043F\u0456\u043D\u0433 \u0437\u043E\u043D\u0456. \u0412\u0456\u0434\u043F\u043E\u0447\u0438\u0432\u0430\u0439\u0442\u0435 \u043D\u0430 \u043F\u0456\u0434\u0432\u0438\u0449\u0435\u043D\u0456\u0439 \u043C\u0456\u0441\u0446\u0435\u0432\u043E\u0441\u0442\u0456, \u043F\u043E\u0431\u043B\u0438\u0437\u0443 \u0410\u0434\u0440\u0456\u0430\u0442\u0438\u0447\u043D\u043E\u0433\u043E \u043C\u043E\u0440\u044F, \u0432 \u043E\u0442\u043E\u0447\u0435\u043D\u043D\u0456 \u0441\u0435\u0440\u0435\u0434\u0437\u0435\u043C\u043D\u043E\u043C\u043E\u0440\u0441\u044C\u043A\u043E\u0457 \u043F\u0440\u0438\u0440\u043E\u0434\u0438.',
-    supFac1:'\u0415\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u043D\u0435 \u043F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044F', supFac2:'\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u0456\u0434\u043D\u0435 \u043F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044F', supFac3:'\u041A\u0430\u043D\u0430\u043B\u0456\u0437\u0430\u0446\u0456\u0439\u043D\u0435 \u043F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044F',
-    sanLbl:'\u041D\u0430 \u0442\u0435\u0440\u0438\u0442\u043E\u0440\u0456\u0457', sanTitle:'\u0421\u0430\u043D\u0456\u0442\u0430\u0440\u043D\u0456 \u0432\u0443\u0437\u043B\u0438',
-    sanLead:'\u0421\u0430\u043D\u0456\u0442\u0430\u0440\u043D\u0456 \u0432\u0443\u0437\u043B\u0438 \u043A\u0435\u043C\u043F\u0456\u043D\u0433\u0443 \u0440\u043E\u0437\u0442\u0430\u0448\u043E\u0432\u0430\u043D\u0456 \u0431\u0456\u043B\u044F \u0432\u0445\u0456\u0434\u043D\u043E\u0457 \u0437\u043E\u043D\u0438 \u0442\u0430 \u0432 \u0431\u0435\u0437\u043F\u043E\u0441\u0435\u0440\u0435\u0434\u043D\u0456\u0439 \u0431\u043B\u0438\u0437\u044C\u043A\u043E\u0441\u0442\u0456 \u0434\u043E \u0437\u043E\u043D\u0438 \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0456\u0432 - \u043E\u0431\u043B\u0430\u0434\u043D\u0430\u043D\u0456 \u0437\u0430 \u043D\u0430\u0439\u0432\u0438\u0449\u0438\u043C\u0438 \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u0430\u043C\u0438 \u0434\u043B\u044F \u0432\u0441\u0456\u0445 \u0433\u043E\u0441\u0442\u0435\u0439.',
-    san1:'\u0414\u0443\u0448\u0456 \u0437 \u0433\u0430\u0440\u044F\u0447\u043E\u044E \u0442\u0430 \u0445\u043E\u043B\u043E\u0434\u043D\u043E\u044E \u0432\u043E\u0434\u043E\u044E', san2:'\u0423\u043C\u0438\u0432\u0430\u043B\u044C\u043D\u0438\u043A\u0438 \u0437 \u0433\u0430\u0440\u044F\u0447\u043E\u044E \u0442\u0430 \u0445\u043E\u043B\u043E\u0434\u043D\u043E\u044E \u0432\u043E\u0434\u043E\u044E',
-    san3:'\u0427\u043E\u043B\u043E\u0432\u0456\u0447\u0456 \u0442\u0430 \u0436\u0456\u043D\u043E\u0447\u0456 \u0442\u0443\u0430\u043B\u0435\u0442\u0438', san4:'\u0414\u0438\u0442\u044F\u0447\u0456 \u0433\u0456\u0433\u0456\u0454\u043D\u0456\u0447\u043D\u0456 \u043A\u0456\u043C\u043D\u0430\u0442\u0438 \u0437\u0456 \u0441\u043F\u043E\u0432\u0438\u0432\u0430\u043B\u044C\u043D\u0438\u043C \u0441\u0442\u043E\u043B\u0438\u043A\u043E\u043C',
-    san5:'\u041E\u0431\u043B\u0430\u0434\u043D\u0430\u043D\u043D\u044F \u0434\u043B\u044F \u043B\u044E\u0434\u0435\u0439 \u0437 \u043E\u0441\u043E\u0431\u043B\u0438\u0432\u0438\u043C\u0438 \u043F\u043E\u0442\u0440\u0435\u0431\u0430\u043C\u0438', san6:'\u041F\u0440\u0430\u043B\u044C\u043D\u0430 \u0442\u0430 \u0441\u0443\u0448\u0438\u043B\u044C\u043D\u0430 \u043C\u0430\u0448\u0438\u043D\u0430',
-    san7:'\u041F\u0440\u0438\u043C\u0456\u0449\u0435\u043D\u043D\u044F \u0434\u043B\u044F \u0440\u0443\u0447\u043D\u043E\u0433\u043E \u043F\u0440\u0430\u043D\u043D\u044F \u0442\u0430 \u043C\u0438\u0442\u0442\u044F \u043F\u043E\u0441\u0443\u0434\u0443',
-    stripTitle:'\u0412\u0441\u0456 \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0438 \u0432\u043A\u043B\u044E\u0447\u0430\u044E\u0442\u044C',
-    strip1:'\u041F\u0440\u0438\u0432\u0430\u0442\u043D\u0438\u0439 \u0434\u043E\u0441\u0442\u0443\u043F \u0434\u043E \u043F\u043B\u044F\u0436\u0443', strip2:'\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u0438\u0439 Wi-Fi', strip3:'\u0421\u0435\u0440\u0435\u0434\u0437\u0435\u043C\u043D\u043E\u043C\u043E\u0440\u0441\u044C\u043A\u0430 \u043F\u0440\u0438\u0440\u043E\u0434\u0430', strip4:'\u0421\u0443\u0447\u0430\u0441\u043D\u0456 \u0441\u0430\u043D\u0456\u0442\u0430\u0440\u043D\u0456 \u0431\u043B\u043E\u043A\u0438',
-    strip5:'\u0414\u043E\u0441\u0442\u0443\u043F \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0456\u043B\u0435\u043C \u0434\u043E \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0430', strip6:'\u0417\u043E\u043D\u0430 \u0431\u0430\u0440\u0431\u0435\u043A\u044E', strip7:'\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u0456 \u0437\u0440\u0443\u0447\u043D\u043E\u0441\u0442\u0456', strip8:'\u0414\u0440\u0443\u0436\u043D\u0454 \u0434\u043E \u0442\u0432\u0430\u0440\u0438\u043D',
-    fAbout:'4-\u0437\u0456\u0440\u043A\u043E\u0432\u0438\u0439 \u043A\u0435\u043C\u043F\u0456\u043D\u0433 \u043D\u0430 \u041C\u0430\u043A\u0430\u0440\u0441\u044C\u043A\u0456\u0439 \u0420\u0438\u0432\'\u0454\u0440\u0456. \u0420\u043E\u0437\u0442\u0430\u0448\u043E\u0432\u0430\u043D\u0438\u0439 \u043D\u0430 \u0443\u0437\u0431\u0435\u0440\u0435\u0436\u0436\u0456 \u0410\u0434\u0440\u0456\u0430\u0442\u0438\u043A\u0438, \u0434\u0435 \u0433\u043E\u0440\u0438 \u0437\u0443\u0441\u0442\u0440\u0456\u0447\u0430\u044E\u0442\u044C\u0441\u044F \u0437 \u043C\u043E\u0440\u0435\u043C.',
-    fc1Title:'\u041F\u0440\u043E\u0436\u0438\u0432\u0430\u043D\u043D\u044F', fc1a:'\u041A\u0435\u043C\u043F\u0456\u043D\u0433 \u0442\u0430 \u043C\u043E\u0431\u0456\u043B\u044C\u043D\u0456 \u0431\u0443\u0434\u0438\u043D\u043A\u0438', fc1b:'\u041C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A\u0438',
-    fc2Title:'\u0414\u043E\u0441\u043B\u0456\u0434\u0438\u0442\u0438', fc2a:'\u0417\u0440\u0443\u0447\u043D\u043E\u0441\u0442\u0456', fc2b:'\u0424\u043E\u0442\u043E\u0433\u0430\u043B\u0435\u0440\u0435\u044F', fc2c:'\u041F\u043B\u044F\u0436 \u0442\u0430 \u043C\u043E\u0440\u0435', fc2d:'\u0410\u043A\u0442\u0438\u0432\u043D\u0438\u0439 \u0432\u0456\u0434\u043F\u043E\u0447\u0438\u043D\u043E\u043A',
-    fc3Title:'\u0406\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044F', fc3a:'\u041A\u0430\u0440\u0442\u0430 \u0442\u0430 \u043C\u0430\u0440\u0448\u0440\u0443\u0442', fc3b:'\u041A\u043E\u043D\u0442\u0430\u043A\u0442', fc3c:'\u041A\u043B\u0456\u043C\u0430\u0442',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. \u0412\u0441\u0456 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0445\u0438\u0449\u0435\u043D\u0456.', fStars:'4 \u0417\u0456\u0440\u043A\u0438 \u00B7 \u041C\u0430\u043A\u0430\u0440\u0441\u044C\u043A\u0430 \u0420\u0438\u0432\'\u0454\u0440\u0430'
+    bookNow:'Забронювати', breadcrumb:'Головна', pageTitle:'Майданчики',
+    heroTitle:'Кемпінг <em>Майданчики</em>',
+    secLbl:'Оберіть майданчик', secTitle:'Ваш простір у природі',
+    introPara:'Привезіть власний намет, причіп або кемпер і оселіться на одному з наших затінених майданчиків у середземноморській природі — лише кілька кроків від Адріатичного узбережжя.',
+    badgeCamping:'Кемпінг зона', campName:'Кемпінг зона',
+    campDesc:'Оберіть відпочинок у наметі в оточенні прекрасної природи та кемпінг зони, яка пропонує все необхідне.',
+    specType:'Намет / Причіп / Кемпер', facilities:'Зручності',
+    campFac1:'Спільні водопровідні підключення', campFac2:'Спільні електричні підключення', campFac3:'Безкоштовний Wi-Fi',
+    bookRoom:'Забронювати \u2192',
+    badgeSuperior:'Superior', supName:'Superior майданчик',
+    supDesc:'Оселіться в найпривабливішій кемпінг зоні. Відпочивайте на підвищеній місцевості поблизу Адріатичного моря.',
+    supSpecType:'Намет / Причіп / Кемпер',
+    supFac1:'Електричне підключення', supFac2:'Водопровідне підключення', supFac3:'Каналізаційне підключення',
+    sanLbl:'На місці', sanTitle:'Санітарні вузли',
+    sanLead:'Санітарні вузли кемпінгу розташовані поряд із вхідною зоною та безпосередньо поблизу зони майданчиків.',
+    san1:'Душові з гарячою та холодною водою', san2:'Умивальники з гарячою та холодною водою',
+    san3:'Чоловічі та жіночі туалети', san4:'Дитячі гігієнічні кімнати зі столиком для пелюшок',
+    san5:'Зручності для людей з особливими потребами', san6:'Пральна машина та сушарка',
+    san7:'Кімната для ручного прання одягу та посуду',
+    stripTitle:'Усі майданчики включають',
+    strip1:'Приватний пляж', strip2:'Безкоштовний Wi-Fi', strip3:'Середземноморська природа', strip4:'Сучасні санвузли',
+    strip5:'Доступ авто до майданчика', strip6:'Зона барбекю', strip7:'Доступні зручності', strip8:'Домашні тварини вітаються',
+    fAbout:"Кемпінг 4 зірки на Макарській Рив'єрі.",
+    fc1Title:'Проживання', fc1a:'Кемпінг і мобільні будинки', fc1b:'Майданчики',
+    fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
+    fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
   }
 };
 
-// ── LANGUAGE SWITCHER ──
+// APPLY LANGUAGE
+function applyLang(code) {
+  var dict = T[code];
+  if (!dict) return;
+  document.getElementById('langCode').textContent = code;
+  document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === code); });
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n-html');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.title = (dict.pageTitle || 'Pitches') + ' - Medora Orbis';
+  localStorage.setItem('lang', code);
+}
+
+// BUILD LANGUAGE MENU
 var langCodes = ['EN','HR','DE','HU','RO','UA'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
@@ -451,49 +474,26 @@ langCodes.forEach(function(code) {
   btn.className = 'lang-opt' + (code === 'EN' ? ' active' : '');
   btn.textContent = code;
   btn.addEventListener('click', function() {
-    document.getElementById('langCode').textContent = code;
     document.getElementById('langDrop').classList.remove('open');
-    document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === code); });
     applyLang(code);
-    localStorage.setItem('medoraLang', code); // Save chosen language
   });
   langMenu.appendChild(btn);
 });
 
+// LANGUAGE DROPDOWN TOGGLE
 document.getElementById('langBtn').addEventListener('click', function(e) {
   e.stopPropagation();
   document.getElementById('langDrop').classList.toggle('open');
 });
-document.addEventListener('click', function() { document.getElementById('langDrop').classList.remove('open'); });
+document.addEventListener('click', function() {
+  document.getElementById('langDrop').classList.remove('open');
+});
 
-// ── APPLY TRANSLATIONS ──
-function applyLang(code) {
-  var dict = T[code];
-  if (!dict) return;
-  // Also update the button label and active state
-  document.getElementById('langCode').textContent = code;
-  document.querySelectorAll('.lang-opt').forEach(function(b) { b.classList.toggle('active', b.textContent === code); });
-  // data-i18n = textContent
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.textContent = dict[key];
-  });
-  // data-i18n-html = innerHTML (for elements with <em>, &rarr; etc.)
-  document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n-html');
-    if (dict[key] !== undefined) el.innerHTML = dict[key];
-  });
-  // Update page title
-  document.title = (dict.pageTitle || 'Pitches') + ' - Medora Orbis';
-}
+// LOAD SAVED LANGUAGE ON PAGE OPEN
+var savedLang = localStorage.getItem('lang');
+if (savedLang && T[savedLang]) { applyLang(savedLang); }
 
-// Load saved language on page start
-(function() {
-  var saved = localStorage.getItem('medoraLang');
-  if (saved && saved !== 'EN') { applyLang(saved); }
-})();
-
-// ── FACILITIES TOGGLE ──
+// FACILITIES TOGGLE
 document.querySelectorAll('.fac-head').forEach(function(head) {
   head.addEventListener('click', function() {
     var body = this.nextElementSibling;
