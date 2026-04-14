@@ -187,7 +187,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
     </div>
     <div class="options-grid">
       <a href="camping.html" class="option-card">
-        <img src="images/camping-card.jpg" alt="Camping" loading="lazy">
+        <img src="images/camping-card.jpg" alt="Camping" loading="lazy" onerror="this.style.visibility='hidden';">
         <div class="option-overlay">
           <div class="option-name" data-key="opt1-name">Camping</div>
           <div class="option-desc" data-key="opt1-desc">Spacious pitches with full hookups, modern sanitary blocks, and direct beach access.</div>
@@ -195,7 +195,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
         </div>
       </a>
       <a href="pitches_page.html" class="option-card">
-        <img src="images/pitches-card.jpg" alt="Pitches" loading="lazy">
+        <img src="images/pitches-card.jpg" alt="Pitches" loading="lazy" onerror="this.style.visibility='hidden';">
         <div class="option-overlay">
           <div class="option-name" data-key="opt3-name">Pitches</div>
           <div class="option-desc" data-key="opt3-desc">Bring your own tent or motorhome to our scenic, shaded pitches with electricity hookup.</div>
@@ -235,7 +235,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
   <div class="container">
     <div class="offer-card">
       <div class="offer-img">
-        <img src="images/offer.jpg" alt="Special Offer" loading="lazy">
+        <img src="images/offer.jpg" alt="Special Offer" loading="lazy" onerror="this.style.visibility='hidden';">
         <div class="offer-tag" id="offer-badge">Limited Availability</div>
       </div>
       <div class="offer-body">
@@ -266,13 +266,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
     <div class="car-outer">
       <div class="car-wrap" id="carWrap">
         <div class="car-track" id="carTrack">
-          <div class="car-slide"><img src="images/gallery1.jpg" alt="Gallery 1"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery2.jpg" alt="Gallery 2"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery3.jpg" alt="Gallery 3"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery4.jpg" alt="Gallery 4"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery5.jpg" alt="Gallery 5"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery6.jpg" alt="Gallery 6"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
-          <div class="car-slide"><img src="images/gallery7.jpg" alt="Gallery 7"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery1.jpg" alt="Gallery 1" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery2.jpg" alt="Gallery 2" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery3.jpg" alt="Gallery 3" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery4.jpg" alt="Gallery 4" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery5.jpg" alt="Gallery 5" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery6.jpg" alt="Gallery 6" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
+          <div class="car-slide"><img src="images/gallery7.jpg" alt="Gallery 7" onerror="this.style.visibility='hidden';"><div class="slide-hover"><div class="slide-hover-icon">+</div></div></div>
         </div>
       </div>
       <div class="car-ctrls">
@@ -406,7 +406,9 @@ if (savedLang && T[savedLang]) {
   applyLang(savedLang);
 }
 
-// CAROUSEL
+// CAROUSEL — wait for full page load so image dimensions are ready
+window.addEventListener('load', function() {
+
 var carTrack = document.getElementById('carTrack');
 var carWrap = document.getElementById('carWrap');
 var slides = Array.from(carTrack.querySelectorAll('.car-slide'));
@@ -456,6 +458,8 @@ document.getElementById('lbClose').addEventListener('click', closeLB);
 document.getElementById('lbPrev').addEventListener('click', function() { shiftLB(-1); });
 document.getElementById('lbNext').addEventListener('click', function() { shiftLB(1); });
 document.getElementById('lightbox').addEventListener('click', function(e) { if (e.target === document.getElementById('lightbox')) closeLB(); });
+
+}); // end window.load
 </script>
 </body>
 </html>
