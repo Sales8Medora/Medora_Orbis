@@ -44,9 +44,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .pitch-card{display:grid;grid-template-columns:1fr 1fr;margin-bottom:40px;border-radius:8px;overflow:hidden;box-shadow:0 4px 32px rgba(13,45,110,.08);background:#fff;}
 .pitch-card.rev .p-img{order:2;}
 .pitch-card.rev .p-info{order:1;}
-.p-img{position:relative;overflow:hidden;min-height:340px;}
+.p-img{position:relative;overflow:hidden;min-height:340px;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
 .p-ph{width:100%;height:100%;min-height:340px;background:#c8daea;display:flex;align-items:center;justify-content:center;color:rgba(13,45,110,.3);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;}
-.p-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
+.p-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
 .pitch-card:hover .p-img img{transform:scale(1.04);}
 .p-info{padding:40px 38px;display:flex;flex-direction:column;justify-content:center;}
 .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
@@ -145,7 +145,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 
     <!-- Camping Area -->
     <div class="pitch-card">
-      <div class="p-img"><div class="p-ph">Photo - Camping Area</div></div>
+      <div class="p-img"><img src="images/pitch-camping.jpg" alt="Camping Area" onerror="this.remove();"><div class="p-ph" style="display:none;">Photo - Camping Area</div></div>
       <div class="p-info">
         <div class="badges"><span class="badge b-blue" data-i18n="badgeCamping">Camping Area</span></div>
         <h2 class="p-name" data-i18n="campName">Camping Area</h2>
@@ -168,7 +168,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 
     <!-- Superior Pitch -->
     <div class="pitch-card rev">
-      <div class="p-img"><div class="p-ph">Photo - Superior Pitch</div></div>
+      <div class="p-img"><img src="images/pitch-superior.jpg" alt="Superior Pitch" onerror="this.remove();"><div class="p-ph" style="display:none;">Photo - Superior Pitch</div></div>
       <div class="p-info">
         <div class="badges"><span class="badge b-prem" data-i18n="badgeSuperior">Superior</span></div>
         <h2 class="p-name" data-i18n="supName">Superior Pitch</h2>
