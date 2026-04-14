@@ -59,36 +59,20 @@ section{padding:100px 0;}
 .option-link{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lb);transform:translateY(6px);opacity:0;transition:opacity .3s,transform .3s;}
 .option-link::after{content:'→';}
 .option-card:hover .option-link{opacity:1;transform:translateY(0);}
-.am-sec{background:var(--cb);position:relative;overflow:hidden;padding:140px 0;}
+.am-sec{background:var(--cb);position:relative;overflow:hidden;padding:100px 0;}
 .am-sec::before{content:'';position:absolute;top:-1px;left:0;right:0;height:80px;background:var(--ww);clip-path:ellipse(60% 100% at 50% 0%);}
 .am-sec::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:80px;background:var(--ww);clip-path:ellipse(60% 100% at 50% 100%);}
 .am-inner{position:relative;z-index:1;}
 .am-inner .sec-lbl{color:var(--lb);}
 .am-inner .sec-lbl::before{background:var(--lb);}
 .am-inner .sec-title{color:#fff;}
-.am-lead{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:480px;margin-top:16px;margin-bottom:64px;}
-.am-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);}
-.am-item{background:rgba(255,255,255,.06);padding:36px 28px;display:flex;flex-direction:column;gap:14px;transition:background .2s;}
+.am-lead{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:480px;margin-top:16px;margin-bottom:48px;}
+.am-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.1);}
+.am-item{background:rgba(255,255,255,.06);padding:20px 18px;display:flex;flex-direction:column;gap:8px;transition:background .2s;}
 .am-item:hover{background:rgba(255,255,255,.12);}
-.am-icon{font-size:1.6rem;}
-.am-name{font-size:.82rem;font-weight:500;color:#fff;letter-spacing:.04em;line-height:1.4;}
-.am-detail{font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.55;}
-.offer-sec{background:var(--ww);}
-.offer-card{background:var(--cb);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:480px;}
-.offer-img{position:relative;overflow:hidden;}
-.offer-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
-.offer-card:hover .offer-img img{transform:scale(1.04);}
-.offer-tag{position:absolute;top:28px;left:28px;background:var(--lb);color:#fff;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;border-radius:2px;}
-.offer-body{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;}
-.offer-body .sec-lbl{color:rgba(255,255,255,.6);}
-.offer-body .sec-lbl::before{background:rgba(255,255,255,.6);}
-.offer-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:#fff;line-height:1.1;margin:16px 0;}
-.offer-title em{font-style:italic;color:var(--lb);}
-.offer-desc{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.72;margin-bottom:36px;}
-.offer-perks{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;}
-.offer-perks li{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:2px;}
-.btn-offer{display:inline-flex;align-items:center;gap:12px;background:var(--lb);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:16px 32px;border-radius:2px;text-decoration:none;transition:background .2s,gap .2s;}
-.btn-offer:hover{background:#007ab5;gap:18px;}
+.am-icon{font-size:1.4rem;}
+.am-name{font-size:.78rem;font-weight:500;color:#fff;letter-spacing:.04em;line-height:1.4;}
+.am-detail{font-size:.68rem;color:rgba(255,255,255,.5);line-height:1.5;}
 .gal-sec{background:var(--ww);padding-top:80px;}
 .gal-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;}
 .btn-gal{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--lb);text-decoration:none;border-bottom:1px solid var(--lb);padding-bottom:4px;transition:color .2s,border-color .2s;white-space:nowrap;}
@@ -135,8 +119,8 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
 .f-bottom p{font-size:.72rem;color:rgba(255,255,255,.35);}
 .f-rating{display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(255,255,255,.4);}
 .f-rating .stars{color:var(--lb);letter-spacing:2px;}
-@media(max-width:900px){nav{padding:0 24px;}.nav-links{display:none;}.hero-content{padding:0 32px;}.container{padding:0 24px;}.options-grid{grid-template-columns:1fr;gap:12px;}.option-card{aspect-ratio:16/9;}.am-grid{grid-template-columns:repeat(2,1fr);}.offer-card{grid-template-columns:1fr;}.offer-img{min-height:280px;}.f-grid{grid-template-columns:1fr 1fr;gap:40px;}.car-slide{flex:0 0 calc(50% - 8px);}}
-@media(max-width:600px){.am-grid{grid-template-columns:1fr 1fr;}.f-grid{grid-template-columns:1fr;}.car-slide{flex:0 0 calc(85% - 8px);}.gal-header{flex-direction:column;align-items:flex-start;gap:16px;}}
+@media(max-width:900px){nav{padding:0 24px;}.nav-links{display:none;}.hero-content{padding:0 32px;}.container{padding:0 24px;}.options-grid{grid-template-columns:1fr;gap:12px;}.option-card{aspect-ratio:16/9;}.am-grid{grid-template-columns:repeat(2,1fr);}.f-grid{grid-template-columns:1fr 1fr;gap:40px;}.car-slide{flex:0 0 calc(50% - 8px);}}
+@media(max-width:600px){.am-grid{grid-template-columns:repeat(2,1fr);}.f-grid{grid-template-columns:1fr;}.car-slide{flex:0 0 calc(85% - 8px);}.gal-header{flex-direction:column;align-items:flex-start;gap:16px;}}
 </style>
 </head>
 <body>
@@ -207,41 +191,16 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
     <h2 class="sec-title" id="am-title">Camp Amenities</h2>
     <p class="am-lead" id="am-lead">Everything you need for a perfect Adriatic stay — thoughtfully designed for comfort, ecology, and connection.</p>
     <div class="am-grid">
-      <div class="am-item"><div class="am-icon">🏖️</div><div class="am-name" data-key="am1">Private Beach Access</div><div class="am-detail" data-key="am1d">Direct access to pristine pebble beach on the Makarska Riviera</div></div>
-      <div class="am-item"><div class="am-icon">🛎️</div><div class="am-name" data-key="am2">24h Reception</div><div class="am-detail" data-key="am2d">Round-the-clock front desk and security on the campsite</div></div>
-      <div class="am-item"><div class="am-icon">🚿</div><div class="am-name" data-key="am3">Modern Sanitary Blocks</div><div class="am-detail" data-key="am3d">Fully renovated, clean facilities with hot water always available</div></div>
-      <div class="am-item"><div class="am-icon">📶</div><div class="am-name" data-key="am4">Free Wi-Fi</div><div class="am-detail" data-key="am4d">High-speed internet access throughout the entire campsite</div></div>
-      <div class="am-item"><div class="am-icon">🚲</div><div class="am-name" data-key="am5">Bicycle Rental</div><div class="am-detail" data-key="am5d">Explore Podgora and the coast at your own pace</div></div>
-      <div class="am-item"><div class="am-icon">🌿</div><div class="am-name" data-key="am6">Eco Standards</div><div class="am-detail" data-key="am6d">Waste separation, solar collectors, and eco irrigation systems</div></div>
-      <div class="am-item"><div class="am-icon">🍖</div><div class="am-name" data-key="am7">BBQ &amp; Social Area</div><div class="am-detail" data-key="am7d">Covered communal space with barbecue and large shared tables</div></div>
-      <div class="am-item"><div class="am-icon">🧒</div><div class="am-name" data-key="am8">Children's Playground</div><div class="am-detail" data-key="am8d">Safe, shaded play area for little adventurers</div></div>
-      <div class="am-item"><div class="am-icon">⚡</div><div class="am-name" data-key="am9">EV Charging</div><div class="am-detail" data-key="am9d">On-site electric vehicle charging station available</div></div>
-      <div class="am-item"><div class="am-icon">🐾</div><div class="am-name" data-key="am10">Pet Friendly</div><div class="am-detail" data-key="am10d">Designated pet-welcome area within the campsite</div></div>
-      <div class="am-item"><div class="am-icon">♿</div><div class="am-name" data-key="am11">Accessible Facilities</div><div class="am-detail" data-key="am11d">Partially adapted for guests with special needs</div></div>
-      <div class="am-item"><div class="am-icon">💆</div><div class="am-name" data-key="am12">Wellness &amp; Spa</div><div class="am-detail" data-key="am12d">Access to whirlpool, sauna &amp; massage at nearby Hotel Medora Auri</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="offer-sec" id="offer">
-  <div class="container">
-    <div class="offer-card">
-      <div class="offer-img">
-        <img src="images/offer.jpg" alt="Special Offer" onerror="this.remove();">
-        <div class="offer-tag" id="offer-badge">Limited Availability</div>
-      </div>
-      <div class="offer-body">
-        <div class="sec-lbl" id="offer-label">Exclusive Deal</div>
-        <h2 class="offer-title" id="offer-title">Spring<br><em>Special Offer</em></h2>
-        <p class="offer-desc" id="offer-desc">Book your stay this spring and enjoy lunch included in the price — fresh local flavours, served daily at our restaurant with a sea view.</p>
-        <ul class="offer-perks">
-          <li data-key="perk1">Lunch Included</li>
-          <li data-key="perk2">Free Wi-Fi</li>
-          <li data-key="perk3">Beach Access</li>
-          <li data-key="perk4">Flexible Cancellation</li>
-        </ul>
-        <a href="https://medorahotels.com/hr/book/?nights=1&code=-1&date=" target="_blank" class="btn-offer" id="offer-cta">View Offer →</a>
-      </div>
+      <div class="am-item"><div class="am-icon">🏖️</div><div class="am-name" data-key="am1">Private Beach Access</div></div>
+      <div class="am-item"><div class="am-icon">🛎️</div><div class="am-name" data-key="am2">24h Reception</div></div>
+      <div class="am-item"><div class="am-icon">🚿</div><div class="am-name" data-key="am3">Modern Sanitary Blocks</div></div>
+      <div class="am-item"><div class="am-icon">📶</div><div class="am-name" data-key="am4">Free Wi-Fi</div></div>
+      <div class="am-item"><div class="am-icon">🚲</div><div class="am-name" data-key="am5">Bicycle Rental</div></div>
+      <div class="am-item"><div class="am-icon">🍖</div><div class="am-name" data-key="am7">BBQ &amp; Social Area</div></div>
+      <div class="am-item"><div class="am-icon">🧒</div><div class="am-name" data-key="am8">Children's Playground</div></div>
+      <div class="am-item"><div class="am-icon">⚡</div><div class="am-name" data-key="am9">EV Charging</div></div>
+      <div class="am-item"><div class="am-icon">🐾</div><div class="am-name" data-key="am10">Pet Friendly</div></div>
+      <div class="am-item"><div class="am-icon">♿</div><div class="am-name" data-key="am11">Accessible Facilities</div></div>
     </div>
   </div>
 </section>
@@ -353,7 +312,6 @@ function applyLang(code) {
   // Translate all elements with an ID listed in T
   ['hero-tag','hero-h1','hero-sub','scroll-hint','opt-label','opt-title',
    'am-title','am-lead',
-   'offer-badge','offer-label','offer-title','offer-desc','offer-cta',
    'gal-label','gal-title','gal-btn','footer-about',
    'fc1-title','fc2-title','fc3-title','footer-copy','footer-stars-text','el-bookNow'
   ].forEach(function(id) {
