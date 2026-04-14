@@ -162,7 +162,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
 </nav>
 
 <div class="book-bar">
-  <a href="https://medorahotels.com/hr/book/?nights=1&code=-1&date=" target="_blank" class="btn-book" id="el-bookNow">Book Now</a>
+  <a href="#" target="_blank" class="btn-book" id="el-bookNow">Book Now</a>
 </div>
 
 <div class="hero">
@@ -183,7 +183,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
     </div>
     <div class="options-grid">
       <a href="camping.html" class="option-card">
-        <img src="images/camping-card.jpg" alt="Camping" loading="lazy" onerror="this.style.visibility='hidden';">
+        <img src="images/camping-card.jpg" alt="Camping" onerror="this.remove();">
         <div class="option-overlay">
           <div class="option-name" data-key="opt1-name">Camping</div>
           <div class="option-desc" data-key="opt1-desc">Spacious pitches with full hookups, modern sanitary blocks, and direct beach access.</div>
@@ -191,7 +191,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
         </div>
       </a>
       <a href="pitches_page.html" class="option-card">
-        <img src="images/pitches-card.jpg" alt="Pitches" loading="lazy" onerror="this.style.visibility='hidden';">
+        <img src="images/pitches-card.jpg" alt="Pitches" onerror="this.remove();">
         <div class="option-overlay">
           <div class="option-name" data-key="opt3-name">Pitches</div>
           <div class="option-desc" data-key="opt3-desc">Bring your own tent or motorhome to our scenic, shaded pitches with electricity hookup.</div>
@@ -227,7 +227,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
   <div class="container">
     <div class="offer-card">
       <div class="offer-img">
-        <img src="images/offer.jpg" alt="Special Offer" loading="lazy" onerror="this.style.visibility='hidden';">
+        <img src="images/offer.jpg" alt="Special Offer" onerror="this.remove();">
         <div class="offer-tag" id="offer-badge">Limited Availability</div>
       </div>
       <div class="offer-body">
@@ -397,6 +397,17 @@ var savedLang = localStorage.getItem('lang');
 if (savedLang && T[savedLang]) {
   applyLang(savedLang);
 }
+
+// BOOK NOW — dynamic today/tomorrow dates
+(function() {
+  var today = new Date();
+  var tomorrow = new Date();
+  tomorrow.setDate(today.getDate() + 1);
+  function fmt(d) { return d.toISOString().split('T')[0]; }
+  var base = 'https://medorahotels.book-official-website.com/book.php?page=cross_selling&companyid=195&ptype=mobilehomes%7Ccamp&crcid=a2842b5b20be7f48d2b770c1628971af';
+  var url = base + '&checkin=' + fmt(today) + '&checkout=' + fmt(tomorrow);
+  document.getElementById('el-bookNow').href = url;
+})();
 
 // CAROUSEL — wait for full page load so image dimensions are ready
 window.addEventListener('load', function() {
