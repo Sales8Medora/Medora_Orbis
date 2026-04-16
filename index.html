@@ -14,7 +14,7 @@ body{font-family:'Jost',sans-serif;background:var(--ww);color:var(--cb);overflow
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
 .nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
-.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
 .nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
 .nav-right{display:flex;align-items:center;}
@@ -34,9 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .hero{position:relative;height:calc(100vh - 108px);min-height:500px;margin-top:108px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:80px;}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,45,110,.2),rgba(13,45,110,.65)),url('images/hero.jpg') center/cover no-repeat;}
 .hero-content{position:relative;max-width:900px;padding:0 64px;}
-.hero-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:20px;border-left:3px solid var(--lb);padding-left:14px;}
+.hero-tag{display:inline-block;font-size:1rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-bottom:24px;background:rgba(0,149,214,.75);padding:8px 18px 8px 16px;border-left:4px solid #fff;border-radius:0 3px 3px 0;text-shadow:none;}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.8rem,8vw,7.5rem);font-weight:600;line-height:1.0;color:#fff;margin-bottom:28px;text-shadow:0 2px 24px rgba(0,0,0,.4);}
-.hero h1 em{font-style:italic;color:#fff;text-shadow:0 0 60px rgba(0,149,214,1);}
+.hero h1 em{font-style:italic;color:#fff;-webkit-text-stroke:0;text-shadow:-1px -1px 0 #0095d6,1px -1px 0 #0095d6,-1px 1px 0 #0095d6,1px 1px 0 #0095d6;}
 .hero-sub{font-size:1.2rem;font-weight:500;color:#fff;max-width:520px;line-height:1.75;text-shadow:0 1px 12px rgba(0,0,0,.5);}
 .scroll-hint{position:absolute;bottom:28px;right:48px;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;}
 .scroll-hint::after{content:'';width:1px;height:52px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:sl 1.8s ease-in-out infinite;}
@@ -50,7 +50,7 @@ section{padding:100px 0;}
 .options-intro{max-width:520px;margin-bottom:64px;}
 .options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:820px;margin:0 auto;}
 .option-card{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;text-decoration:none;display:block;border-radius:20px;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
-.option-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s;display:block;position:absolute;inset:0;}
+.option-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s;display:block;position:absolute;inset:0;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:bicubic;}
 .option-card:hover img{transform:scale(1.06);}
 .option-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,45,110,.92) 0%,rgba(13,45,110,.45) 55%,rgba(13,45,110,.15) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:36px 28px;border-radius:20px;}
 .option-card:hover .option-overlay{background:linear-gradient(to top,rgba(13,45,110,.96) 0%,rgba(13,45,110,.55) 55%,rgba(13,45,110,.2) 100%);}
@@ -83,7 +83,7 @@ section{padding:100px 0;}
 .car-track{display:flex;gap:16px;transition:transform .55s cubic-bezier(.25,.46,.45,.94);}
 .car-track.no-tr{transition:none;}
 .car-slide{flex:0 0 calc(33.333% - 11px);aspect-ratio:4/3;overflow:hidden;border-radius:3px;cursor:pointer;position:relative;flex-shrink:0;}
-.car-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;pointer-events:none;}
+.car-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;pointer-events:none;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:bicubic;}
 .car-slide:hover img{transform:scale(1.05);}
 .slide-hover{position:absolute;inset:0;background:rgba(13,45,110,.4);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;}
 .slide-hover-icon{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;}
@@ -130,9 +130,8 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
   <ul class="nav-links">
     <li><a href="#options">Stay</a></li>
     <li><a href="#amenities">Amenities</a></li>
-    <li><a href="#offer">Offers</a></li>
     <li><a href="#gallery">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://camping-makarska-riviera.com/contact/" target="_blank">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
@@ -212,7 +211,6 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
         <div class="sec-lbl" id="gal-label">Visual Journey</div>
         <h2 class="sec-title" id="gal-title">Gallery</h2>
       </div>
-      <a href="https://camping-makarska-riviera.com/photo-gallery/" target="_blank" class="btn-gal" id="gal-btn">View Full Gallery →</a>
     </div>
     <div class="car-outer">
       <div class="car-wrap" id="carWrap">
@@ -257,7 +255,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
         <ul class="f-links">
           <li><a href="camping.html" data-key="fc1-1">Camping &amp; Mobile Homes</a></li>
           <li><a href="pitches_page.html" data-key="fc1-3">Pitches</a></li>
-          <li><a href="https://medorahotels.com/hr/book/" target="_blank" data-key="fc1-4">Book Now</a></li>
+          <li><a href="#" target="_blank" data-key="fc1-4" id="el-bookNowFooter">Book Now</a></li>
         </ul>
       </div>
       <div>
@@ -365,6 +363,8 @@ if (savedLang && T[savedLang]) {
   var base = 'https://medorahotels.book-official-website.com/book.php?page=cross_selling&companyid=195&ptype=mobilehomes%7Ccamp&crcid=a2842b5b20be7f48d2b770c1628971af';
   var url = base + '&checkin=' + fmt(today) + '&checkout=' + fmt(tomorrow);
   document.getElementById('el-bookNow').href = url;
+  var footerBook = document.getElementById('el-bookNowFooter');
+  if (footerBook) footerBook.href = url;
 })();
 
 // CAROUSEL — wait for full page load so image dimensions are ready
