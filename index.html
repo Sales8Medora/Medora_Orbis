@@ -376,6 +376,8 @@ function spv() { return window.innerWidth < 600 ? 1 : window.innerWidth < 900 ? 
 function maxIdx() { return Math.max(0, slides.length - spv()); }
 function slideW() { return (carWrap.offsetWidth - 16 * (spv() - 1)) / spv(); }
 
+function isMobile() { return window.innerWidth < 900; }
+
 function buildDots() {
   carDots.innerHTML = '';
   for (var i = 0; i <= maxIdx(); i++) {
@@ -386,10 +388,21 @@ function buildDots() {
   }
 }
 function updateCarousel() {
-  carTrack.style.transform = 'translateX(-' + (cur * (slideW() + 16)) + 'px)';
+  if (isMobile()) {
+    carWrap.scrollTo({ left: cur * (slideW() + 16), behavior: 'smooth' });
+  } else {
+    carTrack.style.transform = 'translateX(-' + (cur * (slideW() + 16)) + 'px)';
+  }
   carDots.querySelectorAll('.car-dot').forEach(function(d, i) { d.classList.toggle('active', i === cur); });
 }
 function goTo(i) { cur = Math.max(0, Math.min(i, maxIdx())); updateCarousel(); }
+
+// Sync dots when user swipes natively on mobile
+carWrap.addEventListener('scroll', function() {
+  if (!isMobile()) return;
+  var idx = Math.round(carWrap.scrollLeft / (slideW() + 16));
+  if (idx !== cur) { cur = idx; carDots.querySelectorAll('.car-dot').forEach(function(d, i) { d.classList.toggle('active', i === cur); }); }
+}, { passive: true });
 
 document.getElementById('prevBtn').addEventListener('click', function() { goTo(cur - 1); });
 document.getElementById('nextBtn').addEventListener('click', function() { goTo(cur + 1); });
