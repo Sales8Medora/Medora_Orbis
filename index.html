@@ -81,6 +81,7 @@ section{padding:100px 0;}
 .car-wrap.dragging{cursor:grabbing;}
 .car-track{display:flex;gap:16px;transition:transform .55s cubic-bezier(.25,.46,.45,.94);}
 .car-track.no-tr{transition:none;}
+@media(max-width:900px){.car-wrap{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:default;}.car-wrap::-webkit-scrollbar{display:none;}.car-track{transform:none!important;transition:none!important;}.car-slide{scroll-snap-align:start;scroll-snap-stop:always;}}
 .car-slide{flex:0 0 calc(50% - 8px);aspect-ratio:3/2;overflow:hidden;border-radius:3px;cursor:pointer;position:relative;flex-shrink:0;transform:translateZ(0);-webkit-backface-visibility:hidden;}
 .car-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;pointer-events:none;transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;image-rendering:auto;}
 .car-slide:hover img{transform:scale(1.05);}
@@ -119,7 +120,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
 .f-rating{display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(255,255,255,.4);}
 .f-rating .stars{color:var(--lb);letter-spacing:2px;}
 @media(max-width:900px){nav{padding:0 24px;}.nav-links{display:none;}.hero-content{padding:0 32px;}.container{padding:0 24px;}.options-grid{grid-template-columns:1fr;gap:12px;}.option-card{aspect-ratio:16/9;}.am-grid{grid-template-columns:repeat(2,1fr);}.f-grid{grid-template-columns:1fr 1fr;gap:40px;}.car-slide{flex:0 0 calc(50% - 8px);}}
-@media(max-width:600px){.am-grid{grid-template-columns:repeat(2,1fr);}.f-grid{grid-template-columns:1fr;}.car-slide{flex:0 0 calc(85% - 8px);}.gal-header{flex-direction:column;align-items:flex-start;gap:16px;}}
+@media(max-width:600px){.am-grid{grid-template-columns:repeat(2,1fr);}.f-grid{grid-template-columns:1fr;}.car-slide{flex:0 0 calc(100% - 0px);scroll-snap-align:start;}.gal-header{flex-direction:column;align-items:flex-start;gap:16px;}}
 </style>
 </head>
 <body>
