@@ -244,7 +244,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
         <p class="f-about" id="footer-about">A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.</p>
         <div class="f-contact"><span>📍</span> Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
         <div class="f-contact"><span>📞</span> +385 (0)21 601 701</div>
-        <div class="f-contact"><span>✉️</span> info@medorahotels.com</div>
+        <div class="f-contact"><span>✉️</span> reservations@medorahotels.com</div>
       </div>
       <div>
         <div class="f-col-title" id="fc1-title">Stay</div>
@@ -375,8 +375,18 @@ var cur = 0, dragStart = null, dragDelta = 0, startCur = 0;
 function spv() { return window.innerWidth < 600 ? 1 : window.innerWidth < 900 ? 1 : 2; }
 function maxIdx() { return Math.max(0, slides.length - spv()); }
 function slideW() { return (carWrap.offsetWidth - 16 * (spv() - 1)) / spv(); }
-
 function isMobile() { return window.innerWidth < 900; }
+
+function setMode() {
+  if (isMobile()) {
+    carWrap.style.overflowX = 'auto';
+    carWrap.style.overflowY = 'hidden';
+    carTrack.style.transform = 'none';
+  } else {
+    carWrap.style.overflowX = 'hidden';
+    carWrap.style.overflowY = 'hidden';
+  }
+}
 
 function buildDots() {
   carDots.innerHTML = '';
@@ -387,13 +397,16 @@ function buildDots() {
     carDots.appendChild(d);
   }
 }
+function updateDots() {
+  carDots.querySelectorAll('.car-dot').forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+}
 function updateCarousel() {
   if (isMobile()) {
     carWrap.scrollTo({ left: cur * (slideW() + 16), behavior: 'smooth' });
   } else {
     carTrack.style.transform = 'translateX(-' + (cur * (slideW() + 16)) + 'px)';
   }
-  carDots.querySelectorAll('.car-dot').forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+  updateDots();
 }
 function goTo(i) { cur = Math.max(0, Math.min(i, maxIdx())); updateCarousel(); }
 
@@ -401,12 +414,13 @@ function goTo(i) { cur = Math.max(0, Math.min(i, maxIdx())); updateCarousel(); }
 carWrap.addEventListener('scroll', function() {
   if (!isMobile()) return;
   var idx = Math.round(carWrap.scrollLeft / (slideW() + 16));
-  if (idx !== cur) { cur = idx; carDots.querySelectorAll('.car-dot').forEach(function(d, i) { d.classList.toggle('active', i === cur); }); }
+  if (idx !== cur) { cur = idx; updateDots(); }
 }, { passive: true });
 
 document.getElementById('prevBtn').addEventListener('click', function() { goTo(cur - 1); });
 document.getElementById('nextBtn').addEventListener('click', function() { goTo(cur + 1); });
-window.addEventListener('resize', function() { buildDots(); updateCarousel(); });
+window.addEventListener('resize', function() { setMode(); buildDots(); updateCarousel(); });
+setMode();
 buildDots();
 updateCarousel();
 
