@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active Vacation - Medora Orbis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--lb:#0095d6;--cb:#0d2d6e;--ww:#f5f9ff;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+.nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+.btn-book-nav:hover{background:#007ab5;}
+.lang-drop{position:relative;}
+.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
+.lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
+.lang-drop.open .lang-arrow{transform:rotate(180deg);}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(13,45,110,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
+.lang-drop.open .lang-menu{display:block;}
+.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Jost',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
+.lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
+.lang-opt.active{color:#fff;font-weight:600;}
+
+/* ── HERO ── */
+.page-hero{margin-top:68px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:40px;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,45,110,.15),rgba(13,45,110,.72)),url('images/active-vacation/hero.jpg') center/cover no-repeat;background-color:#1a4a8a;}
+.hero-txt{position:relative;padding:0 64px;}
+.breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
+.breadcrumb a{color:var(--lb);text-decoration:none;}
+.hero-txt h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:300;color:#fff;line-height:1.1;}
+.hero-txt h1 em{font-style:italic;color:#7dd8f8;}
+
+/* ── SHARED ── */
+.container{max-width:1140px;margin:0 auto;padding:0 48px;}
+.sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.sec-lbl::before{content:'';width:28px;height:1px;background:var(--lb);flex-shrink:0;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
+
+/* ── INTRO ── */
+.intro{padding:52px 0 44px;}
+.intro p{font-size:.95rem;color:#555;line-height:1.8;font-weight:300;margin-top:14px;max-width:680px;}
+
+/* ── ACTIVITY SECTIONS ── */
+.activities{padding:0 0 80px;}
+
+/* Each activity block */
+.act-block{margin-bottom:80px;}
+.act-block:last-child{margin-bottom:0;}
+
+/* Top row: title + description */
+.act-header{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-bottom:32px;}
+.act-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;color:var(--cb);line-height:1.15;margin-bottom:10px;}
+.act-desc{font-size:.88rem;color:#555;line-height:1.8;font-weight:300;}
+
+/* 3-photo grid */
+.act-photos{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:12px;height:320px;}
+.act-photos .ph{border-radius:6px;overflow:hidden;position:relative;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
+.act-photos .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
+.act-photos .ph:hover img{transform:scale(1.05);}
+/* Fallback placeholder when no image */
+.act-photos .ph::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);pointer-events:none;}
+.act-photos .ph img + *{display:none;} /* hide pseudo if img loads */
+
+/* Divider between sections */
+.act-divider{border:none;border-top:1px solid rgba(13,45,110,.08);margin-bottom:80px;}
+
+/* ── CTA STRIP ── */
+.cta-strip{background:var(--cb);padding:72px 0;}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-txt .sec-lbl{color:var(--lb);}
+.cta-txt .sec-lbl::before{background:var(--lb);}
+.cta-txt h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:10px;}
+.cta-txt p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.75;max-width:480px;}
+.btn-cta{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;white-space:nowrap;}
+.btn-cta:hover{background:#007ab5;}
+
+/* ── FOOTER ── */
+footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;border-top:1px solid rgba(255,255,255,.07);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:14px;}
+.f-logo span{color:rgba(255,255,255,.6);font-weight:300;}
+.f-about{font-size:.78rem;line-height:1.75;color:rgba(255,255,255,.5);font-weight:300;margin-bottom:18px;max-width:260px;}
+.f-contact{font-size:.75rem;color:rgba(255,255,255,.55);line-height:1.9;}
+.f-col-title{font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:18px;}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.f-links a{font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-weight:300;transition:color .2s;}
+.f-links a:hover{color:#fff;}
+.f-divider{border:none;border-top:1px solid rgba(255,255,255,.1);margin-bottom:28px;}
+.f-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.f-bottom p{font-size:.7rem;color:rgba(255,255,255,.3);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  nav{padding:0 24px;}
+  .page-hero{height:220px;padding-bottom:28px;}
+  .hero-txt{padding:0 24px;}
+  .container{padding:0 24px;}
+  .act-header{grid-template-columns:1fr;gap:16px;}
+  .act-photos{grid-template-columns:1fr 1fr;height:auto;}
+  .act-photos .ph{height:180px;}
+  .act-photos .ph:first-child{grid-column:1/-1;height:220px;}
+  .cta-inner{flex-direction:column;text-align:center;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:560px){
+  .act-photos{grid-template-columns:1fr;}
+  .act-photos .ph,.act-photos .ph:first-child{height:200px;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <div class="nav-right">
+    <div class="lang-drop" id="langDrop">
+      <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <a href="#" class="btn-book-nav" id="el-bookNav" data-i18n="bookNow">Book Now</a>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-txt">
+    <p class="breadcrumb"><a href="index.html" data-i18n="breadcrumb">Home</a> &nbsp;/&nbsp; <span data-i18n="pageTitle">Active Vacation</span></p>
+    <h1 data-i18n-html="heroTitle">Active <em>Vacation</em></h1>
+  </div>
+</div>
+
+<!-- ══════════ INTRO ══════════ -->
+<section class="intro">
+  <div class="container">
+    <div class="sec-lbl" data-i18n="secLbl">What to Do</div>
+    <h2 class="sec-title" data-i18n="secTitle">Adventures at every turn</h2>
+    <p data-i18n="introPara">The Makarska Riviera is more than a place to rest — it's a playground for the curious and the active. From the crystal-clear Adriatic to the rugged peaks of the Biokovo mountains, every day holds a new adventure waiting just outside your pitch.</p>
+  </div>
+</section>
+
+<!-- ══════════ ACTIVITIES ══════════ -->
+<section class="activities">
+  <div class="container">
+
+    <!-- ① SWIMMING & BEACH -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act1Name">Swimming &amp; Beach</h3>
+        </div>
+        <p class="act-desc" data-i18n="act1Desc">Our private pebble beach sits at the foot of the campsite, lapped by the clear turquoise waters of the Adriatic. Spend lazy mornings swimming in calm, shallow bays, or claim a sunlounger and let the sea breeze do its work. The water is clean, warm from June through September, and perfect for snorkelling right from the shore.</p>
+      </div>
+      <div class="act-photos">
+        <!-- Name your photos exactly as shown in the data-label attribute -->
+        <div class="ph" data-label="swimming-1.jpg">
+          <img src="images/active-vacation/swimming-1.jpg" alt="Swimming at the beach" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="swimming-2.jpg">
+          <img src="images/active-vacation/swimming-2.jpg" alt="Pebble beach" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="swimming-3.jpg">
+          <img src="images/active-vacation/swimming-3.jpg" alt="Adriatic sea view" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <hr class="act-divider">
+
+    <!-- ② KAYAKING & WATER SPORTS -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act2Name">Kayaking &amp; Water Sports</h3>
+        </div>
+        <p class="act-desc" data-i18n="act2Desc">Paddle along the coastline, discover hidden sea caves, and explore coves that are only reachable by water. Kayak and stand-up paddleboard rentals are available near the beach. For something faster, jet-ski and boat hire can be arranged locally. Whether you're a first-timer or an experienced paddler, the calm inshore waters make this a family favourite.</p>
+      </div>
+      <div class="act-photos">
+        <div class="ph" data-label="kayaking-1.jpg">
+          <img src="images/active-vacation/kayaking-1.jpg" alt="Kayaking on the Adriatic" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="kayaking-2.jpg">
+          <img src="images/active-vacation/kayaking-2.jpg" alt="Stand-up paddleboard" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="kayaking-3.jpg">
+          <img src="images/active-vacation/kayaking-3.jpg" alt="Sea cave exploration" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <hr class="act-divider">
+
+    <!-- ③ CYCLING -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act3Name">Cycling</h3>
+        </div>
+        <p class="act-desc" data-i18n="act3Desc">Cycle along the coastal path with the sea on one side and fragrant pine forests on the other. Marked cycling routes connect the campsite to the nearby towns of Baška Voda and Brela. Bikes can be rented at the campsite or locally. For those who want more of a challenge, mountain bike trails lead up towards the lower slopes of Biokovo.</p>
+      </div>
+      <div class="act-photos">
+        <div class="ph" data-label="cycling-1.jpg">
+          <img src="images/active-vacation/cycling-1.jpg" alt="Coastal cycling path" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="cycling-2.jpg">
+          <img src="images/active-vacation/cycling-2.jpg" alt="Mountain biking trail" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="cycling-3.jpg">
+          <img src="images/active-vacation/cycling-3.jpg" alt="Bike rental" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <hr class="act-divider">
+
+    <!-- ④ HIKING & BIOKOVO -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act4Name">Hiking &amp; Biokovo</h3>
+        </div>
+        <p class="act-desc" data-i18n="act4Desc">The Biokovo Nature Park rises steeply behind the coast, offering dramatic hiking with unforgettable views over the Adriatic and the Dalmatian islands. Trails range from easy forest walks to demanding ridge hikes reaching over 1,700 m. Don't miss the Biokovo Skywalk — a glass-floored viewing platform perched above the coast — one of the most spectacular spots in Croatia.</p>
+      </div>
+      <div class="act-photos">
+        <div class="ph" data-label="hiking-1.jpg">
+          <img src="images/active-vacation/hiking-1.jpg" alt="Biokovo mountain trail" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="hiking-2.jpg">
+          <img src="images/active-vacation/hiking-2.jpg" alt="Biokovo Skywalk" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="hiking-3.jpg">
+          <img src="images/active-vacation/hiking-3.jpg" alt="Views over the Adriatic from Biokovo" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <hr class="act-divider">
+
+    <!-- ⑤ DIVING & SNORKELLING -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act5Name">Diving &amp; Snorkelling</h3>
+        </div>
+        <p class="act-desc" data-i18n="act5Desc">The Adriatic around Makarska is exceptionally clear and rich with marine life — sea urchins, octopus, colourful fish, and rocky reef formations await beneath the surface. Snorkelling is excellent directly from the beach. For those wanting to go deeper, a local dive school offers guided dives, equipment rental, and PADI courses for complete beginners through to advanced divers.</p>
+      </div>
+      <div class="act-photos">
+        <div class="ph" data-label="diving-1.jpg">
+          <img src="images/active-vacation/diving-1.jpg" alt="Scuba diving in the Adriatic" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="diving-2.jpg">
+          <img src="images/active-vacation/diving-2.jpg" alt="Snorkelling from the beach" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="diving-3.jpg">
+          <img src="images/active-vacation/diving-3.jpg" alt="Underwater marine life" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+    <hr class="act-divider">
+
+    <!-- ⑥ BEACH SPORTS -->
+    <div class="act-block">
+      <div class="act-header">
+        <div>
+          <h3 class="act-name" data-i18n="act6Name">Beach &amp; Court Sports</h3>
+        </div>
+        <p class="act-desc" data-i18n="act6Desc">Stay active on land with beach volleyball on the shore, tennis courts just minutes away, and table tennis tables on site. Our animation team organises tournaments and group games throughout the season — a great way to meet fellow campers. There's always something going on for kids and adults alike, from morning stretching sessions to evening beach games.</p>
+      </div>
+      <div class="act-photos">
+        <div class="ph" data-label="sports-1.jpg">
+          <img src="images/active-vacation/sports-1.jpg" alt="Beach volleyball" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="sports-2.jpg">
+          <img src="images/active-vacation/sports-2.jpg" alt="Tennis court" onerror="this.style.display='none'">
+        </div>
+        <div class="ph" data-label="sports-3.jpg">
+          <img src="images/active-vacation/sports-3.jpg" alt="Sports and animation" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- ══════════ CTA STRIP ══════════ -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-txt">
+        <div class="sec-lbl" data-i18n="ctaLbl">Ready to explore?</div>
+        <h2 data-i18n="ctaTitle">Book your active escape</h2>
+        <p data-i18n="ctaPara">Reserve your pitch or mobile home and arrive to a summer full of sun, sea, and adventure on the Makarska Riviera.</p>
+      </div>
+      <a href="#" class="btn-cta" id="el-ctaBook" data-i18n="bookNow">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="f-logo">Medora <span>Orbis</span></a>
+        <p class="f-about" data-i18n="fAbout">A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.</p>
+        <p class="f-contact">Put Sv. Martina 6, Baška Voda<br>+385 21 620 620<br>camping@medorahotels.com</p>
+      </div>
+      <div>
+        <p class="f-col-title" data-i18n="fc1Title">Stay</p>
+        <ul class="f-links">
+          <li><a href="camping.html" data-i18n="fc1a">Camping &amp; Mobile Homes</a></li>
+          <li><a href="pitches_page.html" data-i18n="fc1b">Pitches</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-title" data-i18n="fc2Title">Explore</p>
+        <ul class="f-links">
+          <li><a href="#" data-i18n="fc2a">Amenities</a></li>
+          <li><a href="#" data-i18n="fc2b">Photo Gallery</a></li>
+          <li><a href="#" data-i18n="fc2c">Beach &amp; Sea</a></li>
+          <li><a href="active-vacation.html" data-i18n="fc2d">Active Vacation</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-title" data-i18n="fc3Title">Information</p>
+        <ul class="f-links">
+          <li><a href="#" data-i18n="fc3a">Map &amp; Directions</a></li>
+          <li><a href="contact.html" data-i18n="fc3b">Contact</a></li>
+          <li><a href="#" data-i18n="fc3c">Climate</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="f-divider">
+    <div class="f-bottom">
+      <p data-i18n="fCopy">&#169; 2025 Medora Orbis Camping. All rights reserved.</p>
+      <p data-i18n="fStars">4-Star Certified &middot; Makarska Riviera</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ══════════════════════════════════════════════
+// TRANSLATIONS
+// ══════════════════════════════════════════════
+var T = {
+  EN: {
+    bookNow:'Book Now', breadcrumb:'Home', pageTitle:'Active Vacation',
+    heroTitle:'Active <em>Vacation</em>',
+    secLbl:'What to Do', secTitle:'Adventures at every turn',
+    introPara:'The Makarska Riviera is more than a place to rest — it\'s a playground for the curious and the active. From the crystal-clear Adriatic to the rugged peaks of the Biokovo mountains, every day holds a new adventure waiting just outside your pitch.',
+    act1Lbl:'On the Shore', act1Name:'Swimming & Beach',
+    act1Tag1:'All Ages', act1Tag2:'Private Beach', act1Tag3:'Free Access',
+    act1Desc:'Our private pebble beach sits at the foot of the campsite, lapped by the clear turquoise waters of the Adriatic. Spend lazy mornings swimming in calm, shallow bays, or claim a sunlounger and let the sea breeze do its work. The water is clean, warm from June through September, and perfect for snorkelling right from the shore.',
+    act2Lbl:'On the Water', act2Name:'Kayaking & Water Sports',
+    act2Tag1:'Rental Available', act2Tag2:'Guided Tours', act2Tag3:'Beginners Welcome',
+    act2Desc:'Paddle along the coastline, discover hidden sea caves, and explore coves that are only reachable by water. Kayak and stand-up paddleboard rentals are available near the beach. For something faster, jet-ski and boat hire can be arranged locally. Whether you\'re a first-timer or an experienced paddler, the calm inshore waters make this a family favourite.',
+    act3Lbl:'Two Wheels', act3Name:'Cycling',
+    act3Tag1:'Bike Rental', act3Tag2:'Marked Routes', act3Tag3:'All Levels',
+    act3Desc:'Cycle along the coastal path with the sea on one side and fragrant pine forests on the other. Marked cycling routes connect the campsite to the nearby towns of Baška Voda and Brela. Bikes can be rented at the campsite or locally. For those who want more of a challenge, mountain bike trails lead up towards the lower slopes of Biokovo.',
+    act4Lbl:'Into the Mountains', act4Name:'Hiking & Biokovo',
+    act4Tag1:'Nature Park', act4Tag2:'Skywalk', act4Tag3:'Panoramic Views',
+    act4Desc:'The Biokovo Nature Park rises steeply behind the coast, offering dramatic hiking with unforgettable views over the Adriatic and the Dalmatian islands. Trails range from easy forest walks to demanding ridge hikes reaching over 1,700 m. Don\'t miss the Biokovo Skywalk — a glass-floored viewing platform perched above the coast — one of the most spectacular spots in Croatia.',
+    act5Lbl:'Beneath the Surface', act5Name:'Diving & Snorkelling',
+    act5Tag1:'Dive School Nearby', act5Tag2:'Crystal-Clear Water', act5Tag3:'All Abilities',
+    act5Desc:'The Adriatic around Makarska is exceptionally clear and rich with marine life — sea urchins, octopus, colourful fish, and rocky reef formations await beneath the surface. Snorkelling is excellent directly from the beach. For those wanting to go deeper, a local dive school offers guided dives, equipment rental, and PADI courses for complete beginners through to advanced divers.',
+    act6Lbl:'Fun & Games', act6Name:'Beach & Court Sports',
+    act6Tag1:'Beach Volleyball', act6Tag2:'Tennis', act6Tag3:'Table Tennis',
+    act6Desc:'Stay active on land with beach volleyball on the shore, tennis courts just minutes away, and table tennis tables on site. Our animation team organises tournaments and group games throughout the season — a great way to meet fellow campers. There\'s always something going on for kids and adults alike, from morning stretching sessions to evening beach games.',
+    ctaLbl:'Ready to explore?', ctaTitle:'Book your active escape',
+    ctaPara:'Reserve your pitch or mobile home and arrive to a summer full of sun, sea, and adventure on the Makarska Riviera.',
+    fAbout:'A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.',
+    fc1Title:'Stay', fc1a:'Camping & Mobile Homes', fc1b:'Pitches',
+    fc2Title:'Explore', fc2a:'Amenities', fc2b:'Photo Gallery', fc2c:'Beach & Sea', fc2d:'Active Vacation',
+    fc3Title:'Information', fc3a:'Map & Directions', fc3b:'Contact', fc3c:'Climate',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. All rights reserved.', fStars:'4-Star Certified \u00B7 Makarska Riviera'
+  },
+  HR: {
+    bookNow:'Rezerviraj', breadcrumb:'Pocetna', pageTitle:'Aktivan odmor',
+    heroTitle:'Aktivan <em>odmor</em>',
+    secLbl:'Sto raditi', secTitle:'Pustolovine na svakom koraku',
+    introPara:'Makarska rivijera vise je od mjesta za odmor — to je raj za avanturiste. Od kristalno cistog Jadrana do stjenovitih vrhova Biokova, svaki dan krije novu avanturu samo korak od vase parcele.',
+    act1Lbl:'Na obali', act1Name:'Kupanje i plaza',
+    act1Tag1:'Za sve uzraste', act1Tag2:'Privatna plaza', act1Tag3:'Besplatan pristup',
+    act1Desc:'Nasa privatna sljuncana plaza nalazi se podnozju kampa, obasjana tirkiznom vodom Jadrana. Provodite jutarnje sate u kupanju, ili zauzmite lezaljku i uzivajte u morskom povjetarcu. Voda je cista, topla od lipnja do rujna, idealna za snorkeling izravno s plaze.',
+    act2Lbl:'Na vodi', act2Name:'Kajakarenje i vodeni sportovi',
+    act2Tag1:'Iznajmljivanje dostupno', act2Tag2:'Vodeni izleti', act2Tag3:'Pocetnici dobrodosli',
+    act2Desc:'Veslajte duz obale, otkrivajte skrivene morske spilje i istrazujte uvale dostupne samo s vode. Najam kajaka i SUP dasaka dostupan je u blizini plaze. Za brace, moguc je i najam jet-skija i brodova. Mirne obalne vode cine ovo omiljenom aktivnoscu za cijelu obitelj.',
+    act3Lbl:'Na dva kotaca', act3Name:'Biciklizam',
+    act3Tag1:'Najam bicikala', act3Tag2:'Oznacene rute', act3Tag3:'Svi nivoi',
+    act3Desc:'Vozite biciklom uz obalnu stazu s morem s jedne i mirisnim borovim sumama s druge strane. Oznacene biciklicke rute povezuju kamp s obliznjem Baskom Vodom i Brelima. Bicikli se mogu iznajmiti u kampu ili lokalno. Za vece izazove, staze za brdski biciklizam vode prema nizim padinama Biokova.',
+    act4Lbl:'U planine', act4Name:'Planinarski pohodi i Biokovo',
+    act4Tag1:'Park prirode', act4Tag2:'Stakleni most', act4Tag3:'Panoramski pogled',
+    act4Desc:'Park prirode Biokovo strmo se uzize iza obale, nudeci dramaticne pohodnje s nezaboravnim pogledima na Jadran i dalmatinske otoke. Staze sezaju od laganih sumarskih setnji do zahtjevnih uzlaznih pohoda na visine iznad 1.700 m. Ne propustite Biokovo Skywalk — staklenu platformu postavljenu iznad obale.',
+    act5Lbl:'Ispod povrsine', act5Name:'Ronjenje i snorkeling',
+    act5Tag1:'Ronilacka skola u blizini', act5Tag2:'Kristalno cista voda', act5Tag3:'Svi nivoi',
+    act5Desc:'Jadransko more oko Makarske iznimno je cisto i bogato morskim zivotom — jezi, hobotnice, sarene ribe i hridinasti grebeni cekaju ispod povrsine. Snorkeling je izvrstan izravno s plaze. Za dublja iskustva, lokalna ronilacka skola nudi vodena ronjenja, najam opreme i PADI tecajeve.',
+    act6Lbl:'Sport i zabava', act6Name:'Sportovi na plazi i terenima',
+    act6Tag1:'Odbojka na plazi', act6Tag2:'Tenis', act6Tag3:'Stolni tenis',
+    act6Desc:'Ostanite aktivni na kopnu s odbojem na plazi, teniskim terenima u blizini i stolnoteniskim stolovima u kampu. Nas animacijski tim organizira turnire i grupne igre kroz cijelu sezonu — odlican nacin za druzenje s ostalim gostima.',
+    ctaLbl:'Spremni za avanturu?', ctaTitle:'Rezervirajte aktivni odmor',
+    ctaPara:'Rezervirajte parcelu ili mobilnu kucicu i docekajte ljeto puno sunca, mora i avantura na Makarskoj rivijeri.',
+    fAbout:'Kamp s 4 zvjezdice na Makarskoj rivijeri uz jadransku obalu.',
+    fc1Title:'Smjestaj', fc1a:'Kampiranje i mobilne kucice', fc1b:'Parcele',
+    fc2Title:'Istrazite', fc2a:'Sadrzaji', fc2b:'Foto galerija', fc2c:'Plaza i more', fc2d:'Aktivan odmor',
+    fc3Title:'Informacije', fc3a:'Karta i upute', fc3b:'Kontakt', fc3c:'Klima',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
+  },
+  DE: {
+    bookNow:'Jetzt buchen', breadcrumb:'Startseite', pageTitle:'Aktivurlaub',
+    heroTitle:'Aktiver <em>Urlaub</em>',
+    secLbl:'Aktivitäten', secTitle:'Abenteuer auf Schritt und Tritt',
+    introPara:'Die Makarska Riviera ist mehr als ein Ort zum Entspannen — sie ist ein Abenteuerspielplatz für Neugierige und Aktive. Vom kristallklaren Adria bis zu den schroffen Gipfeln des Biokovo-Gebirges wartet jeden Tag ein neues Erlebnis direkt vor Ihrem Stellplatz.',
+    act1Lbl:'Am Strand', act1Name:'Schwimmen & Strand',
+    act1Tag1:'Für alle Altersgruppen', act1Tag2:'Privatstrand', act1Tag3:'Kostenloser Zugang',
+    act1Desc:'Unser privater Kieselstrand liegt am Fuß des Campingplatzes und wird von den klaren türkisblauen Gewässern der Adria umspielt. Verbringen Sie ruhige Morgen beim Schwimmen in ruhigen, flachen Buchten oder nehmen Sie eine Liege und lassen Sie die Meeresbrise für sich arbeiten.',
+    act2Lbl:'Auf dem Wasser', act2Name:'Kajak & Wassersport',
+    act2Tag1:'Verleih verfügbar', act2Tag2:'Geführte Touren', act2Tag3:'Anfänger willkommen',
+    act2Desc:'Paddeln Sie die Küstenlinie entlang, entdecken Sie versteckte Meereshöhlen und erkunden Sie Buchten, die nur per Boot erreichbar sind. Kajak- und SUP-Verleih ist in Strandnähe verfügbar. Für mehr Tempo kann Jet-Ski und Bootsvermietung lokal arrangiert werden.',
+    act3Lbl:'Auf zwei Rädern', act3Name:'Radfahren',
+    act3Tag1:'Fahrradverleih', act3Tag2:'Markierte Routen', act3Tag3:'Alle Niveaus',
+    act3Desc:'Radeln Sie entlang des Küstenpfades mit dem Meer auf einer Seite und duftenden Kiefernwäldern auf der anderen. Markierte Radwege verbinden den Campingplatz mit den Städten Baška Voda und Brela. Fahrräder können am Campingplatz oder lokal gemietet werden.',
+    act4Lbl:'In die Berge', act4Name:'Wandern & Biokovo',
+    act4Tag1:'Naturpark', act4Tag2:'Skywalk', act4Tag3:'Panoramablick',
+    act4Desc:'Der Naturpark Biokovo erhebt sich steil hinter der Küste und bietet dramatische Wanderungen mit unvergesslichen Ausblicken auf die Adria. Verpassen Sie nicht den Biokovo Skywalk — eine verglaste Aussichtsplattform hoch über der Küste.',
+    act5Lbl:'Unter der Oberfläche', act5Name:'Tauchen & Schnorcheln',
+    act5Tag1:'Tauchschule in der Nähe', act5Tag2:'Kristallklares Wasser', act5Tag3:'Alle Niveaus',
+    act5Desc:'Das Adriatische Meer rund um Makarska ist außergewöhnlich klar und reich an Meereslebewesen. Schnorcheln ist direkt vom Strand möglich. Für Tiefentauchgänge bietet eine lokale Tauchschule geführte Tauchgänge, Ausrüstungsverleih und PADI-Kurse an.',
+    act6Lbl:'Spaß & Sport', act6Name:'Strand- & Hof-Sport',
+    act6Tag1:'Beachvolleyball', act6Tag2:'Tennis', act6Tag3:'Tischtennis',
+    act6Desc:'Bleiben Sie aktiv mit Beachvolleyball am Strand, Tennisplätzen in der Nähe und Tischtennisplatten auf dem Gelände. Unser Animationsteam organisiert während der ganzen Saison Turniere und Gruppenspiele.',
+    ctaLbl:'Bereit zum Erkunden?', ctaTitle:'Buchen Sie Ihren Aktivurlaub',
+    ctaPara:'Reservieren Sie Ihren Stellplatz oder Ihr Mobilheim und erleben Sie einen Sommer voller Sonne, Meer und Abenteuer.',
+    fAbout:'Ein 4-Sterne-Campingziel an der Makarska Riviera, direkt an der Adriaküste.',
+    fc1Title:'Unterkunft', fc1a:'Camping & Mobilheime', fc1b:'Stellplätze',
+    fc2Title:'Erkunden', fc2a:'Einrichtungen', fc2b:'Fotogalerie', fc2c:'Strand & Meer', fc2d:'Aktivurlaub',
+    fc3Title:'Informationen', fc3a:'Karte & Anfahrt', fc3b:'Kontakt', fc3c:'Klima',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4 Sterne \u00B7 Makarska Riviera'
+  },
+  HU: {
+    bookNow:'Foglalás', breadcrumb:'Főoldal', pageTitle:'Aktív nyaralás',
+    heroTitle:'Aktív <em>nyaralás</em>',
+    secLbl:'Teendők', secTitle:'Kalandok minden sarkon',
+    introPara:'A Makarska Riviera több mint egy pihenőhely — ez egy játszótér a kíváncsiak és az aktív emberek számára. A kristálytiszta Adriai-tengertől a Biokovo-hegység sziklás csúcsaiig minden nap új kaland vár közvetlenül a parcellád előtt.',
+    act1Lbl:'A parton', act1Name:'Fürdőzés és strand', act1Tag1:'Minden korosztálynak', act1Tag2:'Privát strand', act1Tag3:'Ingyenes belépés',
+    act1Desc:'Privát kavicsos strandunk a kemping lábánál terül el, amelyet az Adriai-tenger kristálytiszta, türkizkék vize nyaldos.',
+    act2Lbl:'A vízen', act2Name:'Kajakozás és vízisportok', act2Tag1:'Bérlés elérhető', act2Tag2:'Vezetett túrák', act2Tag3:'Kezdőknek is',
+    act2Desc:'Evezzen a partvonal mentén, fedezzen fel rejtett tengeri barlangokat és zsákutcás öblöket, amelyek csak vízen érhetők el.',
+    act3Lbl:'Két keréken', act3Name:'Kerékpározás', act3Tag1:'Kerékpár bérlés', act3Tag2:'Jelzett útvonalak', act3Tag3:'Minden szint',
+    act3Desc:'Kerékpározzon a parti ösvényen, egyik oldalán a tengerrel, másikon az illatos fenyőerdőkkel.',
+    act4Lbl:'A hegyek felé', act4Name:'Gyalogtúrák és Biokovo', act4Tag1:'Természetpark', act4Tag2:'Skywalk', act4Tag3:'Panorámás kilátás',
+    act4Desc:'A Biokovo Természetpark meredeken emelkedik a part mögött, drámai túrázási lehetőségekkel és felejthetetlen kilátással.',
+    act5Lbl:'A felszín alatt', act5Name:'Búvárkodás és snorkeling', act5Tag1:'Búváriskola a közelben', act5Tag2:'Kristálytiszta víz', act5Tag3:'Minden szint',
+    act5Desc:'A Makarska körüli Adriai-tenger kivételesen tiszta és gazdag tengeri élettel.',
+    act6Lbl:'Szórakozás és sport', act6Name:'Strand- és pályasportok', act6Tag1:'Röplabda strandon', act6Tag2:'Tenisz', act6Tag3:'Asztalitenisz',
+    act6Desc:'Maradjon aktív strandröplabdával, közeli teniszpályákkal és helyszíni asztalitenisz-asztalokkal.',
+    ctaLbl:'Készen áll a felfedezésre?', ctaTitle:'Foglalja le aktív nyaralását',
+    ctaPara:'Foglalja le a parcelláját vagy mobilházát, és érkezzen egy napfénnyel, tengerrel és kalanddal teli nyárra.',
+    fAbout:'4 csillagos kemping a Makarska Riviérán az Adriai-tenger partján.',
+    fc1Title:'Szállás', fc1a:'Kemping és mobilházak', fc1b:'Parcellák',
+    fc2Title:'Felfedezés', fc2a:'Létesítmények', fc2b:'Fotógaléria', fc2c:'Strand és tenger', fc2d:'Aktív nyaralás',
+    fc3Title:'Információk', fc3a:'Térkép és útvonal', fc3b:'Kapcsolat', fc3c:'Éghajlat',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
+  },
+  RO: {
+    bookNow:'Rezervați', breadcrumb:'Acasă', pageTitle:'Vacanță activă',
+    heroTitle:'Vacanță <em>activă</em>',
+    secLbl:'Ce să faci', secTitle:'Aventuri la tot pasul',
+    introPara:'Riviera Makarska este mai mult decât un loc de odihnă — este un teren de joacă pentru cei curioși și activi. De la Adriatica cristalină la vârfurile stâncoase ale munților Biokovo, în fiecare zi te așteaptă o nouă aventură.',
+    act1Lbl:'Pe mal', act1Name:'Înot și plajă', act1Tag1:'Toate vârstele', act1Tag2:'Plajă privată', act1Tag3:'Acces gratuit',
+    act1Desc:'Plaja noastră privată de pietriș se află la poalele campingului, scăldată de apele turcoaz clare ale Adriaticii.',
+    act2Lbl:'Pe apă', act2Name:'Caiac și sporturi nautice', act2Tag1:'Închirieri disponibile', act2Tag2:'Tururi ghidate', act2Tag3:'Începători bine-veniți',
+    act2Desc:'Vâslește de-a lungul coastei, descoperă peșteri marine ascunse și explorează golfuri accesibile doar pe apă.',
+    act3Lbl:'Pe două roți', act3Name:'Ciclism', act3Tag1:'Închiriere biciclete', act3Tag2:'Rute marcate', act3Tag3:'Toate nivelele',
+    act3Desc:'Pedalează pe poteca de coastă cu marea pe o parte și păduri de pini parfumați pe cealaltă.',
+    act4Lbl:'La munte', act4Name:'Drumeții și Biokovo', act4Tag1:'Parc natural', act4Tag2:'Skywalk', act4Tag3:'Priveliști panoramice',
+    act4Desc:'Parcul Natural Biokovo se ridică abrupt în spatele coastei, oferind drumeții dramatice cu priveliști de neuitat.',
+    act5Lbl:'Sub suprafață', act5Name:'Scufundări și snorkeling', act5Tag1:'Școală de scufundări', act5Tag2:'Apă cristalină', act5Tag3:'Toate nivelele',
+    act5Desc:'Marea Adriatică din jurul Makarsăi este excepțional de clară și bogată în viață marină.',
+    act6Lbl:'Distracție și sport', act6Name:'Sport pe plajă și teren', act6Tag1:'Volei pe plajă', act6Tag2:'Tenis', act6Tag3:'Tenis de masă',
+    act6Desc:'Rămâi activ cu volei pe plajă, terenuri de tenis în apropiere și mese de ping-pong pe amplasament.',
+    ctaLbl:'Gata de explorat?', ctaTitle:'Rezervă vacanța ta activă',
+    ctaPara:'Rezervă parcela sau căsuța mobilă și bucură-te de o vară plină de soare, mare și aventuri.',
+    fAbout:'O destinație de camping de 4 stele pe Riviera Makarska, pe coasta Adriaticii.',
+    fc1Title:'Cazare', fc1a:'Camping și case mobile', fc1b:'Parcele',
+    fc2Title:'Explorați', fc2a:'Facilități', fc2b:'Galerie foto', fc2c:'Plajă și mare', fc2d:'Vacanță activă',
+    fc3Title:'Informații', fc3a:'Hartă și indicații', fc3b:'Contact', fc3c:'Climă',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
+  },
+  UA: {
+    bookNow:'Забронювати', breadcrumb:'Головна', pageTitle:'Активний відпочинок',
+    heroTitle:'Активний <em>відпочинок</em>',
+    secLbl:'Що робити', secTitle:'Пригоди на кожному кроці',
+    introPara:"Макарська Рив'єра — це більше, ніж місце для відпочинку. Від кришталево чистої Адріатики до скелястих вершин гір Біоково — кожен день тут наповнений новими пригодами.",
+    act1Lbl:'На березі', act1Name:'Купання та пляж', act1Tag1:'Для всіх вікових груп', act1Tag2:'Приватний пляж', act1Tag3:'Безкоштовний доступ',
+    act1Desc:'Наш приватний галечний пляж розташований біля підніжжя кемпінгу, омитий бірюзовими водами Адріатики.',
+    act2Lbl:'На воді', act2Name:'Каякінг і водні види спорту', act2Tag1:'Прокат доступний', act2Tag2:'Екскурсії з гідом', act2Tag3:'Для початківців',
+    act2Desc:'Пливіть уздовж узбережжя, відкривайте приховані морські печери та досліджуйте бухти, доступні лише з води.',
+    act3Lbl:'На двох колесах', act3Name:'Велоспорт', act3Tag1:'Прокат велосипедів', act3Tag2:'Позначені маршрути', act3Tag3:'Для всіх рівнів',
+    act3Desc:'Їздіть на велосипеді вздовж прибережної стежки з морем з одного боку та запашними сосновими лісами з іншого.',
+    act4Lbl:'У гори', act4Name:'Піші походи та Біоково', act4Tag1:'Природний парк', act4Tag2:'Скайвок', act4Tag3:'Панорамні краєвиди',
+    act4Desc:'Природний парк Біоково стрімко піднімається за узбережжям, пропонуючи драматичні походи з незабутніми видами.',
+    act5Lbl:'Під поверхнею', act5Name:'Дайвінг та снорклінг', act5Tag1:'Школа дайвінгу поряд', act5Tag2:'Кристально чиста вода', act5Tag3:'Для всіх рівнів',
+    act5Desc:'Адріатичне море навколо Макарської є винятково чистим і багатим морським життям.',
+    act6Lbl:'Розваги та спорт', act6Name:'Пляжні та майданчикові види спорту', act6Tag1:'Пляжний волейбол', act6Tag2:'Теніс', act6Tag3:'Настільний теніс',
+    act6Desc:'Залишайтесь активними з пляжним волейболом, тенісними кортами неподалік і столами для настільного тенісу на місці.',
+    ctaLbl:'Готові до пригод?', ctaTitle:'Забронюйте активний відпочинок',
+    ctaPara:"Зарезервуйте свій майданчик або мобільний будинок і насолоджуйтесь літом, повним сонця, моря та пригод на Макарській Рив'єрі.",
+    fAbout:"Кемпінг 4 зірки на Макарській Рив'єрі вздовж узбережжя Адріатики.",
+    fc1Title:'Проживання', fc1a:'Кемпінг і мобільні будинки', fc1b:'Майданчики',
+    fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
+    fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
+    fCopy:'\u00A9 2025 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
+  }
+};
+
+// ══════════════════════════════════════════════
+// APPLY LANGUAGE
+// ══════════════════════════════════════════════
+function applyLang(code) {
+  var dict = T[code];
+  if (!dict) return;
+  document.getElementById('langCode').textContent = code;
+  document.querySelectorAll('.lang-opt').forEach(function(b) {
+    b.classList.toggle('active', b.textContent === code);
+  });
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n-html');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.title = (dict.pageTitle || 'Active Vacation') + ' - Medora Orbis';
+  localStorage.setItem('lang', code);
+}
+
+// ══════════════════════════════════════════════
+// BUILD LANGUAGE MENU
+// ══════════════════════════════════════════════
+var langCodes = ['EN','HR','DE','HU','RO','UA'];
+var langMenu = document.getElementById('langMenu');
+langCodes.forEach(function(code) {
+  var btn = document.createElement('button');
+  btn.className = 'lang-opt' + (code === 'EN' ? ' active' : '');
+  btn.textContent = code;
+  btn.addEventListener('click', function() {
+    document.getElementById('langDrop').classList.remove('open');
+    applyLang(code);
+  });
+  langMenu.appendChild(btn);
+});
+
+// LANGUAGE DROPDOWN TOGGLE
+document.getElementById('langBtn').addEventListener('click', function(e) {
+  e.stopPropagation();
+  document.getElementById('langDrop').classList.toggle('open');
+});
+document.addEventListener('click', function() {
+  document.getElementById('langDrop').classList.remove('open');
+});
+
+// LOAD SAVED LANGUAGE ON PAGE OPEN
+var savedLang = localStorage.getItem('lang');
+if (savedLang && T[savedLang]) { applyLang(savedLang); }
+
+// BOOK NOW — dynamic today/tomorrow dates
+(function() {
+  var today = new Date();
+  var tomorrow = new Date();
+  tomorrow.setDate(today.getDate() + 1);
+  function fmt(d) { return d.toISOString().split('T')[0]; }
+  var url = 'https://medorahotels.book-official-website.com/book.php?page=cross_selling&companyid=195&ptype=mobilehomes%7Ccamp&crcid=a2842b5b20be7f48d2b770c1628971af&checkin=' + fmt(today) + '&checkout=' + fmt(tomorrow);
+  document.querySelectorAll('.btn-book-nav, #el-ctaBook').forEach(function(btn) { btn.href = url; });
+})();
+</script>
+</body>
+</html>
