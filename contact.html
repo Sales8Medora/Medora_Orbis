@@ -17,6 +17,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
 .nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
 .nav-right{display:flex;align-items:center;gap:16px;}
+.nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
 .btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
 .btn-book-nav:hover{background:#007ab5;}
 .lang-drop{position:relative;}
@@ -121,6 +124,11 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 <!-- ══════════ NAV ══════════ -->
 <nav>
   <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <ul class="nav-links">
+    <li><a href="camping.html">Stay</a></li>
+    <li><a href="active-vacation.html">Active Vacation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>

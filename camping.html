@@ -15,6 +15,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
 .nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
 .nav-right{display:flex;align-items:center;gap:16px;}
+.nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
 .btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
 .btn-book-nav:hover{background:#007ab5;}
 .lang-drop{position:relative;}
@@ -108,10 +111,18 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 .f-bottom{display:flex;align-items:center;justify-content:space-between;font-size:.7rem;color:rgba(255,255,255,.35);}
 @media(max-width:900px){
   nav{padding:0 24px;} .container{padding:0 24px;} .filter-inner{padding:0 24px;} .hero-txt{padding:0 24px;}
+  .nav-links{display:none;}
   .room-card{grid-template-columns:1fr;} .room-card.rev .r-img,.room-card.rev .r-info{order:unset;}
   .fac-grid{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr 1fr;gap:32px;} .strip-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr;} .r-specs{flex-direction:column;gap:8px;}}
+.cta-strip{background:var(--lb);padding:64px 0;}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;}
+.cta-inner p{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.75;max-width:480px;margin-top:8px;}
+.btn-cta{background:#fff;color:var(--lb);font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;white-space:nowrap;flex-shrink:0;}
+.btn-cta:hover{background:var(--cb);color:#fff;}
+@media(max-width:860px){.cta-inner{flex-direction:column;text-align:center;}}
 </style>
 </head>
 <body>
@@ -121,6 +132,11 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
      ============================================================ -->
 <nav>
   <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <ul class="nav-links">
+    <li><a href="camping.html">Stay</a></li>
+    <li><a href="active-vacation.html">Active Vacation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
@@ -415,6 +431,21 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 
   </div>
 </section>
+
+<!-- ============================================================
+     ACTIVE VACATION CTA
+     ============================================================ -->
+<div class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Explore the <em>Makarska Riviera</em></h2>
+        <p>From cycling and diving to mountain adventures — discover everything you can do during your stay.</p>
+      </div>
+      <a href="active-vacation.html" class="btn-cta">Active Vacation →</a>
+    </div>
+  </div>
+</div>
 
 <!-- ============================================================
      STRIP — "All stays include" icons row
