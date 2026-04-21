@@ -363,12 +363,7 @@ if (savedLang && T[savedLang]) {
 
 // BOOK NOW — dynamic today/tomorrow dates
 (function() {
-  var today = new Date();
-  var tomorrow = new Date();
-  tomorrow.setDate(today.getDate() + 1);
-  function fmt(d) { return d.toISOString().split('T')[0]; }
-  var base = 'https://medorahotels.book-official-website.com/book.php?page=cross_selling&companyid=195&ptype=mobilehomes%7Ccamp&crcid=ba48e1596e9e848de4590046165a3ff4';
-  var url = base + '&checkin=' + fmt(today) + '&checkout=' + fmt(tomorrow);
+  var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&date=2026-05-01&nights=4&lang=en&unit_select=1&adults=2';
   document.getElementById('el-bookNow').href = url;
   var footerBook = document.getElementById('el-bookNowFooter');
   if (footerBook) footerBook.href = url;

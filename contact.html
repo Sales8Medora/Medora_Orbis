@@ -327,13 +327,9 @@ document.addEventListener('click', function() {
   document.getElementById('langDrop').classList.remove('open');
 });
 
-// ── BOOK NOW: dynamic today/tomorrow dates ──
+// ── BOOK NOW ──
 (function() {
-  var today = new Date();
-  var tomorrow = new Date();
-  tomorrow.setDate(today.getDate() + 1);
-  function fmt(d) { return d.toISOString().split('T')[0]; }
-  var url = 'https://medorahotels.book-official-website.com/book.php?page=cross_selling&companyid=195&ptype=mobilehomes%7Ccamp&crcid=a2842b5b20be7f48d2b770c1628971af&checkin=' + fmt(today) + '&checkout=' + fmt(tomorrow);
+  var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&date=2026-05-01&nights=4&lang=en&unit_select=1&adults=2';
   document.getElementById('el-bookNav').href = url;
   document.getElementById('el-bookStrip').href = url;
 })();
