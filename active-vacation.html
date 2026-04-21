@@ -66,9 +66,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .act-photos .ph{border-radius:6px;overflow:hidden;position:relative;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
 .act-photos .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
 .act-photos .ph:hover img{transform:scale(1.05);}
-/* Fallback placeholder when no image */
-.act-photos .ph::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);pointer-events:none;}
-.act-photos .ph img + *{display:none;} /* hide pseudo if img loads */
 
 /* Divider between sections */
 .act-divider{border:none;border-top:1px solid rgba(13,45,110,.08);margin-bottom:80px;}
@@ -163,13 +160,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
         <p class="act-desc" data-i18n="act1Desc">Cycle along the coastal path with the sea on one side and fragrant pine forests on the other. Marked cycling routes connect the campsite to the nearby towns of Baška Voda and Brela. Bikes can be rented at the campsite or locally. For those who want more of a challenge, mountain bike trails lead up towards the lower slopes of Biokovo.</p>
       </div>
       <div class="act-photos">
-        <div class="ph" data-label="cycling-1.jpg">
+        <div class="ph">
           <img src="images/active-vacation/cycling-1.jpg" alt="Coastal cycling path" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="cycling-2.jpg">
+        <div class="ph">
           <img src="images/active-vacation/cycling-2.jpg" alt="Mountain biking trail" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="cycling-3.jpg">
+        <div class="ph">
           <img src="images/active-vacation/cycling-3.jpg" alt="Bike rental" onerror="this.style.display='none'">
         </div>
       </div>
@@ -186,13 +183,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
         <p class="act-desc" data-i18n="act2Desc">The Adriatic around Makarska is exceptionally clear and rich with marine life — sea urchins, octopus, colourful fish, and rocky reef formations await beneath the surface. Snorkelling is excellent directly from the beach. For those wanting to go deeper, a local dive school offers guided dives, equipment rental, and PADI courses for complete beginners through to advanced divers.</p>
       </div>
       <div class="act-photos">
-        <div class="ph" data-label="diving-1.jpg">
+        <div class="ph">
           <img src="images/active-vacation/diving-1.jpg" alt="Scuba diving in the Adriatic" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="diving-2.jpg">
+        <div class="ph">
           <img src="images/active-vacation/diving-2.jpg" alt="Snorkelling from the beach" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="diving-3.jpg">
+        <div class="ph">
           <img src="images/active-vacation/diving-3.jpg" alt="Underwater marine life" onerror="this.style.display='none'">
         </div>
       </div>
@@ -209,13 +206,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
         <p class="act-desc" data-i18n="act3Desc">The Adriatic is one of the richest fishing grounds in the Mediterranean, and the waters around Podgora are no exception. Cast from the rocks along the shore or join a local boat excursion for deep-sea fishing further out. Whether you're an experienced angler or trying it for the first time, the clear coastal waters offer a peaceful and rewarding way to spend the day.</p>
       </div>
       <div class="act-photos">
-        <div class="ph" data-label="fishing-1.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fishing-1.jpg" alt="Fishing from the rocks" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="fishing-2.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fishing-2.jpg" alt="Boat fishing on the Adriatic" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="fishing-3.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fishing-3.jpg" alt="Fishing at sunset" onerror="this.style.display='none'">
         </div>
       </div>
@@ -232,13 +229,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
         <p class="act-desc" data-i18n="act4Desc">For those who like their thrills on the surface, the Adriatic delivers. Ride the banana boat, fly above the sea on a parasail, bounce across the waves on a tube, or feel the rush of a jet ski. These water toys are available locally at the beach and are perfect for families, groups of friends, or anyone who just wants to have fun in the sun.</p>
       </div>
       <div class="act-photos">
-        <div class="ph" data-label="fun-water-1.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fun-water-1.jpg" alt="Banana boat ride" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="fun-water-2.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fun-water-2.jpg" alt="Parasailing above the Adriatic" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="fun-water-3.jpg">
+        <div class="ph">
           <img src="images/active-vacation/fun-water-3.jpg" alt="Jet ski on the sea" onerror="this.style.display='none'">
         </div>
       </div>
@@ -255,13 +252,13 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
         <p class="act-desc" data-i18n="act5Desc">The Biokovo massif rising behind the coast opens up a world of adventure. Hike or trek along well-marked trails with panoramic views over the Adriatic, test yourself on climbing routes, or soar above it all on a tandem paragliding flight. For the ultimate adrenaline rush, the local zipline offers breathtaking views as you fly between the mountains and the sea. There is no shortage of ways to explore the wild side of the Makarska Riviera.</p>
       </div>
       <div class="act-photos">
-        <div class="ph" data-label="mountain-1.jpg">
+        <div class="ph">
           <img src="images/active-vacation/mountain-1.jpg" alt="Trekking on Biokovo" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="mountain-2.jpg">
+        <div class="ph">
           <img src="images/active-vacation/mountain-2.jpg" alt="Paragliding over the Adriatic" onerror="this.style.display='none'">
         </div>
-        <div class="ph" data-label="mountain-3.jpg">
+        <div class="ph">
           <img src="images/active-vacation/mountain-3.jpg" alt="Zipline in the mountains" onerror="this.style.display='none'">
         </div>
       </div>
