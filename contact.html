@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Medora Orbis Camping in Podgora, Croatia. Reach our reception by phone, email or WhatsApp. Find us on the Makarska Riviera.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="favicon.ico">
 <title>Contact — Medora Orbis Camping 4★</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -187,7 +190,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
             </div>
             <div class="contact-detail">
               <p class="contact-label">WhatsApp</p>
-              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713&_gl=1*1verhvb*_gcl_au*MTQ4NjI4NTQwNi4xNzcwNzEyODEx" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
             </div>
           </div>
 
@@ -321,7 +324,8 @@ document.addEventListener('click', function() {
 
 // ── BOOK NOW ──
 (function() {
-  var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&date=2026-05-01&nights=4&lang=en&unit_select=1&adults=2';
+  var today = new Date().toISOString().split('T')[0];
+  var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&nights=4&lang=en&unit_select=1&adults=2' + '&date=' + today;
   document.getElementById('el-bookNav').href = url;
   document.getElementById('el-bookStrip').href = url;
 })();
