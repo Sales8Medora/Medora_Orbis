@@ -5,50 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pitches - Medora Orbis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--lb:#0095d6;--cb:#0d2d6e;--ww:#f5f9ff;}
+:root{--lb:#0095d6;--cb:#003087;--ww:#f5f9ff;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
-.nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
+body{font-family:'Raleway',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo-img{height:48px;width:auto;display:block;filter:brightness(0) invert(1);}
+
 .nav-right{display:flex;align-items:center;gap:16px;}
 .nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
 .nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
-.btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+.btn-book-nav{background:var(--lb);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
 .btn-book-nav:hover{background:#007ab5;}
 .lang-drop{position:relative;}
-.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
 .lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 .lang-drop.open .lang-arrow{transform:rotate(180deg);}
-.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(13,45,110,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
 .lang-drop.open .lang-menu{display:block;}
-.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Jost',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
+.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
 .lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
 .lang-opt.active{color:#fff;font-weight:600;}
 .page-hero{margin-top:68px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:40px;}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,45,110,.15),rgba(13,45,110,.72)),url('images/pitches.jpg') center/cover no-repeat;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.15),rgba(0,48,135,.72)),url('images/pitches.jpg') center/cover no-repeat;}
 .hero-txt{position:relative;padding:0 64px;}
 .breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
 .breadcrumb a{color:var(--lb);text-decoration:none;}
-.hero-txt h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:300;color:#fff;line-height:1.1;}
+.hero-txt h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:300;color:#fff;line-height:1.1;}
 .hero-txt h1 em{font-style:italic;color:#7dd8f8;}
 .container{max-width:1140px;margin:0 auto;padding:0 48px;}
 .sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
 .sec-lbl::before{content:'';width:28px;height:1px;background:var(--lb);flex-shrink:0;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
 .intro{padding:52px 0 44px;}
 .intro p{font-size:.95rem;color:#555;line-height:1.8;font-weight:300;margin-top:14px;max-width:680px;}
 .pitches{padding:0 0 80px;}
-.pitch-card{display:grid;grid-template-columns:1fr 1fr;margin-bottom:40px;border-radius:8px;overflow:hidden;box-shadow:0 4px 32px rgba(13,45,110,.08);background:#fff;}
+.pitch-card{display:grid;grid-template-columns:1fr 1fr;margin-bottom:40px;border-radius:8px;overflow:hidden;box-shadow:0 4px 32px rgba(0,48,135,.08);background:#fff;}
 .pitch-card.rev .p-img{order:2;}
 .pitch-card.rev .p-info{order:1;}
-.p-img{position:relative;overflow:hidden;min-height:340px;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
-.p-ph{width:100%;height:100%;min-height:340px;background:#c8daea;display:flex;align-items:center;justify-content:center;color:rgba(13,45,110,.3);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;}
+.p-img{position:relative;overflow:hidden;min-height:340px;background:linear-gradient(145deg,#1a4a8a,#003087);}
+.p-ph{width:100%;height:100%;min-height:340px;background:#c8daea;display:flex;align-items:center;justify-content:center;color:rgba(0,48,135,.3);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;}
 .p-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
 .pitch-card:hover .p-img img{transform:scale(1.04);}
 .p-info{padding:40px 38px;display:flex;flex-direction:column;justify-content:center;}
@@ -56,12 +56,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .badge{font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:2px;}
 .b-blue{background:var(--lb);color:#fff;}
 .b-prem{background:var(--cb);color:#fff;}
-.p-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--cb);line-height:1.15;margin-bottom:12px;}
+.p-name{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--cb);line-height:1.15;margin-bottom:12px;}
 .p-desc{font-size:.86rem;color:#666;line-height:1.75;font-weight:300;margin-bottom:18px;}
 .p-specs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;padding:12px 14px;background:var(--ww);border-radius:4px;}
 .spec{display:flex;align-items:center;gap:7px;font-size:.76rem;font-weight:500;color:var(--cb);}
 .fac-wrap{margin-bottom:22px;}
-.fac-head{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 14px;background:var(--ww);border:1px solid rgba(13,45,110,.1);border-radius:4px;user-select:none;}
+.fac-head{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 14px;background:var(--ww);border:1px solid rgba(0,48,135,.1);border-radius:4px;user-select:none;}
 .fac-head:hover{background:#e8f2fb;}
 .fac-label{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#999;}
 .fac-arrow{font-size:.65rem;color:var(--lb);transition:transform .3s;display:inline-block;}
@@ -86,7 +86,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 
 /* STRIP */
 .strip{background:var(--lb);padding:56px 0;}
-.strip h2{text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:#fff;margin-bottom:36px;}
+.strip h2{text-align:center;font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:300;color:#fff;margin-bottom:36px;}
 .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.15);}
 .strip-item{background:rgba(255,255,255,.05);padding:26px 20px;text-align:center;transition:background .2s;}
 .strip-item:hover{background:rgba(255,255,255,.15);}
@@ -95,7 +95,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 
 footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:14px;}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:14px;}
 .f-logo span{color:rgba(255,255,255,.6);font-weight:300;}
 .f-about{font-size:.78rem;line-height:1.75;color:rgba(255,255,255,.5);font-weight:300;margin-bottom:18px;max-width:260px;}
 .f-contact{font-size:.75rem;color:rgba(255,255,255,.55);line-height:1.9;}
@@ -115,9 +115,9 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr;}}
 .cta-strip{background:var(--lb);padding:64px 0;}
 .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.cta-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;}
 .cta-inner p{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.75;max-width:480px;margin-top:8px;}
-.btn-cta{background:#fff;color:var(--lb);font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;white-space:nowrap;flex-shrink:0;}
+.btn-cta{background:#fff;color:var(--lb);font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;white-space:nowrap;flex-shrink:0;}
 .btn-cta:hover{background:var(--cb);color:#fff;}
 @media(max-width:860px){.cta-inner{flex-direction:column;text-align:center;}}
 </style>
@@ -125,7 +125,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
     <li><a href="camping.html">Stay</a></li>
     <li><a href="active-vacation.html">Active Vacation</a></li>
@@ -238,40 +238,29 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="f-logo">Medora <span>Orbis</span></a>
+        <a href="index.html" class="f-logo">MEDORA <span>HOTELS &amp; RESORTS</span></a>
         <p class="f-about" data-i18n="fAbout">A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.</p>
-        <div class="f-contact">Put Sv. Vicenca bb, 21327 Podgora, Croatia<br>+385 (0)21 601 701<br>info@medorahotels.com</div>
+        
+        <div class="f-contact">📍 Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
+        <div class="f-contact">📞 <a href="tel:+38521601701" style="color:inherit;text-decoration:none;">+385 (0)21 601 701</a></div>
+        <div class="f-contact">✉️ <a href="mailto:reservations@medorahotels.com" style="color:inherit;text-decoration:none;">reservations@medorahotels.com</a></div>
       </div>
       <div>
         <div class="f-col-title" data-i18n="fc1Title">Stay</div>
         <ul class="f-links">
           <li><a href="camping.html" data-i18n="fc1a">Camping &amp; Mobile Homes</a></li>
-          <li><a href="pitches.html" data-i18n="fc1b">Pitches</a></li>
+          <li><a href="pitches_page.html" data-i18n="fc1b">Pitches</a></li>
+          <li><a href="index.html#amenities" data-i18n="fc2a">Amenities</a></li>
+          <li><a href="index.html#gallery" data-i18n="fc2b">Gallery</a></li>
+          <li><a href="active-vacation.html" data-i18n="fc2d">Active Vacation</a></li>
+          <li><a href="contact.html" data-i18n="fc3b">Contact</a></li>
           <li><a href="https://medorahotels.com/hr/book/" target="_blank" data-i18n="bookNow">Book Now</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-title" data-i18n="fc2Title">Explore</div>
-        <ul class="f-links">
-          <li><a href="https://camping-makarska-riviera.com/facilities-and-services/" target="_blank" data-i18n="fc2a">Amenities</a></li>
-          <li><a href="https://camping-makarska-riviera.com/photo-gallery/" target="_blank" data-i18n="fc2b">Photo Gallery</a></li>
-          <li><a href="https://camping-makarska-riviera.com/beach-and-sea/" target="_blank" data-i18n="fc2c">Beach &amp; Sea</a></li>
-          <li><a href="https://camping-makarska-riviera.com/active-vacation/" target="_blank" data-i18n="fc2d">Active Vacation</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-title" data-i18n="fc3Title">Information</div>
-        <ul class="f-links">
-          <li><a href="https://camping-makarska-riviera.com/map-and-instructions/" target="_blank" data-i18n="fc3a">Map &amp; Directions</a></li>
-          <li><a href="https://camping-makarska-riviera.com/contact/" target="_blank" data-i18n="fc3b">Contact</a></li>
-          <li><a href="https://camping-makarska-riviera.com/orbis-climate/" target="_blank" data-i18n="fc3c">Climate</a></li>
         </ul>
       </div>
     </div>
     <hr class="f-divider">
     <div class="f-bottom">
       <span data-i18n="fCopy">&copy; 2025 Medora Orbis Camping. All rights reserved.</span>
-      <span data-i18n="fStars">4-Star Certified &middot; Makarska Riviera</span>
     </div>
   </div>
 </footer>
@@ -451,6 +440,93 @@ var T = {
     fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
     fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
     fCopy:'\u00A9 2025 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
+  },
+  PL: {
+    bookNow:'Zarezerwuj', breadcrumb:'Strona główna', pageTitle:'Miejsca',
+    heroTitle:'Miejsca <em>kempingowe</em>',
+    secLbl:'Wybierz swoje miejsce', secTitle:'Twoja przestrzeń w naturze',
+    introPara:'Przynieś własny namiot, karawan lub kamper i zajmij jedno z naszych zacisznych miejsc otoczonych śródziemnomorską naturą — zaledwie kilka kroków od wybrzeża Adriatyku.',
+    badgeCamping:'Strefa kempingowa', campName:'Strefa kempingowa',
+    campDesc:'Wybierz wakacje w namiocie otoczony piękną naturą w strefie kempingowej oferującej wszystko, czego potrzebujesz.',
+    specType:'Namiot / Karawan / Kamper', facilities:'Udogodnienia',
+    campFac1:'Wspólne przyłącza wodne', campFac2:'Wspólne przyłącza elektryczne', campFac3:'Bezpłatne Wi-Fi',
+    bookRoom:'Zarezerwuj teraz →',
+    badgeSuperior:'Superior', supName:'Miejsce Superior',
+    supDesc:'Zajmij najbardziej atrakcyjną strefę kempingową. Odpocznij na wyniesionym terenie, blisko Morza Adriatyckiego, otoczony śródziemnomorską naturą.',
+    supSpecType:'Namiot / Karawan / Kamper',
+    supFac1:'Przyłącza elektryczne', supFac2:'Przyłącza wodne', supFac3:'Przyłącza kanalizacyjne',
+    sanLbl:'Na miejscu', sanTitle:'Zaplecze sanitarne',
+    sanLead:'Zaplecze sanitarne kempingu znajduje się przy strefie wejściowej i w bezpośrednim sąsiedztwie strefy miejsc — wyposażone według najwyższych standardów.',
+    san1:'Prysznice z ciepłą i zimną wodą', san2:'Umywalki z ciepłą i zimną wodą',
+    san3:'Toalety dla mężczyzn i kobiet', san4:'Pokoje higieniczne dla dzieci z przewijakiem',
+    san5:'Udogodnienia dla osób ze specjalnymi potrzebami', san6:'Pralka i suszarka',
+    san7:'Pomieszczenie do ręcznego prania ubrań i naczyń',
+    stripTitle:'Wszystkie miejsca zawierają',
+    strip1:'Prywatny dostęp do plaży', strip2:'Bezpłatne Wi-Fi', strip3:'Śródziemnomorska natura', strip4:'Nowoczesne węzły sanitarne',
+    strip5:'Dojazd samochodem na miejsce', strip6:'Strefa BBQ', strip7:'Udogodnienia dla niepełnosprawnych', strip8:'Zwierzęta mile widziane',
+    fAbout:'Camping 4 gwiazdki na Riwierze Makarskiej.',
+    fc1Title:'Pobyt', fc1a:'Camping i domki mobilne', fc1b:'Miejsca',
+    fc2Title:'Odkryj', fc2a:'Udogodnienia', fc2b:'Galeria zdjęć', fc2c:'Plaża i morze', fc2d:'Aktywne wakacje',
+    fc3Title:'Informacje', fc3a:'Mapa i dojazd', fc3b:'Kontakt', fc3c:'Klimat',
+    fCopy:'© 2025 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
+  },
+  CS: {
+    bookNow:'Rezervovat', breadcrumb:'Domů', pageTitle:'Místa',
+    heroTitle:'Kempovací <em>místa</em>',
+    secLbl:'Vyberte si místo', secTitle:'Váš prostor v přírodě',
+    introPara:'Přivezte si vlastní stan, karavan nebo obytné vozidlo a usaďte se na jednom z našich stinných míst obklopených středomořskou přírodou — jen pár kroků od Jaderského pobřeží.',
+    badgeCamping:'Kempovací zóna', campName:'Kempovací zóna',
+    campDesc:'Zvolte dovolenou ve stanu obklopeném krásnou přírodou v kempovací zóně, která nabízí vše, co potřebujete.',
+    specType:'Stan / Karavan / Obytné vozidlo', facilities:'Vybavení',
+    campFac1:'Sdílené přívody vody', campFac2:'Sdílené elektrické přívody', campFac3:'Bezplatné Wi-Fi',
+    bookRoom:'Rezervovat nyní →',
+    badgeSuperior:'Superior', supName:'Místo Superior',
+    supDesc:'Usaďte se v nejatraktivnější kempovací zóně. Relaxujte na vyvýšeném terénu, blízko Jaderského moře, obklopeni středomořskou přírodou.',
+    supSpecType:'Stan / Karavan / Obytné vozidlo',
+    supFac1:'Elektrické přívody', supFac2:'Přívody vody', supFac3:'Kanalizační přívody',
+    sanLbl:'Na místě', sanTitle:'Sanitární zařízení',
+    sanLead:'Sanitární zařízení kempu se nachází u vstupní zóny a v bezprostřední blízkosti zóny míst — vybaveno podle nejvyšších standardů.',
+    san1:'Sprchy s teplou a studenou vodou', san2:'Umyvadla s teplou a studenou vodou',
+    san3:'Toalety pro muže a ženy', san4:'Dětské hygienické místnosti s přebalovacím pultem',
+    san5:'Zařízení přístupné pro osoby se speciálními potřebami', san6:'Pračka a sušička',
+    san7:'Místnost pro ruční praní prádla a nádobí',
+    stripTitle:'Všechna místa zahrnují',
+    strip1:'Soukromý přístup na pláž', strip2:'Bezplatné Wi-Fi', strip3:'Středomořská příroda', strip4:'Moderní sanitární bloky',
+    strip5:'Přístup autem na místo', strip6:'Zóna BBQ', strip7:'Bezbariérové vybavení', strip8:'Domácí mazlíčci vítáni',
+    fAbout:'Kemp 4 hvězdičky na Makarské riviéře.',
+    fc1Title:'Pobyt', fc1a:'Kemping a mobilní domy', fc1b:'Místa',
+    fc2Title:'Objevte', fc2a:'Vybavení', fc2b:'Fotogalerie', fc2c:'Pláž a moře', fc2d:'Aktivní dovolená',
+    fc3Title:'Informace', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klima',
+    fCopy:'© 2025 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra'
+  },
+  SK: {
+    bookNow:'Rezervovať', breadcrumb:'Domov', pageTitle:'Miesta',
+    heroTitle:'Kempingové <em>miesta</em>',
+    secLbl:'Vyberte si miesto', secTitle:'Váš priestor v prírode',
+    introPara:'Privezte vlastný stan, karavan alebo obytné vozidlo a usaďte sa na jednom z našich tienistých miest obklopených stredomorskou prírodou — len pár krokov od pobrežia Jadrana.',
+    badgeCamping:'Kempingová zóna', campName:'Kempingová zóna',
+    campDesc:'Zvoľte dovolenku v stane obklopenom krásnou prírodou v kempingovej zóne, ktorá ponúka všetko, čo potrebujete.',
+    specType:'Stan / Karavan / Obytné vozidlo', facilities:'Vybavenie',
+    campFac1:'Zdieľané prívody vody', campFac2:'Zdieľané elektrické prívody', campFac3:'Bezplatné Wi-Fi',
+    bookRoom:'Rezervovať teraz →',
+    badgeSuperior:'Superior', supName:'Miesto Superior',
+    supDesc:'Usaďte sa v najatraktívnejšej kempingovej zóne. Relaxujte na vyvýšenom teréne, blízko Jadranského mora, obklopení stredomorskou prírodou.',
+    supSpecType:'Stan / Karavan / Obytné vozidlo',
+    supFac1:'Elektrické prívody', supFac2:'Prívody vody', supFac3:'Kanalizačné prívody',
+    sanLbl:'Na mieste', sanTitle:'Sanitárne zariadenia',
+    sanLead:'Sanitárne zariadenia kempingu sa nachádzajú pri vstupnej zóne a v bezprostrednej blízkosti zóny miest — vybavené podľa najvyšších štandardov.',
+    san1:'Sprchy s teplou a studenou vodou', san2:'Umývadlá s teplou a studenou vodou',
+    san3:'Toalety pre mužov a ženy', san4:'Detské hygienické miestnosti s prebaľovacím pultom',
+    san5:'Zariadenie prístupné pre osoby so špeciálnymi potrebami', san6:'Práčka a sušička',
+    san7:'Miestnosť na ručné pranie prádla a riadu',
+    stripTitle:'Všetky miesta zahŕňajú',
+    strip1:'Súkromný prístup na pláž', strip2:'Bezplatné Wi-Fi', strip3:'Stredomorská príroda', strip4:'Moderné sanitárne bloky',
+    strip5:'Prístup autom na miesto', strip6:'Zóna BBQ', strip7:'Bezbariérové vybavenie', strip8:'Domáce zvieratá vítané',
+    fAbout:'Kemp 4 hviezdičky na Makarskej riviére.',
+    fc1Title:'Pobyt', fc1a:'Kemping a mobilné domy', fc1b:'Miesta',
+    fc2Title:'Objavte', fc2a:'Vybavenie', fc2b:'Fotogaléria', fc2c:'Pláž a more', fc2d:'Aktívna dovolenka',
+    fc3Title:'Informácie', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klíma',
+    fCopy:'© 2025 Medora Orbis Camping. Všetky práva vyhradené.', fStars:'4 hviezdičky · Makarská riviéra'
   }
 };
 
@@ -473,7 +549,7 @@ function applyLang(code) {
 }
 
 // BUILD LANGUAGE MENU
-var langCodes = ['EN','HR','DE','HU','RO','UA'];
+var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
   var btn = document.createElement('button');

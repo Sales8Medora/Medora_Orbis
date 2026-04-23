@@ -5,42 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Medora Orbis Camping 4★</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--lb:#0095d6;--cb:#0d2d6e;--ww:#f5f9ff;}
+:root{--lb:#0095d6;--cb:#003087;--ww:#f5f9ff;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
+body{font-family:'Raleway',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
-.nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo-img{height:48px;width:auto;display:block;filter:brightness(0) invert(1);}
+
 .nav-right{display:flex;align-items:center;gap:16px;}
 .nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
 .nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
-.btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+.btn-book-nav{background:var(--lb);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
 .btn-book-nav:hover{background:#007ab5;}
 .lang-drop{position:relative;}
-.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
 .lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 .lang-drop.open .lang-arrow{transform:rotate(180deg);}
-.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(13,45,110,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
 .lang-drop.open .lang-menu{display:block;}
-.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Jost',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
+.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
 .lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
 .lang-opt.active{color:#fff;font-weight:600;}
 
 /* ── HERO ── */
 .page-hero{margin-top:68px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:44px;}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,45,110,.1),rgba(13,45,110,.7)),url('images/camping.jpg') center/cover no-repeat;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.1),rgba(0,48,135,.7)),url('images/camping.jpg') center/cover no-repeat;}
 .hero-txt{position:relative;padding:0 64px;}
 .breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
 .breadcrumb a{color:var(--lb);text-decoration:none;}
 .breadcrumb a:hover{color:#fff;}
-.hero-txt h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.1;}
+.hero-txt h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.1;}
 .hero-txt h1 em{font-style:italic;color:#7dd8f8;}
 
 /* ── CONTACT SECTION ── */
@@ -52,7 +52,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 .contact-info{}
 .sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
 .sec-lbl::before{content:'';width:28px;height:1px;background:var(--lb);flex-shrink:0;}
-.property-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:6px;}
+.property-name{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:6px;}
 .stars{color:#c8a45a;font-size:.85rem;letter-spacing:2px;margin-bottom:22px;display:block;}
 .address-block{margin-bottom:32px;}
 .address-line{font-size:.9rem;color:#555;font-weight:300;line-height:1.8;}
@@ -63,7 +63,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 
 /* Contact groups */
 .contact-group{margin-bottom:32px;}
-.contact-group-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--cb);margin-bottom:14px;}
+.contact-group-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:var(--cb);margin-bottom:14px;}
 .contact-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px;}
 .contact-icon{width:34px;height:34px;border-radius:50%;background:rgba(0,149,214,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .contact-icon svg{width:15px;height:15px;fill:var(--lb);}
@@ -75,7 +75,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 
 /* Right column — Map */
 .map-col{}
-.map-wrapper{border-radius:6px;overflow:hidden;box-shadow:0 8px 48px rgba(13,45,110,.14);position:relative;}
+.map-wrapper{border-radius:6px;overflow:hidden;box-shadow:0 8px 48px rgba(0,48,135,.14);position:relative;}
 .map-wrapper iframe{display:block;width:100%;height:440px;border:0;}
 .map-caption{margin-top:12px;font-size:.72rem;color:#888;letter-spacing:.04em;}
 .map-caption a{color:var(--lb);text-decoration:none;}
@@ -84,7 +84,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 /* ── STRIP ── */
 .strip{background:var(--cb);padding:52px 0;}
 .strip-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-.strip-copy h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;}
+.strip-copy h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:300;color:#fff;}
 .strip-copy p{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:6px;}
 .btn-book-lg{display:inline-flex;align-items:center;gap:10px;background:var(--lb);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:14px 34px;border-radius:2px;text-decoration:none;transition:background .2s,gap .2s;white-space:nowrap;}
 .btn-book-lg:hover{background:#007ab5;gap:16px;}
@@ -92,8 +92,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 /* ── FOOTER ── */
 footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
-.f-brand-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:16px;}
-.f-brand-logo span{color:rgba(255,255,255,.55);font-weight:300;}
+.f-brand-logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:16px;}
+.f-brand-logo span{display:block;color:rgba(255,255,255,.45);font-weight:300;font-size:.6em;letter-spacing:.28em;margin-top:1px;}
 .f-about{font-size:.78rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:20px;max-width:270px;}
 .f-contact-row{display:flex;align-items:flex-start;gap:9px;font-size:.76rem;color:rgba(255,255,255,.55);margin-bottom:8px;line-height:1.55;}
 .f-contact-row span{color:var(--lb);font-size:.9rem;}
@@ -123,7 +123,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 
 <!-- ══════════ NAV ══════════ -->
 <nav>
-  <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
     <li><a href="camping.html">Stay</a></li>
     <li><a href="active-vacation.html">Active Vacation</a></li>
@@ -270,50 +270,34 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
   <div class="container">
     <div class="f-grid">
       <div>
-        <a href="index.html" class="f-brand-logo">Medora <span>Orbis</span></a>
+        <a href="index.html" class="f-brand-logo">MEDORA <span>HOTELS &amp; RESORTS</span></a>
         <p class="f-about">A 4-star camping destination on the Dalmatian coast, surrounded by crystal-clear Adriatic waters and pine forests.</p>
-        <p class="f-contact-row"><span>📍</span> Put Sv. Vicenca bb, 21327 Podgora, Croatia</p>
-        <p class="f-contact-row"><span>📞</span> +385 (0)21 625 377</p>
-        <p class="f-contact-row"><span>✉</span> orbis.reception@medorahotels.com</p>
+        <p class="f-contact-row"><span>✉</span> reservations@medorahotels.com</p>
+        <div class="f-contact">📍 Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
+        <div class="f-contact">📞 <a href="tel:+38521601701" style="color:inherit;text-decoration:none;">+385 (0)21 601 701</a></div>
+        <div class="f-contact">✉️ <a href="mailto:reservations@medorahotels.com" style="color:inherit;text-decoration:none;">reservations@medorahotels.com</a></div>
       </div>
       <div>
         <p class="f-col-title">Explore</p>
         <ul class="f-links">
           <li><a href="camping.html">Mobile Homes</a></li>
-          <li><a href="#">Pitches</a></li>
-          <li><a href="#">Amenities</a></li>
-          <li><a href="#">Gallery</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="f-col-title">Info</p>
-        <ul class="f-links">
-          <li><a href="#">Arrival &amp; Departure</a></li>
-          <li><a href="#">House Rules</a></li>
-          <li><a href="#">Pet Policy</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="f-col-title">Legal</p>
-        <ul class="f-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="pitches_page.html">Pitches</a></li>
+          <li><a href="index.html#amenities">Amenities</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="active-vacation.html">Active Vacation</a></li>
         </ul>
       </div>
     </div>
     <hr class="f-divider">
     <div class="f-bottom">
       <p>© 2026 Medora Hotels &amp; Resorts. All rights reserved.</p>
-      <p>Medora Orbis Camping 4★ — Podgora, Croatia</p>
     </div>
   </div>
 </footer>
 
 <script>
 // ── LANGUAGE DROPDOWN ──
-var langCodes = ['EN','HR','DE','HU','RO','UA'];
+var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
   var btn = document.createElement('button');

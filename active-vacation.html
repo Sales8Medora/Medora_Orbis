@@ -5,45 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Active Vacation - Medora Orbis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--lb:#0095d6;--cb:#0d2d6e;--ww:#f5f9ff;}
+:root{--lb:#0095d6;--cb:#003087;--ww:#f5f9ff;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
+body{font-family:'Raleway',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
-.nav-logo span{color:rgba(255,255,255,.6);font-weight:300;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo-img{height:48px;width:auto;display:block;filter:brightness(0) invert(1);}
+
 .nav-right{display:flex;align-items:center;gap:16px;}
-.btn-book-nav{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+.btn-book-nav{background:var(--lb);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:none;padding:9px 24px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
 .btn-book-nav:hover{background:#007ab5;}
 .lang-drop{position:relative;}
-.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
 .lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 .lang-drop.open .lang-arrow{transform:rotate(180deg);}
-.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(13,45,110,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
 .lang-drop.open .lang-menu{display:block;}
-.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Jost',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
+.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
 .lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
 .lang-opt.active{color:#fff;font-weight:600;}
 
 /* ── HERO ── */
 .page-hero{margin-top:68px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:40px;}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,45,110,.15),rgba(13,45,110,.72)),url('images/active-vacation/hero.jpg') center/cover no-repeat;background-color:#1a4a8a;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.15),rgba(0,48,135,.72)),url('images/active-vacation/hero.jpg') center/cover no-repeat;background-color:#1a4a8a;}
 .hero-txt{position:relative;padding:0 64px;}
 .breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
 .breadcrumb a{color:var(--lb);text-decoration:none;}
-.hero-txt h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:300;color:#fff;line-height:1.1;}
+.hero-txt h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:300;color:#fff;line-height:1.1;}
 .hero-txt h1 em{font-style:italic;color:#7dd8f8;}
 
 /* ── SHARED ── */
 .container{max-width:1140px;margin:0 auto;padding:0 48px;}
 .sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
 .sec-lbl::before{content:'';width:28px;height:1px;background:var(--lb);flex-shrink:0;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
 
 /* ── INTRO ── */
 .intro{padding:52px 0 44px;}
@@ -58,32 +58,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,45,110,.9
 
 /* Top row: title + description */
 .act-header{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:start;margin-bottom:32px;}
-.act-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;color:var(--cb);line-height:1.15;margin-bottom:10px;}
+.act-name{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;color:var(--cb);line-height:1.15;margin-bottom:10px;}
 .act-desc{font-size:.88rem;color:#555;line-height:1.8;font-weight:300;}
 
 /* 3-photo grid */
 .act-photos{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:12px;height:320px;}
-.act-photos .ph{border-radius:6px;overflow:hidden;position:relative;background:linear-gradient(145deg,#1a4a8a,#0d2d6e);}
+.act-photos .ph{border-radius:6px;overflow:hidden;position:relative;background:linear-gradient(145deg,#1a4a8a,#003087);}
 .act-photos .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
 .act-photos .ph:hover img{transform:scale(1.05);}
 
 /* Divider between sections */
-.act-divider{border:none;border-top:1px solid rgba(13,45,110,.08);margin-bottom:80px;}
+.act-divider{border:none;border-top:1px solid rgba(0,48,135,.08);margin-bottom:80px;}
 
 /* ── CTA STRIP ── */
 .cta-strip{background:var(--cb);padding:72px 0;}
 .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
 .cta-txt .sec-lbl{color:var(--lb);}
 .cta-txt .sec-lbl::before{background:var(--lb);}
-.cta-txt h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:10px;}
+.cta-txt h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:10px;}
 .cta-txt p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.75;max-width:480px;}
-.btn-cta{background:var(--lb);color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;white-space:nowrap;}
+.btn-cta{background:var(--lb);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;white-space:nowrap;}
 .btn-cta:hover{background:#007ab5;}
 
 /* ── FOOTER ── */
 footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;border-top:1px solid rgba(255,255,255,.07);}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:14px;}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:14px;}
 .f-logo span{color:rgba(255,255,255,.6);font-weight:300;}
 .f-about{font-size:.78rem;line-height:1.75;color:rgba(255,255,255,.5);font-weight:300;margin-bottom:18px;max-width:260px;}
 .f-contact{font-size:.75rem;color:rgba(255,255,255,.55);line-height:1.9;}
@@ -119,7 +119,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
 
 <!-- ══════════ NAV ══════════ -->
 <nav>
-  <a href="index.html" class="nav-logo">Medora <span>Orbis</span></a>
+  <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Medora Orbis" class="nav-logo-img"></a>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
@@ -286,39 +286,38 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="f-logo">Medora <span>Orbis</span></a>
+        <a href="index.html" class="f-logo">MEDORA <span>HOTELS &amp; RESORTS</span></a>
         <p class="f-about" data-i18n="fAbout">A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.</p>
-        <p class="f-contact">Put Sv. Martina 6, Baška Voda<br>+385 21 620 620<br>camping@medorahotels.com</p>
+        
+        <div class="f-contact">📍 Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
+        <div class="f-contact">📞 <a href="tel:+38521601701" style="color:inherit;text-decoration:none;">+385 (0)21 601 701</a></div>
+        <div class="f-contact">✉️ <a href="mailto:reservations@medorahotels.com" style="color:inherit;text-decoration:none;">reservations@medorahotels.com</a></div>
       </div>
       <div>
         <p class="f-col-title" data-i18n="fc1Title">Stay</p>
         <ul class="f-links">
           <li><a href="camping.html" data-i18n="fc1a">Camping &amp; Mobile Homes</a></li>
           <li><a href="pitches_page.html" data-i18n="fc1b">Pitches</a></li>
+          <li><a href="index.html#amenities" data-i18n="fc2a">Amenities</a></li>
+          <li><a href="index.html#gallery" data-i18n="fc2b">Gallery</a></li>
         </ul>
       </div>
       <div>
         <p class="f-col-title" data-i18n="fc2Title">Explore</p>
         <ul class="f-links">
-          <li><a href="#" data-i18n="fc2a">Amenities</a></li>
-          <li><a href="#" data-i18n="fc2b">Photo Gallery</a></li>
-          <li><a href="#" data-i18n="fc2c">Beach &amp; Sea</a></li>
           <li><a href="active-vacation.html" data-i18n="fc2d">Active Vacation</a></li>
         </ul>
       </div>
       <div>
         <p class="f-col-title" data-i18n="fc3Title">Information</p>
         <ul class="f-links">
-          <li><a href="#" data-i18n="fc3a">Map &amp; Directions</a></li>
           <li><a href="contact.html" data-i18n="fc3b">Contact</a></li>
-          <li><a href="#" data-i18n="fc3c">Climate</a></li>
         </ul>
       </div>
     </div>
     <hr class="f-divider">
     <div class="f-bottom">
       <p data-i18n="fCopy">&#169; 2025 Medora Orbis Camping. All rights reserved.</p>
-      <p data-i18n="fStars">4-Star Certified &middot; Makarska Riviera</p>
     </div>
   </div>
 </footer>
@@ -465,6 +464,60 @@ var T = {
     fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
     fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
     fCopy:'\u00A9 2025 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
+  },
+  PL: {
+    bookNow:'Zarezerwuj', breadcrumb:'Strona główna', pageTitle:'Aktywne wakacje',
+    heroTitle:'Aktywne <em>wakacje</em>',
+    secLbl:'Co robić', secTitle:'Przygody na każdym kroku',
+    introPara:'Riwiera Makarska to więcej niż miejsce do odpoczynku — to plac zabaw dla ciekawych i aktywnych. Od krystalicznie czystego Adriatyku po skaliste szczyty gór Biokovo — każdy dzień kryje nową przygodę tuż za progiem.',
+    act1Name:'Kolarstwo', act1Desc:'Jedź wzdłuż nadmorskiej ścieżki z morzem po jednej stronie i aromatycznymi lasami sosnowymi po drugiej. Oznakowane trasy rowerowe łączą kemping z pobliskimi miastami Baška Voda i Brela. Rowery można wypożyczyć na kempingu lub lokalnie.',
+    act2Name:'Nurkowanie i snorkeling', act2Desc:'Adriatyk wokół Makarskiej jest wyjątkowo przejrzysty i bogaty w życie morskie — jeże morskie, ośmiornice, kolorowe ryby i formacje skalne czekają pod powierzchnią. Snorkeling jest doskonały bezpośrednio z plaży.',
+    act3Name:'Wędkarstwo', act3Desc:'Adriatyk to jedno z najbogatszych łowisk Morza Śródziemnego. Rzucaj z kamieni wzdłuż brzegu lub dołącz do lokalnej wycieczki łodzią na głębinowe wędkarstwo na otwartym morzu.',
+    act4Name:'Zabawy na wodzie', act4Desc:'Dla tych, którzy lubią dreszczyk emocji na powierzchni, Adriatyk ma wszystko. Jedź na banana boacie, unoś się nad morzem na parasailu, skacz na falach na tuba ride lub poczuj emocje jazdy na jet ski.',
+    act5Name:'Górskie przygody', act5Desc:'Masyw Biokovo wznoszący się za wybrzeżem otwiera świat przygód. Wędruj oznakowanymi szlakami z panoramicznym widokiem na Adriatyk, sprawdź się na trasach wspinaczkowych lub szybuj na tandemowym locie paralotniowym.',
+    ctaLbl:'Gotowy do odkrywania?', ctaTitle:'Zarezerwuj swój aktywny wypoczynek',
+    ctaPara:'Zarezerwuj swoje miejsce lub domek mobilny i przyjedź na lato pełne słońca, morza i przygód na Riwierze Makarskiej.',
+    fAbout:'Camping 4 gwiazdki na Riwierze Makarskiej.',
+    fc1Title:'Pobyt', fc1a:'Camping i domki mobilne', fc1b:'Miejsca',
+    fc2Title:'Odkryj', fc2a:'Udogodnienia', fc2b:'Galeria zdjęć', fc2c:'Plaża i morze', fc2d:'Aktywne wakacje',
+    fc3Title:'Informacje', fc3a:'Mapa i dojazd', fc3b:'Kontakt', fc3c:'Klimat',
+    fCopy:'© 2025 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
+  },
+  CS: {
+    bookNow:'Rezervovat', breadcrumb:'Domů', pageTitle:'Aktivní dovolená',
+    heroTitle:'Aktivní <em>dovolená</em>',
+    secLbl:'Co dělat', secTitle:'Dobrodružství na každém kroku',
+    introPara:'Makarská riviéra je víc než místo k odpočinku — je to hřiště pro zvídavé a aktivní. Od křišťálově čistého Jadranu po skalnaté vrcholy pohoří Biokovo — každý den skrývá nové dobrodružství.',
+    act1Name:'Cyklistika', act1Desc:'Jeďte podél pobřežní stezky s mořem na jedné straně a voňavými borovými lesy na druhé. Značené cyklotrasy spojují kemp s blízkými městy Baška Voda a Brela. Kola lze půjčit v kempu nebo místně.',
+    act2Name:'Potápění a šnorchlování', act2Desc:'Jadranské moře kolem Makarské je mimořádně čisté a bohaté na mořský život — mořští ježci, chobotnice, barevné ryby a skalní útvary čekají pod hladinou. Šnorchlování je výborné přímo z pláže.',
+    act3Name:'Rybaření', act3Desc:'Jadranské moře je jedno z nejbohatších lovišť Středomoří. Lovte ze skalisté zátoky podél pobřeží nebo se připojte k místnímu výletu na lodi pro hlubinné rybaření na otevřeném moři.',
+    act4Name:'Zábava na vodě', act4Desc:'Pro ty, kteří rádi zažívají adrenalin na hladině, Jadran nabízí vše. Projet se na banánách, létat nad mořem na parasailu, skákat na vlnách na tube ride nebo pocítit vzrušení jízdy na vodním skútru.',
+    act5Name:'Horská dobrodružství', act5Desc:'Masiv Biokovo tyčící se za pobřežím otevírá svět dobrodružství. Turistika po značených stezkách s panoramatickými výhledy na Jadran, lezecké trasy nebo tandemový paragliding let.',
+    ctaLbl:'Připraveni k prozkoumání?', ctaTitle:'Rezervujte si aktivní pobyt',
+    ctaPara:'Rezervujte si místo nebo mobilní dům a přijeďte na léto plné slunce, moře a dobrodružství na Makarské riviéře.',
+    fAbout:'Kemp 4 hvězdičky na Makarské riviéře.',
+    fc1Title:'Pobyt', fc1a:'Kemping a mobilní domy', fc1b:'Místa',
+    fc2Title:'Objevte', fc2a:'Vybavení', fc2b:'Fotogalerie', fc2c:'Pláž a moře', fc2d:'Aktivní dovolená',
+    fc3Title:'Informace', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klima',
+    fCopy:'© 2025 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra'
+  },
+  SK: {
+    bookNow:'Rezervovať', breadcrumb:'Domov', pageTitle:'Aktívna dovolenka',
+    heroTitle:'Aktívna <em>dovolenka</em>',
+    secLbl:'Čo robiť', secTitle:'Dobrodružstvá na každom kroku',
+    introPara:'Makarská riviéra je viac ako miesto na odpočinok — je to ihrisko pre zvedavých a aktívnych. Od krištáľovo čistého Jadrana po skalnaté vrcholy pohoria Biokovo — každý deň skrýva nové dobrodružstvo.',
+    act1Name:'Cyklistika', act1Desc:'Jazdite pozdĺž pobrežnej cesty s morom na jednej strane a voňavými borovicovými lesmi na druhej. Značené cyklotrasy spájajú kemping s blízkymi mestami Baška Voda a Brela. Bicykle si možno požičať v kempingu alebo miestne.',
+    act2Name:'Potápanie a šnorchlovanie', act2Desc:'Jadranské more okolo Makarskej je mimoriadne čisté a bohaté na morský život — morské ježky, chobotnice, farebné ryby a skalné útvary čakajú pod hladinou. Šnorchlovanie je výborné priamo z pláže.',
+    act3Name:'Rybárstvo', act3Desc:'Jadranské more je jedno z najbohatších lovísk Stredozemia. Lovte zo skalnatého brehu pozdĺž pobrežia alebo sa pripojte k miestnej výprave na lodi pre hlbokomorský rybolov na otvorenom mori.',
+    act4Name:'Zábava na vode', act4Desc:'Pre tých, ktorí radi zažívajú adrenalín na hladine, Jadran ponúka všetko. Prejazd na banánoch, lietanie nad morom na parasaile, skákanie na vlnách na tube ride alebo pocítiť vzrušenie jazdy na vodnom skútri.',
+    act5Name:'Horské dobrodružstvá', act5Desc:'Masív Biokovo týčiaci sa za pobrežím otvára svet dobrodružstiev. Turistika po značených chodníkoch s panoramatickými výhľadmi na Jadran, lezecké trasy alebo tandemový paraglidingový let.',
+    ctaLbl:'Pripravení objavovať?', ctaTitle:'Rezervujte si aktívny pobyt',
+    ctaPara:'Rezervujte si miesto alebo mobilný dom a príďte na leto plné slnka, mora a dobrodružstiev na Makarskej riviére.',
+    fAbout:'Kemp 4 hviezdičky na Makarskej riviére.',
+    fc1Title:'Pobyt', fc1a:'Kemping a mobilné domy', fc1b:'Miesta',
+    fc2Title:'Objavte', fc2a:'Vybavenie', fc2b:'Fotogaléria', fc2c:'Pláž a more', fc2d:'Aktívna dovolenka',
+    fc3Title:'Informácie', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klíma',
+    fCopy:'© 2025 Medora Orbis Camping. Všetky práva vyhradené.', fStars:'4 hviezdičky · Makarská riviéra'
   }
 };
 
@@ -487,13 +540,17 @@ function applyLang(code) {
     if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
   document.title = (dict.pageTitle || 'Active Vacation') + ' - Medora Orbis';
+  var bookNav = document.getElementById('el-bookNav');
+  if (bookNav) bookNav.textContent = dict.bookNow || '';
+  var ctaBook = document.getElementById('el-ctaBook');
+  if (ctaBook) ctaBook.textContent = dict.bookNow || '';
   localStorage.setItem('lang', code);
 }
 
 // ══════════════════════════════════════════════
 // BUILD LANGUAGE MENU
 // ══════════════════════════════════════════════
-var langCodes = ['EN','HR','DE','HU','RO','UA'];
+var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
   var btn = document.createElement('button');
