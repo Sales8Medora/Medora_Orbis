@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Activities and active vacation options at Medora Orbis Camping on the Makarska Riviera. Cycling, water sports, and excursions in Podgora, Croatia.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <title>Active Vacation - Medora Orbis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -113,16 +115,14 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
   .act-photos .ph,.act-photos .ph:first-child{height:200px;}
   .footer-grid{grid-template-columns:1fr;}
 }
-
-.fab-wrap{position:fixed;bottom:28px;right:24px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.fab-wrap{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
 .fab-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s;}
 .fab-wrap.open .fab-actions{opacity:1;pointer-events:all;transform:translateY(0);}
 .fab-action{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.fab-action-label{background:rgba(0,48,135,.92);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;padding:6px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.2);}
-.fab-action-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 2px 12px rgba(0,0,0,.25);flex-shrink:0;}
-.fab-main{width:56px;height:56px;border-radius:50%;background:var(--lb);color:#fff;border:none;font-size:1.6rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,149,214,.5);cursor:pointer;transition:background .2s,transform .2s;}
+.fab-action-label{background:rgba(0,48,135,.95);color:#fff;font-family:'Raleway',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.06em;padding:7px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.fab-action-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,.3);flex-shrink:0;}
+.fab-main{width:58px;height:58px;border-radius:50%;background:var(--lb);color:#fff;border:none;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,149,214,.55);cursor:pointer;transition:background .2s,transform .2s;}
 .fab-wrap.open .fab-main{background:var(--cb);transform:rotate(45deg);}
-@media(min-width:901px){.fab-wrap{display:none;}}
 @media(max-width:480px){
   nav{padding:0 12px;height:52px;}
   .nav-logo-img{height:28px;}
@@ -334,7 +334,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
     </div>
     <hr class="f-divider">
     <div class="f-bottom">
-      <p data-i18n="fCopy">&#169; 2025 Medora Orbis Camping. All rights reserved.</p>
+      <p data-i18n="fCopy">&#169; 2026 Medora Orbis Camping. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -365,7 +365,7 @@ var T = {
     fc1Title:'Stay', fc1a:'Camping & Mobile Homes', fc1b:'Pitches',
     fc2Title:'Explore', fc2a:'Amenities', fc2b:'Photo Gallery', fc2c:'Beach & Sea', fc2d:'Active Vacation',
     fc3Title:'Information', fc3a:'Map & Directions', fc3b:'Contact', fc3c:'Climate',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. All rights reserved.', fStars:'4-Star Certified \u00B7 Makarska Riviera'
+    fCopy:'\u00A9 2026 Medora Orbis Camping. All rights reserved.', fStars:'4-Star Certified \u00B7 Makarska Riviera'
   },
   HR: {
     bookNow:'Rezerviraj', breadcrumb:'Pocetna', pageTitle:'Aktivan odmor',
@@ -388,7 +388,7 @@ var T = {
     fc1Title:'Smjestaj', fc1a:'Kampiranje i mobilne kucice', fc1b:'Parcele',
     fc2Title:'Istrazite', fc2a:'Sadrzaji', fc2b:'Foto galerija', fc2c:'Plaza i more', fc2d:'Aktivan odmor',
     fc3Title:'Informacije', fc3a:'Karta i upute', fc3b:'Kontakt', fc3c:'Klima',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
+    fCopy:'\u00A9 2026 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
   },
   DE: {
     bookNow:'Jetzt buchen', breadcrumb:'Startseite', pageTitle:'Aktivurlaub',
@@ -411,7 +411,7 @@ var T = {
     fc1Title:'Unterkunft', fc1a:'Camping & Mobilheime', fc1b:'Stellplätze',
     fc2Title:'Erkunden', fc2a:'Einrichtungen', fc2b:'Fotogalerie', fc2c:'Strand & Meer', fc2d:'Aktivurlaub',
     fc3Title:'Informationen', fc3a:'Karte & Anfahrt', fc3b:'Kontakt', fc3c:'Klima',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4 Sterne \u00B7 Makarska Riviera'
+    fCopy:'\u00A9 2026 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4 Sterne \u00B7 Makarska Riviera'
   },
   HU: {
     bookNow:'Foglalás', breadcrumb:'Főoldal', pageTitle:'Aktív nyaralás',
@@ -434,7 +434,7 @@ var T = {
     fc1Title:'Szállás', fc1a:'Kemping és mobilházak', fc1b:'Parcellák',
     fc2Title:'Felfedezés', fc2a:'Létesítmények', fc2b:'Fotógaléria', fc2c:'Strand és tenger', fc2d:'Aktív nyaralás',
     fc3Title:'Információk', fc3a:'Térkép és útvonal', fc3b:'Kapcsolat', fc3c:'Éghajlat',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
+    fCopy:'\u00A9 2026 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
   },
   RO: {
     bookNow:'Rezervați', breadcrumb:'Acasă', pageTitle:'Vacanță activă',
@@ -457,7 +457,7 @@ var T = {
     fc1Title:'Cazare', fc1a:'Camping și case mobile', fc1b:'Parcele',
     fc2Title:'Explorați', fc2a:'Facilități', fc2b:'Galerie foto', fc2c:'Plajă și mare', fc2d:'Vacanță activă',
     fc3Title:'Informații', fc3a:'Hartă și indicații', fc3b:'Contact', fc3c:'Climă',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
+    fCopy:'\u00A9 2026 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
   },
   UA: {
     bookNow:'Забронювати', breadcrumb:'Головна', pageTitle:'Активний відпочинок',
@@ -480,7 +480,7 @@ var T = {
     fc1Title:'Проживання', fc1a:'Кемпінг і мобільні будинки', fc1b:'Майданчики',
     fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
     fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
-    fCopy:'\u00A9 2025 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
+    fCopy:'\u00A9 2026 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
   },
   PL: {
     bookNow:'Zarezerwuj', breadcrumb:'Strona główna', pageTitle:'Aktywne wakacje',
@@ -498,7 +498,7 @@ var T = {
     fc1Title:'Pobyt', fc1a:'Camping i domki mobilne', fc1b:'Miejsca',
     fc2Title:'Odkryj', fc2a:'Udogodnienia', fc2b:'Galeria zdjęć', fc2c:'Plaża i morze', fc2d:'Aktywne wakacje',
     fc3Title:'Informacje', fc3a:'Mapa i dojazd', fc3b:'Kontakt', fc3c:'Klimat',
-    fCopy:'© 2025 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
+    fCopy:'© 2026 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
   },
   CS: {
     bookNow:'Rezervovat', breadcrumb:'Domů', pageTitle:'Aktivní dovolená',
@@ -516,7 +516,7 @@ var T = {
     fc1Title:'Pobyt', fc1a:'Kemping a mobilní domy', fc1b:'Místa',
     fc2Title:'Objevte', fc2a:'Vybavení', fc2b:'Fotogalerie', fc2c:'Pláž a moře', fc2d:'Aktivní dovolená',
     fc3Title:'Informace', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klima',
-    fCopy:'© 2025 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra'
+    fCopy:'© 2026 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra'
   },
   SK: {
     bookNow:'Rezervovať', breadcrumb:'Domov', pageTitle:'Aktívna dovolenka',
@@ -534,7 +534,7 @@ var T = {
     fc1Title:'Pobyt', fc1a:'Kemping a mobilné domy', fc1b:'Miesta',
     fc2Title:'Objavte', fc2a:'Vybavenie', fc2b:'Fotogaléria', fc2c:'Pláž a more', fc2d:'Aktívna dovolenka',
     fc3Title:'Informácie', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klíma',
-    fCopy:'© 2025 Medora Orbis Camping. Všetky práva vyhradené.', fStars:'4 hviezdičky · Makarská riviéra'
+    fCopy:'© 2026 Medora Orbis Camping. Všetky práva vyhradené.', fStars:'4 hviezdičky · Makarská riviéra'
   }
 };
 
@@ -606,17 +606,6 @@ document.addEventListener('click',function(){
   document.getElementById('fabWrap').classList.remove('open');
 });
 </script>
-    <div class="fab-action">
-      <span class="fab-action-label">WhatsApp</span>
-      <a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener" class="fab-action-icon" style="background:#25D366;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.77L0 32l8.43-2.01A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.748-1.836l-.484-.287-5.01 1.195 1.234-4.874-.316-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.63-.199-.895.199-.265.398-1.029 1.294-1.261 1.56-.232.265-.464.298-.862.1-.398-.2-1.681-.62-3.203-1.98-1.184-1.057-1.983-2.363-2.215-2.761-.232-.398-.025-.613.174-.811.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.895-2.158-1.228-2.954-.323-.775-.651-.67-.895-.682l-.762-.013c-.265 0-.696.1-1.06.497-.364.398-1.393 1.362-1.393 3.32s1.426 3.852 1.625 4.117c.199.265 2.807 4.285 6.802 6.011.951.41 1.693.655 2.271.839.954.304 1.823.261 2.51.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.892-.099-.165-.364-.265-.762-.464z"/></svg></a>
-    </div>
-    <div class="fab-action">
-      <span class="fab-action-label">+385 (0)21 601 701</span>
-      <a href="tel:+38521601701" class="fab-action-icon">📞</a>
-    </div>
-  </div>
-  <button class="fab-main" id="fabBtn">+</button>
-</div>
 <div class="fab-wrap" id="fabWrap">
   <div class="fab-actions">
     <a href="mailto:reservations@medorahotels.com" class="fab-action">
