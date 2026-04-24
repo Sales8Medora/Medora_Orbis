@@ -144,9 +144,9 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
-    <li><a href="camping.html">Stay</a></li>
-    <li><a href="active-vacation.html">Active Vacation</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="camping.html" id="nav-stay">Stay</a></li>
+    <li><a href="active-vacation.html" id="nav-active">Active Vacation</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
@@ -560,6 +560,12 @@ function applyLang(code) {
   document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
     var key = el.getAttribute('data-i18n-html');
     if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  // Nav links
+  var navIds = {'nav-stay':'fc1Title','nav-active':'fc2d','nav-contact':'fc3b'};
+  Object.keys(navIds).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && dict[navIds[id]] !== undefined) el.textContent = dict[navIds[id]];
   });
   document.title = (dict.pageTitle || 'Pitches') + ' - Medora Orbis';
   localStorage.setItem('lang', code);

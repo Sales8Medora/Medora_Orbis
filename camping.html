@@ -151,9 +151,9 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
-    <li><a href="camping.html">Stay</a></li>
-    <li><a href="active-vacation.html">Active Vacation</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="camping.html" id="nav-stay">Stay</a></li>
+    <li><a href="active-vacation.html" id="nav-active">Active Vacation</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
@@ -672,7 +672,8 @@ function applyLang(code) {
     'el-fAbout':'fAbout','el-fStay':'fStay','el-fCamping':'fCamping','el-fPitches':'fPitches',
     'el-fBook':'fBook','el-fExplore':'fExplore','el-fAmenities':'fAmenities','el-fGallery':'fGallery',
     'el-fBeach':'fBeach','el-fActive':'fActive','el-fInfo':'fInfo','el-fMap':'fMap',
-    'el-fContact':'fContact','el-fClimate':'fClimate','el-fCopy':'fCopy','el-fStars':'fStars'
+    'el-fContact':'fContact','el-fClimate':'fClimate','el-fCopy':'fCopy','el-fStars':'fStars',
+    'nav-stay':'fStay','nav-active':'fActive','nav-contact':'fContact'
   };
   Object.keys(ids).forEach(function(id) {
     var el = document.getElementById(id);

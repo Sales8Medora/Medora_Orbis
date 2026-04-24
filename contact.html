@@ -142,9 +142,9 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
-    <li><a href="camping.html">Stay</a></li>
-    <li><a href="active-vacation.html">Active Vacation</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="camping.html" id="nav-stay">Stay</a></li>
+    <li><a href="active-vacation.html" id="nav-active">Active Vacation</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
@@ -353,16 +353,11 @@ function applyLang(code) {
   var t = T[code]; if (!t) return;
   document.getElementById('langCode').textContent = code;
   document.querySelectorAll('.lang-opt').forEach(function(b){ b.classList.toggle('active', b.textContent === code); });
-  var navMap = {camping:'navStay','active-vacation':'navActive',contact:'navContact'};
-  document.querySelectorAll('a[href]').forEach(function(a){
-    var href = a.getAttribute('href') || '';
-    if (a.classList.contains('nav-logo') || a.classList.contains('fab-action')) return;
-    Object.keys(navMap).forEach(function(page){
-      if (href.indexOf(page + '.html') !== -1) a.textContent = t[navMap[page]];
-    });
-  });
-  var bookEl = document.getElementById('el-bookNav');
-  if (bookEl) bookEl.textContent = t.bookNow;
+  var el;
+  el = document.getElementById('nav-stay');    if (el) el.textContent = t.navStay;
+  el = document.getElementById('nav-active');  if (el) el.textContent = t.navActive;
+  el = document.getElementById('nav-contact'); if (el) el.textContent = t.navContact;
+  el = document.getElementById('el-bookNav');  if (el) el.textContent = t.bookNow;
   localStorage.setItem('lang', code);
   setURL(code);
   rewriteLinks(code);
