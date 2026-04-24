@@ -26,8 +26,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97
 .lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 .lang-drop.open .lang-arrow{transform:rotate(180deg);}
-.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
-.lang-drop.open .lang-menu{display:block;}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:100px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,transform .2s;z-index:200;}
+.lang-drop.open .lang-menu{opacity:1;pointer-events:all;transform:translateY(0);}
 .lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
 .lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
 .lang-opt.active{color:#fff;font-weight:600;}
@@ -137,6 +137,11 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;bord
 <!-- ══════════ NAV ══════════ -->
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="camping.html" data-i18n="navStay">Stay</a></li>
+    <li><a href="active-vacation.html" data-i18n="navActive">Active Vacation</a></li>
+    <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+  </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
@@ -366,7 +371,7 @@ var T = {
     fc2Title:'Explore', fc2a:'Amenities', fc2b:'Photo Gallery', fc2c:'Beach & Sea', fc2d:'Active Vacation',
     fc3Title:'Information', fc3a:'Map & Directions', fc3b:'Contact', fc3c:'Climate',
     fCopy:'\u00A9 2026 Medora Orbis Camping. All rights reserved.', fStars:'4-Star Certified \u00B7 Makarska Riviera'
-  },
+  ,navStay:'Stay',navActive:'Active Vacation',navContact:'Contact'},
   HR: {
     bookNow:'Rezerviraj', breadcrumb:'Pocetna', pageTitle:'Aktivan odmor',
     heroTitle:'Aktivan <em>odmor</em>',
@@ -389,7 +394,7 @@ var T = {
     fc2Title:'Istrazite', fc2a:'Sadrzaji', fc2b:'Foto galerija', fc2c:'Plaza i more', fc2d:'Aktivan odmor',
     fc3Title:'Informacije', fc3a:'Karta i upute', fc3b:'Kontakt', fc3c:'Klima',
     fCopy:'\u00A9 2026 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
-  },
+  ,navStay:'Smjestaj',navActive:'Aktivan odmor',navContact:'Kontakt'},
   DE: {
     bookNow:'Jetzt buchen', breadcrumb:'Startseite', pageTitle:'Aktivurlaub',
     heroTitle:'Aktiver <em>Urlaub</em>',
@@ -412,7 +417,7 @@ var T = {
     fc2Title:'Erkunden', fc2a:'Einrichtungen', fc2b:'Fotogalerie', fc2c:'Strand & Meer', fc2d:'Aktivurlaub',
     fc3Title:'Informationen', fc3a:'Karte & Anfahrt', fc3b:'Kontakt', fc3c:'Klima',
     fCopy:'\u00A9 2026 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4 Sterne \u00B7 Makarska Riviera'
-  },
+  ,navStay:'Unterkunft',navActive:'Aktivurlaub',navContact:'Kontakt'},
   HU: {
     bookNow:'Foglalás', breadcrumb:'Főoldal', pageTitle:'Aktív nyaralás',
     heroTitle:'Aktív <em>nyaralás</em>',
@@ -435,7 +440,7 @@ var T = {
     fc2Title:'Felfedezés', fc2a:'Létesítmények', fc2b:'Fotógaléria', fc2c:'Strand és tenger', fc2d:'Aktív nyaralás',
     fc3Title:'Információk', fc3a:'Térkép és útvonal', fc3b:'Kapcsolat', fc3c:'Éghajlat',
     fCopy:'\u00A9 2026 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
-  },
+  ,navStay:'Szállás',navActive:'Aktív nyaralás',navContact:'Kapcsolat'},
   RO: {
     bookNow:'Rezervați', breadcrumb:'Acasă', pageTitle:'Vacanță activă',
     heroTitle:'Vacanță <em>activă</em>',
@@ -458,7 +463,7 @@ var T = {
     fc2Title:'Explorați', fc2a:'Facilități', fc2b:'Galerie foto', fc2c:'Plajă și mare', fc2d:'Vacanță activă',
     fc3Title:'Informații', fc3a:'Hartă și indicații', fc3b:'Contact', fc3c:'Climă',
     fCopy:'\u00A9 2026 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
-  },
+  ,navStay:'Cazare',navActive:'Vacanță activă',navContact:'Contact'},
   UA: {
     bookNow:'Забронювати', breadcrumb:'Головна', pageTitle:'Активний відпочинок',
     heroTitle:'Активний <em>відпочинок</em>',
@@ -481,7 +486,7 @@ var T = {
     fc2Title:'Дослідити', fc2a:'Зручності', fc2b:'Фотогалерея', fc2c:'Пляж і море', fc2d:'Активний відпочинок',
     fc3Title:'Інформація', fc3a:'Карта та маршрут', fc3b:'Контакт', fc3c:'Клімат',
     fCopy:'\u00A9 2026 Medora Orbis Camping. Усі права захищені.', fStars:"4 зірки \u00B7 Макарська Рив'єра"
-  },
+  ,navStay:'Проживання',navActive:'Активний відпочинок',navContact:'Контакт'},
   PL: {
     bookNow:'Zarezerwuj', breadcrumb:'Strona główna', pageTitle:'Aktywne wakacje',
     heroTitle:'Aktywne <em>wakacje</em>',
@@ -499,7 +504,7 @@ var T = {
     fc2Title:'Odkryj', fc2a:'Udogodnienia', fc2b:'Galeria zdjęć', fc2c:'Plaża i morze', fc2d:'Aktywne wakacje',
     fc3Title:'Informacje', fc3a:'Mapa i dojazd', fc3b:'Kontakt', fc3c:'Klimat',
     fCopy:'© 2026 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
-  },
+  ,navStay:'Pobyt',navActive:'Aktywne wakacje',navContact:'Kontakt'},
   CS: {
     bookNow:'Rezervovat', breadcrumb:'Domů', pageTitle:'Aktivní dovolená',
     heroTitle:'Aktivní <em>dovolená</em>',
@@ -517,7 +522,7 @@ var T = {
     fc2Title:'Objevte', fc2a:'Vybavení', fc2b:'Fotogalerie', fc2c:'Pláž a moře', fc2d:'Aktivní dovolená',
     fc3Title:'Informace', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klima',
     fCopy:'© 2026 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra'
-  },
+  ,navStay:'Pobyt',navActive:'Aktivní dovolená',navContact:'Kontakt'},
   SK: {
     bookNow:'Rezervovať', breadcrumb:'Domov', pageTitle:'Aktívna dovolenka',
     heroTitle:'Aktívna <em>dovolenka</em>',
@@ -535,13 +540,13 @@ var T = {
     fc2Title:'Objavte', fc2a:'Vybavenie', fc2b:'Fotogaléria', fc2c:'Pláž a more', fc2d:'Aktívna dovolenka',
     fc3Title:'Informácie', fc3a:'Mapa a trasa', fc3b:'Kontakt', fc3c:'Klíma',
     fCopy:'© 2026 Medora Orbis Camping. Všetky práva vyhradené.', fStars:'4 hviezdičky · Makarská riviéra'
-  }
+  ,navStay:'Pobyt',navActive:'Aktívna dovolenka',navContact:'Kontakt'}
 };
 
 // ══════════════════════════════════════════════
 // APPLY LANGUAGE
 // ══════════════════════════════════════════════
-function applyLang(code) {
+function applyLang(code, pushState) {
   var dict = T[code];
   if (!dict) return;
   document.getElementById('langCode').textContent = code;
@@ -557,11 +562,12 @@ function applyLang(code) {
     if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
   document.title = (dict.pageTitle || 'Active Vacation') + ' - Medora Orbis';
-  var bookNav = document.getElementById('el-bookNav');
-  if (bookNav) bookNav.textContent = dict.bookNow || '';
-  var ctaBook = document.getElementById('el-ctaBook');
-  if (ctaBook) ctaBook.textContent = dict.bookNow || '';
   localStorage.setItem('lang', code);
+  if (pushState !== false && history.replaceState) {
+    var params = new URLSearchParams(window.location.search);
+    params.set('lang', code);
+    history.replaceState(null, '', window.location.pathname + '?' + params.toString() + window.location.hash);
+  }
 }
 
 // ══════════════════════════════════════════════
@@ -589,9 +595,14 @@ document.addEventListener('click', function() {
   document.getElementById('langDrop').classList.remove('open');
 });
 
-// LOAD SAVED LANGUAGE ON PAGE OPEN
-var savedLang = localStorage.getItem('lang');
-if (savedLang && T[savedLang]) { applyLang(savedLang); }
+// LOAD LANGUAGE: URL param takes priority, then localStorage
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var urlLang = (params.get('lang') || '').toUpperCase();
+  var savedLang = localStorage.getItem('lang');
+  var activeLang = (T[urlLang] ? urlLang : (T[savedLang] ? savedLang : null));
+  if (activeLang) applyLang(activeLang, false);
+})();
 
 // BOOK NOW — dynamic today/tomorrow dates
 (function() {
