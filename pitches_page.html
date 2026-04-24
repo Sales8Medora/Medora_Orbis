@@ -120,15 +120,23 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:60px 0 30px;}
 .btn-cta{background:#fff;color:var(--lb);font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:14px 32px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;white-space:nowrap;flex-shrink:0;}
 .btn-cta:hover{background:var(--cb);color:#fff;}
 @media(max-width:860px){.cta-inner{flex-direction:column;text-align:center;}}
+
 .fab-wrap{position:fixed;bottom:28px;right:24px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
 .fab-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s;}
 .fab-wrap.open .fab-actions{opacity:1;pointer-events:all;transform:translateY(0);}
 .fab-action{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .fab-action-label{background:rgba(0,48,135,.92);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;padding:6px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.2);}
-.fab-action-icon{width:44px;height:44px;border-radius:50%;background:var(--lb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 2px 12px rgba(0,0,0,.25);flex-shrink:0;}
-.fab-main{width:52px;height:52px;border-radius:50%;background:var(--lb);color:#fff;border:none;font-size:1.4rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,149,214,.5);cursor:pointer;transition:background .2s,transform .2s;}
+.fab-action-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 2px 12px rgba(0,0,0,.25);flex-shrink:0;}
+.fab-main{width:56px;height:56px;border-radius:50%;background:var(--lb);color:#fff;border:none;font-size:1.6rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,149,214,.5);cursor:pointer;transition:background .2s,transform .2s;}
 .fab-wrap.open .fab-main{background:var(--cb);transform:rotate(45deg);}
 @media(min-width:901px){.fab-wrap{display:none;}}
+@media(max-width:480px){
+  nav{padding:0 12px;height:52px;}
+  .nav-logo-img{height:28px;}
+  .btn-book-nav{font-size:.6rem;padding:6px 10px;letter-spacing:.06em;}
+  .lang-btn{font-size:10px;padding:4px 6px;gap:4px;}
+  .page-hero{margin-top:52px;}
+}
 </style>
 </head>
 <body>
@@ -600,13 +608,14 @@ document.querySelectorAll('.fac-head').forEach(function(head) {
   var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=c559c86b44a1fa44773cc22257ba2147&date=2026-05-01&nights=4&lang=en&unit_select=1&unit_id=19963&adults=2';
   document.querySelectorAll('.btn-book-nav').forEach(function(btn) { btn.href = url; });
 })();
+document.getElementById('fabBtn').addEventListener('click',function(e){
+  e.stopPropagation();
+  document.getElementById('fabWrap').classList.toggle('open');
+});
+document.addEventListener('click',function(){
+  document.getElementById('fabWrap').classList.remove('open');
+});
 </script>
-<div class="fab-wrap" id="fabWrap">
-  <div class="fab-actions">
-    <div class="fab-action">
-      <span class="fab-action-label">reservations@medorahotels.com</span>
-      <a href="mailto:reservations@medorahotels.com" class="fab-action-icon">✉️</a>
-    </div>
     <div class="fab-action">
       <span class="fab-action-label">WhatsApp</span>
       <a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener" class="fab-action-icon" style="background:#25D366;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.77L0 32l8.43-2.01A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.748-1.836l-.484-.287-5.01 1.195 1.234-4.874-.316-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.63-.199-.895.199-.265.398-1.029 1.294-1.261 1.56-.232.265-.464.298-.862.1-.398-.2-1.681-.62-3.203-1.98-1.184-1.057-1.983-2.363-2.215-2.761-.232-.398-.025-.613.174-.811.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.895-2.158-1.228-2.954-.323-.775-.651-.67-.895-.682l-.762-.013c-.265 0-.696.1-1.06.497-.364.398-1.393 1.362-1.393 3.32s1.426 3.852 1.625 4.117c.199.265 2.807 4.285 6.802 6.011.951.41 1.693.655 2.271.839.954.304 1.823.261 2.51.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.892-.099-.165-.364-.265-.762-.464z"/></svg></a>
@@ -615,6 +624,23 @@ document.querySelectorAll('.fac-head').forEach(function(head) {
       <span class="fab-action-label">+385 (0)21 601 701</span>
       <a href="tel:+38521601701" class="fab-action-icon">📞</a>
     </div>
+  </div>
+  <button class="fab-main" id="fabBtn">+</button>
+</div>
+<div class="fab-wrap" id="fabWrap">
+  <div class="fab-actions">
+    <a href="mailto:reservations@medorahotels.com" class="fab-action">
+      <span class="fab-action-label">reservations@medorahotels.com</span>
+      <span class="fab-action-icon" style="background:var(--lb);">&#9993;</span>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener" class="fab-action">
+      <span class="fab-action-label">WhatsApp</span>
+      <span class="fab-action-icon" style="background:#25D366;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.77L0 32l8.43-2.01A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.748-1.836l-.484-.287-5.01 1.195 1.234-4.874-.316-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.63-.199-.895.199-.265.398-1.029 1.294-1.261 1.56-.232.265-.464.298-.862.1-.398-.2-1.681-.62-3.203-1.98-1.184-1.057-1.983-2.363-2.215-2.761-.232-.398-.025-.613.174-.811.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.895-2.158-1.228-2.954-.323-.775-.651-.67-.895-.682l-.762-.013c-.265 0-.696.1-1.06.497-.364.398-1.393 1.362-1.393 3.32s1.426 3.852 1.625 4.117c.199.265 2.807 4.285 6.802 6.011.951.41 1.693.655 2.271.839.954.304 1.823.261 2.51.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.892-.099-.165-.364-.265-.762-.464z"/></svg></span>
+    </a>
+    <a href="tel:+38521601701" class="fab-action">
+      <span class="fab-action-label">+385 (0)21 601 701</span>
+      <span class="fab-action-icon" style="background:var(--lb);">&#128222;</span>
+    </a>
   </div>
   <button class="fab-main" id="fabBtn">+</button>
 </div>
