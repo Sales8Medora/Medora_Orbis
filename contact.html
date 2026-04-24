@@ -29,8 +29,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97
 .lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 .lang-drop.open .lang-arrow{transform:rotate(180deg);}
-.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:100px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,transform .2s;z-index:200;}
-.lang-drop.open .lang-menu{opacity:1;pointer-events:all;transform:translateY(0);}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:90px;overflow:hidden;display:none;z-index:200;}
+.lang-drop.open .lang-menu{display:block;}
 .lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
 .lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
 .lang-opt.active{color:#fff;font-weight:600;}
@@ -142,16 +142,16 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img"></a>
   <ul class="nav-links">
-    <li><a href="camping.html" data-i18n="navStay">Stay</a></li>
-    <li><a href="active-vacation.html" data-i18n="navActive">Active Vacation</a></li>
-    <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+    <li><a href="camping.html">Stay</a></li>
+    <li><a href="active-vacation.html">Active Vacation</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-drop" id="langDrop">
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
       <div class="lang-menu" id="langMenu"></div>
     </div>
-    <a href="#" target="_blank" class="btn-book-nav" id="el-bookNav" data-i18n="bookNow">Book Now</a>
+    <a href="#" target="_blank" class="btn-book-nav" id="el-bookNav">Book Now</a>
   </div>
 </nav>
 
@@ -159,8 +159,8 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 <div class="page-hero">
   <div class="hero-bg"></div>
   <div class="hero-txt">
-    <p class="breadcrumb"><a href="index.html" data-i18n="breadcrumb">Home</a> &nbsp;/&nbsp; <span data-i18n="navContact">Contact</span></p>
-    <h1 data-i18n-html="heroTitle">Get in <em>Touch</em></h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</p>
+    <h1>Get in <em>Touch</em></h1>
   </div>
 </div>
 
@@ -171,7 +171,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 
       <!-- LEFT: Info -->
       <div class="contact-info">
-        <p class="sec-lbl" data-i18n="findUs">Find Us</p>
+        <p class="sec-lbl">Find Us</p>
         <h2 class="property-name">Medora Orbis Camping</h2>
         <span class="stars">★★★★</span>
 
@@ -184,34 +184,37 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 
         <!-- Reception -->
         <div class="contact-group">
-          <h3 class="contact-group-title" data-i18n="reception">Reception</h3>
+          <h3 class="contact-group-title">Reception</h3>
 
           <div class="contact-row">
             <div class="contact-icon">
+              <!-- Phone icon -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
             </div>
             <div class="contact-detail">
-              <p class="contact-label" data-i18n="telephone">Telephone</p>
+              <p class="contact-label">Telephone</p>
               <p class="contact-value"><a href="tel:+38521625377">+385 (0)21 625 377</a></p>
             </div>
           </div>
 
           <div class="contact-row">
             <div class="contact-icon" style="background:rgba(37,211,102,.12);">
+              <!-- WhatsApp icon -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#25d366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.522 5.853L.057 23.625a.75.75 0 00.921.921l5.83-1.453A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.964-1.362l-.356-.211-3.685.919.952-3.595-.231-.369A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
             </div>
             <div class="contact-detail">
               <p class="contact-label">WhatsApp</p>
-              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener" data-i18n="whatsappChat">Chat with us on WhatsApp</a></p>
+              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
             </div>
           </div>
 
           <div class="contact-row">
             <div class="contact-icon">
+              <!-- Email icon -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
             <div class="contact-detail">
-              <p class="contact-label" data-i18n="generalEnquiries">General enquiries</p>
+              <p class="contact-label">General enquiries</p>
               <p class="contact-value"><a href="mailto:orbis.reception@medorahotels.com">orbis.reception@medorahotels.com</a></p>
             </div>
           </div>
@@ -221,14 +224,15 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 
         <!-- Reservations -->
         <div class="contact-group">
-          <h3 class="contact-group-title" data-i18n="reservations">Reservations</h3>
+          <h3 class="contact-group-title">Reservations</h3>
 
           <div class="contact-row">
             <div class="contact-icon">
+              <!-- Calendar icon -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
             </div>
             <div class="contact-detail">
-              <p class="contact-label" data-i18n="bookingReservations">Booking &amp; reservations</p>
+              <p class="contact-label">Booking &amp; reservations</p>
               <p class="contact-value"><a href="mailto:reservations@medorahotels.com">reservations@medorahotels.com</a></p>
             </div>
           </div>
@@ -238,17 +242,26 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 
       <!-- RIGHT: Map -->
       <div class="map-col">
-        <p class="sec-lbl" data-i18n="ourLocation">Our Location</p>
+        <p class="sec-lbl">Our Location</p>
+        <!--
+          HOW TO ADD YOUR GOOGLE MAPS EMBED KEY:
+          1. Go to https://console.cloud.google.com and enable the "Maps Embed API"
+          2. Copy your API key
+          3. Replace YOUR_API_KEY below with it
+          4. The "q" parameter is the address — you can leave it as-is
+        -->
         <div class="map-wrapper">
           <iframe
             title="Medora Orbis Camping & Glamping location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.3!2d17.0614!3d43.2478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134b506e2f2a8e4b%3A0x60b2a78c80a6b4d2!2sMedora%20Orbis%20Camping%20%26%20Glamping!5e0!3m2!1sen!2shr!4v1"
-            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
         <p class="map-caption">
-          Put Sv. Vicenca bb, 21327 Podgora —
-          <a href="https://maps.google.com/?q=Medora+Orbis+Camping+Glamping+Podgora" target="_blank" rel="noopener" data-i18n="openMaps">Open in Google Maps ↗</a>
+          Put Sv. Vicenca bb, 21327 Podgora — 
+          <a href="https://maps.google.com/?q=Medora+Orbis+Camping+Glamping+Podgora" target="_blank" rel="noopener">Open in Google Maps ↗</a>
         </p>
       </div>
 
@@ -261,10 +274,10 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
   <div class="container">
     <div class="strip-inner">
       <div class="strip-copy">
-        <h2 data-i18n="ctaTitle">Ready to book your stay?</h2>
-        <p data-i18n="ctaDesc">Check availability and reserve your pitch or mobile home online.</p>
+        <h2>Ready to book your stay?</h2>
+        <p>Check availability and reserve your pitch or mobile home online.</p>
       </div>
-      <a href="#" class="btn-book-lg" id="el-bookStrip" data-i18n="bookNow">Book Now</a>
+      <a href="#" class="btn-book-lg" id="el-bookStrip">Book Now →</a>
     </div>
   </div>
 </div>
@@ -275,70 +288,88 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
     <div class="f-grid">
       <div>
         <a href="index.html" class="nav-logo" style="margin-bottom:14px;"><img src="logo_cropped.png" alt="Medora Orbis" class="nav-logo-img" style="filter:brightness(0) invert(1);height:40px;"></a>
-        <p class="f-about" data-i18n="footerAbout">A 4-star camping destination on the Dalmatian coast, surrounded by crystal-clear Adriatic waters and pine forests.</p>
+        <p class="f-about">A 4-star camping destination on the Dalmatian coast, surrounded by crystal-clear Adriatic waters and pine forests.</p>
+        <p class="f-contact-row"><span>✉</span> reservations@medorahotels.com</p>
         <div class="f-contact">📍 Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
         <div class="f-contact">📞 <a href="tel:+38521601701" style="color:inherit;text-decoration:none;">+385 (0)21 601 701</a></div>
         <div class="f-contact">✉️ <a href="mailto:reservations@medorahotels.com" style="color:inherit;text-decoration:none;">reservations@medorahotels.com</a></div>
       </div>
       <div>
-        <p class="f-col-title" data-i18n="footerExplore">Explore</p>
+        <p class="f-col-title">Explore</p>
         <ul class="f-links">
-          <li><a href="camping.html" data-i18n="navStay">Stay</a></li>
-          <li><a href="pitches_page.html" data-i18n="footerPitches">Pitches</a></li>
-          <li><a href="index.html#amenities" data-i18n="footerAmenities">Amenities</a></li>
-          <li><a href="index.html#gallery" data-i18n="footerGallery">Gallery</a></li>
-          <li><a href="active-vacation.html" data-i18n="navActive">Active Vacation</a></li>
+          <li><a href="camping.html">Mobile Homes</a></li>
+          <li><a href="pitches_page.html">Pitches</a></li>
+          <li><a href="index.html#amenities">Amenities</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="active-vacation.html">Active Vacation</a></li>
         </ul>
       </div>
     </div>
     <hr class="f-divider">
     <div class="f-bottom">
-      <p data-i18n="footerCopy">© 2026 Medora Hotels &amp; Resorts. All rights reserved.</p>
+      <p>© 2026 Medora Hotels &amp; Resorts. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script>
-// ── TRANSLATIONS ──
 var T = {
-  EN: { navStay:'Stay', navActive:'Active Vacation', navContact:'Contact', bookNow:'Book Now', breadcrumb:'Home', heroTitle:'Get in <em>Touch</em>', findUs:'Find Us', reception:'Reception', telephone:'Telephone', whatsappChat:'Chat with us on WhatsApp', generalEnquiries:'General enquiries', reservations:'Reservations', bookingReservations:'Booking & reservations', ourLocation:'Our Location', openMaps:'Open in Google Maps ↗', ctaTitle:'Ready to book your stay?', ctaDesc:'Check availability and reserve your pitch or mobile home online.', footerAbout:'A 4-star camping destination on the Dalmatian coast, surrounded by crystal-clear Adriatic waters and pine forests.', footerExplore:'Explore', footerPitches:'Pitches', footerAmenities:'Amenities', footerGallery:'Gallery', footerCopy:'© 2026 Medora Hotels & Resorts. All rights reserved.' },
-  HR: { navStay:'Smještaj', navActive:'Aktivan odmor', navContact:'Kontakt', bookNow:'Rezerviraj', breadcrumb:'Početna', heroTitle:'Kontaktirajte <em>nas</em>', findUs:'Pronađite nas', reception:'Recepcija', telephone:'Telefon', whatsappChat:'Pišite nam na WhatsApp', generalEnquiries:'Opći upiti', reservations:'Rezervacije', bookingReservations:'Rezervacije i upiti', ourLocation:'Naša lokacija', openMaps:'Otvori u Google Mapama ↗', ctaTitle:'Spremni za rezervaciju?', ctaDesc:'Provjerite dostupnost i rezervirajte parcelu ili mobilnu kućicu online.', footerAbout:'Kamp s 4 zvjezdice na jadranskoj obali okružen borovima i kristalno čistim morem.', footerExplore:'Istraži', footerPitches:'Parcele', footerAmenities:'Sadržaji', footerGallery:'Galerija', footerCopy:'© 2026 Medora Hotels & Resorts. Sva prava pridržana.' },
-  DE: { navStay:'Unterkunft', navActive:'Aktiver Urlaub', navContact:'Kontakt', bookNow:'Jetzt buchen', breadcrumb:'Startseite', heroTitle:'Kontaktieren Sie <em>uns</em>', findUs:'Finden Sie uns', reception:'Rezeption', telephone:'Telefon', whatsappChat:'Schreiben Sie uns auf WhatsApp', generalEnquiries:'Allgemeine Anfragen', reservations:'Reservierungen', bookingReservations:'Buchung & Reservierungen', ourLocation:'Unser Standort', openMaps:'In Google Maps öffnen ↗', ctaTitle:'Bereit zu buchen?', ctaDesc:'Verfügbarkeit prüfen und Stellplatz oder Mobilheim online reservieren.', footerAbout:'4-Sterne Camping an der dalmatinischen Küste, umgeben von der kristallklaren Adria und Kiefernwäldern.', footerExplore:'Entdecken', footerPitches:'Stellplätze', footerAmenities:'Ausstattung', footerGallery:'Galerie', footerCopy:'© 2026 Medora Hotels & Resorts. Alle Rechte vorbehalten.' },
-  HU: { navStay:'Szállás', navActive:'Aktív nyaralás', navContact:'Kapcsolat', bookNow:'Foglalás', breadcrumb:'Főoldal', heroTitle:'Lépjen <em>kapcsolatba</em>', findUs:'Találjon meg minket', reception:'Recepció', telephone:'Telefon', whatsappChat:'Írjon nekünk WhatsApp-on', generalEnquiries:'Általános érdeklődés', reservations:'Foglalások', bookingReservations:'Foglalás & Rezerváció', ourLocation:'Elhelyezkedésünk', openMaps:'Megnyitás Google Térképen ↗', ctaTitle:'Készen áll a foglalásra?', ctaDesc:'Ellenőrizze a szabad helyeket és foglalja le parcelláját vagy mobilházát online.', footerAbout:'4 csillagos kempingcélpont a dalmát parton, kristálytiszta Adriai-tenger és fenyőerdők között.', footerExplore:'Felfedezés', footerPitches:'Parcellák', footerAmenities:'Létesítmények', footerGallery:'Galéria', footerCopy:'© 2026 Medora Hotels & Resorts. Minden jog fenntartva.' },
-  RO: { navStay:'Cazare', navActive:'Vacanță activă', navContact:'Contact', bookNow:'Rezervați', breadcrumb:'Acasă', heroTitle:'Luați <em>legătura</em>', findUs:'Găsiți-ne', reception:'Recepție', telephone:'Telefon', whatsappChat:'Scrieți-ne pe WhatsApp', generalEnquiries:'Întrebări generale', reservations:'Rezervări', bookingReservations:'Rezervări & întrebări', ourLocation:'Locația noastră', openMaps:'Deschide în Google Maps ↗', ctaTitle:'Gata să rezervați?', ctaDesc:'Verificați disponibilitatea și rezervați locul sau casa mobilă online.', footerAbout:'Camping de 4 stele pe coasta dalmată, înconjurat de Marea Adriatică cristalină și păduri de pini.', footerExplore:'Explorați', footerPitches:'Parcele', footerAmenities:'Facilități', footerGallery:'Galerie', footerCopy:'© 2026 Medora Hotels & Resorts. Toate drepturile rezervate.' },
-  UA: { navStay:'Проживання', navActive:'Активний відпочинок', navContact:'Контакт', bookNow:'Забронювати', breadcrumb:'Головна', heroTitle:'Зв\'яжіться <em>з нами</em>', findUs:'Знайдіть нас', reception:'Рецепція', telephone:'Телефон', whatsappChat:'Напишіть нам у WhatsApp', generalEnquiries:'Загальні запити', reservations:'Бронювання', bookingReservations:'Бронювання та резервації', ourLocation:'Наше розташування', openMaps:'Відкрити в Google Maps ↗', ctaTitle:'Готові забронювати?', ctaDesc:'Перевірте наявність і забронюйте місце або мобільний будинок онлайн.', footerAbout:'Кемпінг 4 зірки на далматинському узбережжі, оточений кристально чистим Адріатичним морем і сосновими лісами.', footerExplore:'Дослідити', footerPitches:'Майданчики', footerAmenities:'Зручності', footerGallery:'Галерея', footerCopy:'© 2026 Medora Hotels & Resorts. Усі права захищені.' },
-  PL: { navStay:'Pobyt', navActive:'Aktywne wakacje', navContact:'Kontakt', bookNow:'Zarezerwuj', breadcrumb:'Strona główna', heroTitle:'Skontaktuj się <em>z nami</em>', findUs:'Znajdź nas', reception:'Recepcja', telephone:'Telefon', whatsappChat:'Napisz do nas na WhatsApp', generalEnquiries:'Zapytania ogólne', reservations:'Rezerwacje', bookingReservations:'Rezerwacje & zapytania', ourLocation:'Nasza lokalizacja', openMaps:'Otwórz w Google Maps ↗', ctaTitle:'Gotowy do rezerwacji?', ctaDesc:'Sprawdź dostępność i zarezerwuj miejsce lub domek mobilny online.', footerAbout:'Kemping 4 gwiazdki na wybrzeżu dalmatyńskim, otoczony krystalicznym Adriatykiem i lasami sosnowymi.', footerExplore:'Odkryj', footerPitches:'Miejsca', footerAmenities:'Udogodnienia', footerGallery:'Galeria', footerCopy:'© 2026 Medora Hotels & Resorts. Wszelkie prawa zastrzeżone.' },
-  CS: { navStay:'Pobyt', navActive:'Aktivní dovolená', navContact:'Kontakt', bookNow:'Rezervovat', breadcrumb:'Domů', heroTitle:'Spojte se <em>s námi</em>', findUs:'Najděte nás', reception:'Recepce', telephone:'Telefon', whatsappChat:'Napište nám na WhatsApp', generalEnquiries:'Obecné dotazy', reservations:'Rezervace', bookingReservations:'Rezervace & dotazy', ourLocation:'Naše poloha', openMaps:'Otevřít v Google Mapách ↗', ctaTitle:'Připraveni rezervovat?', ctaDesc:'Zkontrolujte dostupnost a rezervujte si místo nebo mobilní dům online.', footerAbout:'Kemp 4 hvězdičky na dalmatském pobřeží, obklopený křišťálově čistým Jadranem a borovými lesy.', footerExplore:'Objevte', footerPitches:'Místa', footerAmenities:'Vybavení', footerGallery:'Galerie', footerCopy:'© 2026 Medora Hotels & Resorts. Všechna práva vyhrazena.' },
-  SK: { navStay:'Pobyt', navActive:'Aktívna dovolenka', navContact:'Kontakt', bookNow:'Rezervovať', breadcrumb:'Domov', heroTitle:'Spojte sa <em>s nami</em>', findUs:'Nájdite nás', reception:'Recepcia', telephone:'Telefón', whatsappChat:'Napíšte nám na WhatsApp', generalEnquiries:'Všeobecné otázky', reservations:'Rezervácie', bookingReservations:'Rezervácie & otázky', ourLocation:'Naša poloha', openMaps:'Otvoriť v Google Mapách ↗', ctaTitle:'Pripravení rezervovať?', ctaDesc:'Skontrolujte dostupnosť a rezervujte si miesto alebo mobilný dom online.', footerAbout:'Kemp 4 hviezdičky na dalmatskom pobreží, obklopený krištáľovo čistým Jadranom a borovými lesmi.', footerExplore:'Objavte', footerPitches:'Miesta', footerAmenities:'Vybavenie', footerGallery:'Galéria', footerCopy:'© 2026 Medora Hotels & Resorts. Všetky práva vyhradené.' }
+  EN:{navStay:'Stay',navActive:'Active Vacation',navContact:'Contact',bookNow:'Book Now'},
+  HR:{navStay:'Smještaj',navActive:'Aktivan odmor',navContact:'Kontakt',bookNow:'Rezerviraj'},
+  DE:{navStay:'Unterkunft',navActive:'Aktiver Urlaub',navContact:'Kontakt',bookNow:'Jetzt buchen'},
+  HU:{navStay:'Szállás',navActive:'Aktív nyaralás',navContact:'Kapcsolat',bookNow:'Foglalás'},
+  RO:{navStay:'Cazare',navActive:'Vacanță activă',navContact:'Contact',bookNow:'Rezervați'},
+  UA:{navStay:'Проживання',navActive:'Активний відпочинок',navContact:'Контакт',bookNow:'Забронювати'},
+  PL:{navStay:'Pobyt',navActive:'Aktywne wakacje',navContact:'Kontakt',bookNow:'Zarezerwuj'},
+  CS:{navStay:'Pobyt',navActive:'Aktivní dovolená',navContact:'Kontakt',bookNow:'Rezervovat'},
+  SK:{navStay:'Pobyt',navActive:'Aktívna dovolenka',navContact:'Kontakt',bookNow:'Rezervovať'}
 };
 
-function applyLang(code, pushState) {
-  var t = T[code];
-  if (!t) return;
-  document.getElementById('langCode').textContent = code;
-  document.querySelectorAll('.lang-opt').forEach(function(b) {
-    b.classList.toggle('active', b.textContent === code);
-  });
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.textContent = t[key];
-  });
-  document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n-html');
-    if (t[key] !== undefined) el.innerHTML = t[key];
-  });
-  localStorage.setItem('lang', code);
-  if (pushState !== false && history.replaceState) {
-    var params = new URLSearchParams(window.location.search);
-    params.set('lang', code);
-    history.replaceState(null, '', window.location.pathname + '?' + params.toString() + window.location.hash);
-  }
+function setURL(code) {
+  try {
+    if (history.replaceState && window.location.href.indexOf('about:') === -1) {
+      var p = new URLSearchParams(window.location.search);
+      p.set('lang', code);
+      history.replaceState(null, '', window.location.pathname + '?' + p.toString());
+    }
+  } catch(e) {}
 }
 
-// ── BUILD LANGUAGE MENU ──
-var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
+function rewriteLinks(code) {
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href === '#') return;
+    if (href.indexOf('.html') === -1) return;
+    try {
+      var url = new URL(href, window.location.href);
+      url.searchParams.set('lang', code);
+      a.setAttribute('href', url.pathname + '?' + url.searchParams.toString() + (url.hash || ''));
+    } catch(e) {}
+  });
+}
+
+function applyLang(code) {
+  var t = T[code]; if (!t) return;
+  document.getElementById('langCode').textContent = code;
+  document.querySelectorAll('.lang-opt').forEach(function(b){ b.classList.toggle('active', b.textContent === code); });
+  var navMap = {camping:'navStay','active-vacation':'navActive',contact:'navContact'};
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href = a.getAttribute('href') || '';
+    if (a.classList.contains('nav-logo') || a.classList.contains('fab-action')) return;
+    Object.keys(navMap).forEach(function(page){
+      if (href.indexOf(page + '.html') !== -1) a.textContent = t[navMap[page]];
+    });
+  });
+  var bookEl = document.getElementById('el-bookNav');
+  if (bookEl) bookEl.textContent = t.bookNow;
+  localStorage.setItem('lang', code);
+  setURL(code);
+  rewriteLinks(code);
+}
+
 var langMenu = document.getElementById('langMenu');
-langCodes.forEach(function(code) {
+['EN','HR','DE','HU','RO','UA','PL','CS','SK'].forEach(function(code) {
   var btn = document.createElement('button');
   btn.className = 'lang-opt' + (code === 'EN' ? ' active' : '');
   btn.textContent = code;
@@ -356,19 +387,17 @@ document.addEventListener('click', function() {
   document.getElementById('langDrop').classList.remove('open');
 });
 
-// ── LOAD LANGUAGE: URL param takes priority, then localStorage ──
 (function() {
   var params = new URLSearchParams(window.location.search);
   var urlLang = (params.get('lang') || '').toUpperCase();
-  var savedLang = localStorage.getItem('lang');
-  var activeLang = (T[urlLang] ? urlLang : (T[savedLang] ? savedLang : null));
-  if (activeLang) applyLang(activeLang, false);
+  var savedLang = (localStorage.getItem('lang') || '').toUpperCase();
+  var active = T[urlLang] ? urlLang : T[savedLang] ? savedLang : null;
+  if (active) applyLang(active);
 })();
 
-// ── BOOK NOW ──
 (function() {
-  var today = new Date().toISOString().split('T')[0];
-  var url = 'https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&nights=4&lang=en&unit_select=1&adults=2&date=' + today;
+  var today=new Date().toISOString().split('T')[0];
+  var url='https://medorahotels.book-official-website.com/book.php?company_id=623423995f029d48852be848b22db50d&hotel=e6b7c5e7e229baf42e41f230777ea92d&nights=4&lang=en&unit_select=1&adults=2'+'&date='+today;
   document.getElementById('el-bookNav').href = url;
   document.getElementById('el-bookStrip').href = url;
 })();
