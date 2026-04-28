@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin">
 <meta name="description" content="Contact Medora Orbis Camping in Podgora, Croatia. Reach reception by phone, email or WhatsApp on the Makarska Riviera.">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <title>Contact — Medora Orbis Camping 4★</title>
@@ -15,8 +18,8 @@ html{scroll-behavior:smooth;}
 body{font-family:'Raleway',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid rgba(0,149,214,.3);}
-.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo-img{height:48px;width:auto;max-width:160px;display:block;object-fit:contain;filter:brightness(0) invert(1);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:80px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}.nav-logo-img{height:54px;width:auto;max-width:180px;display:block;object-fit:contain;filter:brightness(0) invert(1);}
 
 .nav-right{display:flex;align-items:center;gap:16px;}
 .nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
@@ -36,7 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97
 .lang-opt.active{color:#fff;font-weight:600;}
 
 /* ── HERO ── */
-.page-hero{margin-top:68px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:44px;}
+.page-hero{margin-top:80px;position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:44px;}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.1),rgba(0,48,135,.7)),url('images/camping.jpg') center/cover no-repeat;}
 .hero-txt{position:relative;padding:0 64px;}
 .breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
@@ -128,11 +131,11 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
 .fab-main{width:58px;height:58px;border-radius:50%;background:#0095d6;color:#fff;border:none;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,149,214,.55);cursor:pointer;transition:background .2s,transform .2s;}
 .fab-wrap.open .fab-main{background:#003087;transform:rotate(45deg);}
 @media(max-width:480px){
-  nav{padding:0 12px;height:52px;}
+  nav{padding:0 12px;height:64px;} .filter-bar{top:64px;}
   .nav-logo-img{height:36px;max-width:130px;}
   .btn-book-nav{font-size:.6rem;padding:6px 10px;letter-spacing:.06em;}
   .lang-btn{font-size:10px;padding:4px 6px;gap:4px;}
-  .page-hero{margin-top:52px;}
+  .page-hero{margin-top:64px;}
 }
 </style>
 </head>
@@ -151,7 +154,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
       <button class="lang-btn" id="langBtn"><span id="langCode">EN</span><span class="lang-arrow">&#9660;</span></button>
       <div class="lang-menu" id="langMenu"></div>
     </div>
-    <a href="#" target="_blank" class="btn-book-nav" id="el-bookNav">Book Now</a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-book-nav" id="el-bookNav">Book Now</a>
   </div>
 </nav>
 
@@ -204,7 +207,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
             </div>
             <div class="contact-detail">
               <p class="contact-label">WhatsApp</p>
-              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+              <p class="contact-value"><a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
             </div>
           </div>
 
@@ -215,7 +218,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
             </div>
             <div class="contact-detail">
               <p class="contact-label">General enquiries</p>
-              <p class="contact-value"><a href="mailto:orbis.reception@medorahotels.com">orbis.reception@medorahotels.com</a></p>
+              <p class="contact-value"><a href="mailto:&#111;&#114;&#98;&#105;&#115;&#46;&#114;&#101;&#99;&#101;&#112;&#116;&#105;&#111;&#110;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;">&#111;&#114;&#98;&#105;&#115;&#46;&#114;&#101;&#99;&#101;&#112;&#116;&#105;&#111;&#110;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;</a></p>
             </div>
           </div>
         </div>
@@ -233,7 +236,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
             </div>
             <div class="contact-detail">
               <p class="contact-label">Booking &amp; reservations</p>
-              <p class="contact-value"><a href="mailto:reservations@medorahotels.com">reservations@medorahotels.com</a></p>
+              <p class="contact-value"><a href="mailto:&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;">&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;</a></p>
             </div>
           </div>
         </div>
@@ -261,7 +264,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
         </div>
         <p class="map-caption">
           Put Sv. Vicenca bb, 21327 Podgora — 
-          <a href="https://maps.google.com/?q=Medora+Orbis+Camping+Glamping+Podgora" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+          <a href="https://maps.google.com/?q=Medora+Orbis+Camping+Glamping+Podgora" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
         </p>
       </div>
 
@@ -292,7 +295,7 @@ footer{background:var(--cb);color:rgba(255,255,255,.65);padding:72px 0 36px;}
         <p class="f-contact-row"><span>✉</span> reservations@medorahotels.com</p>
         <div class="f-contact">📍 Put Sv. Vicenca bb, 21327 Podgora, Croatia</div>
         <div class="f-contact">📞 <a href="tel:+38521601701" style="color:inherit;text-decoration:none;">+385 (0)21 601 701</a></div>
-        <div class="f-contact">✉️ <a href="mailto:reservations@medorahotels.com" style="color:inherit;text-decoration:none;">reservations@medorahotels.com</a></div>
+        <div class="f-contact">✉️ <a href="mailto:&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;" style="color:inherit;text-decoration:none;">&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;</a></div>
       </div>
       <div>
         <p class="f-col-title">Explore</p>
@@ -399,11 +402,11 @@ document.addEventListener('click', function() {
 </script>
 <div class="fab-wrap" id="fabWrap">
   <div class="fab-actions">
-    <a href="mailto:reservations@medorahotels.com" class="fab-action">
-      <span class="fab-action-label">reservations@medorahotels.com</span>
+    <a href="mailto:&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;" class="fab-action">
+      <span class="fab-action-label">&#114;&#101;&#115;&#101;&#114;&#118;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#109;&#101;&#100;&#111;&#114;&#97;&#104;&#111;&#116;&#101;&#108;&#115;&#46;&#99;&#111;&#109;</span>
       <span class="fab-action-icon" style="background:#0095d6;">&#9993;</span>
     </a>
-    <a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener" class="fab-action">
+    <a href="https://api.whatsapp.com/send?phone=43676800800713" target="_blank" rel="noopener noreferrer" class="fab-action">
       <span class="fab-action-label">WhatsApp</span>
       <span class="fab-action-icon" style="background:#25D366;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.77L0 32l8.43-2.01A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.748-1.836l-.484-.287-5.01 1.195 1.234-4.874-.316-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.63-.199-.895.199-.265.398-1.029 1.294-1.261 1.56-.232.265-.464.298-.862.1-.398-.2-1.681-.62-3.203-1.98-1.184-1.057-1.983-2.363-2.215-2.761-.232-.398-.025-.613.174-.811.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.895-2.158-1.228-2.954-.323-.775-.651-.67-.895-.682l-.762-.013c-.265 0-.696.1-1.06.497-.364.398-1.393 1.362-1.393 3.32s1.426 3.852 1.625 4.117c.199.265 2.807 4.285 6.802 6.011.951.41 1.693.655 2.271.839.954.304 1.823.261 2.51.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.892-.099-.165-.364-.265-.762-.464z"/></svg></span>
     </a>
