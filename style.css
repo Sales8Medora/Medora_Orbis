@@ -1,0 +1,61 @@
+/* ===========================================================
+   style.css — shared styles for all pages of the website.
+   Loaded BEFORE each page's individual CSS file.
+   Contains: base reset, nav bar, language dropdown,
+             floating contact button, footer, common containers.
+   =========================================================== */
+
+:root{--lb:#0095d6;--cb:#003087;--ww:#f5f9ff;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Raleway',sans-serif;background:var(--ww);color:var(--cb);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,48,135,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:80px;border-bottom:1px solid rgba(0,149,214,.3);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo-img{height:54px;width:auto;max-width:180px;display:block;object-fit:contain;filter:brightness(0) invert(1);}
+@media(max-width:768px){.nav-logo-img{height:36px;}}
+.nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.btn-book{background:var(--lb);color:#fff;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;padding:9px 22px;border-radius:2px;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-block;}
+.btn-book:hover{background:#007ab5;}
+.lang-drop{position:relative;}
+.lang-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;letter-spacing:.08em;padding:5px 10px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.lang-btn:hover,.lang-drop.open .lang-btn{background:rgba(0,149,214,.2);border-color:rgba(0,149,214,.6);color:#fff;}
+.lang-btn .arrow{font-size:8px;transition:transform .2s;display:inline-block;}
+.lang-drop.open .lang-btn .arrow{transform:rotate(180deg);}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(0,48,135,.98);border:1px solid rgba(0,149,214,.25);border-radius:4px;min-width:100px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,transform .2s;z-index:200;}
+.lang-drop.open .lang-menu{opacity:1;pointer-events:all;transform:translateY(0);}
+.lang-opt{display:block;width:100%;padding:9px 14px;background:none;border:none;color:rgba(255,255,255,.7);font-family:'Raleway',sans-serif;font-size:12px;cursor:pointer;text-align:left;letter-spacing:.06em;}
+.lang-opt:hover{background:rgba(0,149,214,.15);color:#fff;}
+.lang-opt.active{color:#fff;font-weight:600;}
+.container{max-width:1140px;margin:0 auto;padding:0 48px;}
+.sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--lb);margin-bottom:16px;display:flex;align-items:center;gap:14px;}
+.sec-lbl::before{content:'';width:28px;height:1px;background:var(--lb);flex-shrink:0;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:12px;}
+footer{background:var(--cb);color:rgba(255,255,255,.65);padding:80px 0 40px;}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:64px;}
+.f-brand .nav-logo{display:inline-block;margin-bottom:20px;}
+.f-about{font-size:.8rem;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:28px;max-width:280px;}
+.f-contact{display:flex;align-items:flex-start;gap:10px;font-size:.78rem;color:rgba(255,255,255,.6);margin-bottom:10px;line-height:1.5;}
+.f-contact span{color:var(--lb);font-size:.9rem;}
+.f-col-title{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:24px;}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.f-links a{font-size:.8rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:#fff;}
+.f-divider{border:none;border-top:1px solid rgba(255,255,255,.1);margin-bottom:36px;}
+.f-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.f-bottom p{font-size:.72rem;color:rgba(255,255,255,.35);}
+.f-rating{display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(255,255,255,.4);}
+.f-rating .stars{color:var(--lb);letter-spacing:2px;}
+@media(max-width:900px){nav{padding:0 24px;}.nav-links{display:none;}.container{padding:0 24px;}.f-grid{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:600px){.f-grid{grid-template-columns:1fr;}}
+.fab-wrap{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.fab-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s;}
+.fab-wrap.open .fab-actions{opacity:1;pointer-events:all;transform:translateY(0);}
+.fab-action{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.fab-action-label{background:rgba(0,48,135,.95);color:#fff;font-family:'Raleway',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.06em;padding:7px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.fab-action-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,.3);flex-shrink:0;}
+.fab-main{width:58px;height:58px;border-radius:50%;background:#0095d6;color:#fff;border:none;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,149,214,.55);cursor:pointer;transition:background .2s,transform .2s;}
+.fab-wrap.open .fab-main{background:#003087;transform:rotate(45deg);}
+@media(max-width:480px){nav{padding:0 12px;height:64px;}.nav-logo-img{height:36px;max-width:130px;}.btn-book-nav{font-size:.6rem;padding:6px 10px;letter-spacing:.06em;}.lang-btn{font-size:10px;padding:4px 6px;gap:4px;}.page-hero{margin-top:64px;}}

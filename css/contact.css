@@ -1,0 +1,57 @@
+/* contact.css — styles unique to contact.html */
+
+/* ── NAV ── */
+.lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
+/* ── HERO ── */
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.1),rgba(0,48,135,.7)),url('images/camping.jpg') center/cover no-repeat;}
+.hero-txt{position:relative;padding:0 64px;}
+.breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
+.breadcrumb a{color:var(--lb);text-decoration:none;}
+.breadcrumb a:hover{color:#fff;}
+.hero-txt h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.1;}
+.hero-txt h1 em{font-style:italic;color:#7dd8f8;}
+/* ── CONTACT SECTION ── */
+.contact-section{padding:80px 0 100px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start;}
+/* Left column */
+.contact-info{}
+.property-name{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.15;color:var(--cb);margin-bottom:6px;}
+.stars{color:#c8a45a;font-size:.85rem;letter-spacing:2px;margin-bottom:22px;display:block;}
+.address-block{margin-bottom:32px;}
+.address-line{font-size:.9rem;color:#555;font-weight:300;line-height:1.8;}
+.address-line strong{color:var(--cb);font-weight:500;}
+/* Divider */
+.contact-divider{width:40px;height:2px;background:var(--lb);margin:28px 0;}
+/* Contact groups */
+.contact-group{margin-bottom:32px;}
+.contact-group-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:var(--cb);margin-bottom:14px;}
+.contact-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px;}
+.contact-icon{width:34px;height:34px;border-radius:50%;background:rgba(0,149,214,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.contact-icon svg{width:15px;height:15px;fill:var(--lb);}
+.contact-detail{}
+.contact-label{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:2px;}
+.contact-value{font-size:.88rem;color:var(--cb);font-weight:400;line-height:1.5;}
+.contact-value a{color:var(--cb);text-decoration:none;transition:color .2s;}
+.contact-value a:hover{color:var(--lb);}
+/* Right column — Map */
+.map-col{}
+.map-wrapper{border-radius:6px;overflow:hidden;box-shadow:0 8px 48px rgba(0,48,135,.14);position:relative;}
+.map-wrapper iframe{display:block;width:100%;height:440px;border:0;}
+.map-caption{margin-top:12px;font-size:.72rem;color:#888;letter-spacing:.04em;}
+.map-caption a{color:var(--lb);text-decoration:none;}
+.map-caption a:hover{text-decoration:underline;}
+/* ── STRIP ── */
+.strip{background:var(--cb);padding:52px 0;}
+.strip-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.strip-copy h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:300;color:#fff;}
+.strip-copy p{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:6px;}
+.btn-book-lg{display:inline-flex;align-items:center;gap:10px;background:var(--lb);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:14px 34px;border-radius:2px;text-decoration:none;transition:background .2s,gap .2s;white-space:nowrap;}
+.btn-book-lg:hover{background:#007ab5;gap:16px;}
+/* ── FOOTER ── */
+.f-brand-logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:#fff;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;margin-bottom:16px;}
+.f-brand-logo span{display:block;color:rgba(255,255,255,.45);font-weight:300;font-size:.6em;letter-spacing:.28em;margin-top:1px;}
+.f-contact-row{display:flex;align-items:flex-start;gap:9px;font-size:.76rem;color:rgba(255,255,255,.55);margin-bottom:8px;line-height:1.55;}
+.f-contact-row span{color:var(--lb);font-size:.9rem;}
+/* ── RESPONSIVE ── */
+@media(max-width:860px){.hero-txt{padding:0 24px;}.contact-grid{grid-template-columns:1fr;gap:44px;}.map-wrapper iframe{height:320px;}.strip-inner{flex-direction:column;text-align:center;}}
+@media(max-width:480px){.filter-bar{top:64px;}}
