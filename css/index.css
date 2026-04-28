@@ -1,7 +1,7 @@
 /* index.css — styles unique to index.html */
 
 .hero{position:relative;height:calc(100vh - 80px);min-height:500px;margin-top:80px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:80px;}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.2),rgba(0,48,135,.65)),url('images/hero.jpg') center/cover no-repeat;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.2),rgba(0,48,135,.65)),url('../images/hero.jpg') center/cover no-repeat;}
 .hero-content{position:relative;max-width:900px;padding:0 64px;}
 .hero-tag{display:inline-block;font-size:1rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-bottom:24px;background:rgba(0,149,214,.75);padding:8px 18px 8px 16px;border-left:4px solid #fff;border-radius:0 3px 3px 0;text-shadow:none;}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,8vw,7.5rem);font-weight:600;line-height:1.0;color:#fff;margin-bottom:28px;text-shadow:0 2px 24px rgba(0,0,0,.4);}

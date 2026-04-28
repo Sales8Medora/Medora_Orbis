@@ -3,7 +3,7 @@
 /* ── NAV ── */
 .lang-arrow{font-size:8px;transition:transform .3s;display:inline-block;}
 /* ── HERO ── */
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.15),rgba(0,48,135,.72)),url('images/active-vacation/hero.jpg') center/cover no-repeat;background-color:#1a4a8a;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,48,135,.15),rgba(0,48,135,.72)),url('../images/active-vacation/hero.jpg') center/cover no-repeat;background-color:#1a4a8a;}
 .hero-txt{position:relative;padding:0 64px;}
 .breadcrumb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
 .breadcrumb a{color:var(--lb);text-decoration:none;}
