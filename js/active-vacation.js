@@ -158,7 +158,7 @@ var T = {
     fc3Title:'Informacje', fc3a:'Mapa i dojazd', fc3b:'Kontakt', fc3c:'Klimat',
     fCopy:'© 2026 Medora Orbis Camping. Wszelkie prawa zastrzeżone.', fStars:'4 gwiazdki · Riwiera Makarska'
   },
-  CS: {
+  CZ: {
     bookNow:'Rezervovat', breadcrumb:'Domů', pageTitle:'Aktivní dovolená',
     heroTitle:'Aktivní <em>dovolená</em>',
     secLbl:'Co dělat', secTitle:'Dobrodružství na každém kroku',
@@ -225,7 +225,7 @@ function applyLang(code) {
 // ══════════════════════════════════════════════
 // BUILD LANGUAGE MENU
 // ══════════════════════════════════════════════
-var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
+var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CZ','SK'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
   var btn = document.createElement('button');

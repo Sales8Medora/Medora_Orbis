@@ -5,11 +5,11 @@ var T = {
     r1name:'Premium One Bedroom Home', r1desc:'A stylish premium mobile home for couples or small families, with private pool and all modern comforts.',
     r2name:'Premium Two Bedroom Home', r2desc:'Spacious premium home with two bedrooms and a private pool. Perfect for families.',
     r3name:'Premium Three Bedroom Home', r3desc:'Largest premium home with three bedrooms and private pool for six.',
-    r4name:'Superior Mobile Home', r4desc:'State-of-the-art mobile home with two bedrooms in the Mediterranean landscape.',
-    r5name:'Superior Mobile Home 6', r5desc:'Three-bedroom mobile home for larger families in the Mediterranean landscape.',
+    r4name:'Superior Two Bedroom Home', r4desc:'State-of-the-art mobile home with two bedrooms in the Mediterranean landscape.',
+    r5name:'Superior Three Bedroom Home', r5desc:'Three-bedroom mobile home for larger families in the Mediterranean landscape.',
     r6name:'Deluxe Mobile Home', r6desc:'Premium furnished two-bedroom home with private heated pool and sundeck.',
     r7name:'Deluxe Mobile Home 6', r7desc:'Three bedrooms, private heated pool and sundeck for larger groups.',
-    r8name:'Superior Mobile Home', r8sub:'Wheelchair Accessibility', r8desc:'Specially designed for guests with reduced mobility, without compromising on comfort.',
+    r8name:'Superior Two Bedroom Home', r8sub:'Wheelchair Accessibility', r8desc:'Specially designed for guests with reduced mobility, without compromising on comfort.',
     f_pool:'Private pool', f_wifi:'Free Wi-Fi', f_ac:'Air conditioning', f_terrace2:'Covered terrace (seats 2)', f_terrace4:'Covered terrace (seats 4)', f_terrace6:'Covered terrace (seats 6)', f_bath1:'Bathroom with shower & toilet', f_bath2:'2 bathrooms with shower & toilet', f_dbl:'Double bed (160x200 cm)', f_twin2:'2 twin beds (80x200 cm)', f_twin2x:'2x twin beds (80x200 cm)', f_extra:'Additional bed (135x185 cm)', f_tv:'Satellite TV', f_kit2:'Kitchen (2 cooktops & fridge)', f_kit4:'Kitchen (4 cooktops & fridge)', f_micro_ket:'Microwave & kettle', f_micro_cof:'Microwave & coffee machine', f_table2:'Table & seats for 2', f_table4:'Table & seats for 4', f_table6:'Table & seats for 6', f_safe:'Safe', f_linen:'Linen & towels included', f_hpool:'Private heated pool & sundeck', f_deck:'Deck chairs', f_adapted:'Adapted bathroom for disabled persons',
     strip1:'Private Beach Access', strip2:'Free Wi-Fi', strip3:'Air Conditioning', strip4:'Fully Equipped Kitchen', strip5:'Satellite TV', strip6:'Safe', strip7:'Linen & Towels', strip8:'Mediterranean Garden',
     fStay:'Stay', fCamping:'Camping & Mobile Homes', fPitches:'Pitches', fBook:'Book Now', fExplore:'Explore', fAmenities:'Amenities', fGallery:'Photo Gallery', fBeach:'Beach & Sea', fActive:'Active Vacation', fInfo:'Information', fMap:'Map & Directions', fContact:'Contact', fClimate:'Climate', fAbout:'A 4-star camping destination on the Makarska Riviera. Nestled along the Adriatic coast, where the mountains meet the sea.', fCopy:'\u00A9 2026 Medora Orbis Camping. All rights reserved.', fStars:'4-Star Certified \u00B7 Makarska Riviera'
@@ -20,11 +20,11 @@ var T = {
     r1name:'Premium jednosobna kucica', r1desc:'Stilska premium kucica za parove s privatnim bazenom.',
     r2name:'Premium dvosobna kucica', r2desc:'Prostrana premium kucica s dvije spavaonice i privatnim bazenom.',
     r3name:'Premium trosobna kucica', r3desc:'Najveca premium kucica s tri spavaonice i bazenom.',
-    r4name:'Superior mobilna kucica', r4desc:'Vrhunska kucica s dvije spavaonice uz mediteran.',
-    r5name:'Superior mobilna kucica 6', r5desc:'Tri spavaonice za vece obitelji.',
+    r4name:'Superior dvosobna kucica', r4desc:'Vrhunska kucica s dvije spavaonice uz mediteran.',
+    r5name:'Superior trosobna kucica', r5desc:'Tri spavaonice za vece obitelji.',
     r6name:'Deluxe mobilna kucica', r6desc:'Premium kucica s grijanim bazenom.',
     r7name:'Deluxe mobilna kucica 6', r7desc:'Tri spavaonice i grijani bazen za vece grupe.',
-    r8name:'Superior mobilna kucica', r8sub:'Pristupacnost za invalide', r8desc:'Posebno dizajnirana za goste s ogranicenom pokretljivoscu.',
+    r8name:'Superior dvosobna kucica', r8sub:'Pristupacnost za invalide', r8desc:'Posebno dizajnirana za goste s ogranicenom pokretljivoscu.',
     f_pool:'Privatni bazen', f_wifi:'Besplatni Wi-Fi', f_ac:'Klimatizacija', f_terrace2:'Natkrivena terasa (2 os.)', f_terrace4:'Natkrivena terasa (4 os.)', f_terrace6:'Natkrivena terasa (6 os.)', f_bath1:'Kupaonica s tushom i WC-om', f_bath2:'2 kupaonice s tushom i WC-om', f_dbl:'Bracni krevet (160x200)', f_twin2:'2 jednokrevetna kreveta (80x200)', f_twin2x:'2x jednokrevetna kreveta', f_extra:'Pomocni krevet (135x185)', f_tv:'Satelitska TV', f_kit2:'Kuhinja (2 plice i hladnjak)', f_kit4:'Kuhinja (4 plice i hladnjak)', f_micro_ket:'Mikrovalna i kuhalo', f_micro_cof:'Mikrovalna i aparat za kavu', f_table2:'Stol za 2', f_table4:'Stol za 4', f_table6:'Stol za 6', f_safe:'Sef', f_linen:'Posteljina i rucnici u cijeni', f_hpool:'Grijani bazen i sundeck', f_deck:'Lezaljke', f_adapted:'Prilagodena kupaonica za invalide',
     strip1:'Pristup privatnoj plazi', strip2:'Besplatni Wi-Fi', strip3:'Klimatizacija', strip4:'Opremljena kuhinja', strip5:'Satelitska TV', strip6:'Sef', strip7:'Posteljina i rucnici', strip8:'Mediteranski vrt',
     fStay:'Smjestaj', fCamping:'Kampiranje i mobilne kucice', fPitches:'Parcele', fBook:'Rezerviraj', fExplore:'Istrazite', fAmenities:'Sadrzaji', fGallery:'Foto galerija', fBeach:'Plaza i more', fActive:'Aktivan odmor', fInfo:'Informacije', fMap:'Karta i upute', fContact:'Kontakt', fClimate:'Klima', fAbout:'Kamp s 4 zvjezdice na Makarskoj rivijeri.', fCopy:'\u00A9 2026 Medora Orbis Camping. Sva prava pridrzana.', fStars:'4 zvjezdice \u00B7 Makarska rivijera'
@@ -35,11 +35,11 @@ var T = {
     r1name:'Premium Einzimmerbungalow', r1desc:'Stilvolles Premium-Mobilheim fuer Paare mit privatem Pool.',
     r2name:'Premium Zweizimmerbungalow', r2desc:'Geraeumiges Premium-Heim mit zwei Schlafzimmern und Pool.',
     r3name:'Premium Dreizimmerbungalow', r3desc:'Groesstes Premium-Heim mit drei Schlafzimmern und Pool.',
-    r4name:'Superior Mobilheim', r4desc:'Modernes Mobilheim mit zwei Schlafzimmern im Mittelmeerambiente.',
-    r5name:'Superior Mobilheim 6', r5desc:'Drei Schlafzimmer fuer groessere Familien.',
+    r4name:'Superior Zweizimmerbungalow', r4desc:'Modernes Mobilheim mit zwei Schlafzimmern im Mittelmeerambiente.',
+    r5name:'Superior Dreizimmerbungalow', r5desc:'Drei Schlafzimmer fuer groessere Familien.',
     r6name:'Deluxe Mobilheim', r6desc:'Premium-Heim mit beheiztem Pool und Sonnendeck.',
     r7name:'Deluxe Mobilheim 6', r7desc:'Drei Schlafzimmer, beheizter Pool fuer groessere Gruppen.',
-    r8name:'Superior Mobilheim', r8sub:'Rollstuhlzugang', r8desc:'Speziell fuer Gaeste mit eingeschraenkter Mobilitaet.',
+    r8name:'Superior Zweizimmerbungalow', r8sub:'Rollstuhlzugang', r8desc:'Speziell fuer Gaeste mit eingeschraenkter Mobilitaet.',
     f_pool:'Privater Pool', f_wifi:'Kostenloses WLAN', f_ac:'Klimaanlage', f_terrace2:'Ueberdachte Terrasse (2 Pers.)', f_terrace4:'Ueberdachte Terrasse (4 Pers.)', f_terrace6:'Ueberdachte Terrasse (6 Pers.)', f_bath1:'Bad mit Dusche & WC', f_bath2:'2 Baeder mit Dusche & WC', f_dbl:'Doppelbett (160x200)', f_twin2:'2 Einzelbetten (80x200)', f_twin2x:'2x Einzelbetten', f_extra:'Zusatzbett (135x185)', f_tv:'Satelliten-TV', f_kit2:'Kueche (2 Kochplatten & Kuehlschrank)', f_kit4:'Kueche (4 Kochplatten & Kuehlschrank)', f_micro_ket:'Mikrowelle & Wasserkocher', f_micro_cof:'Mikrowelle & Kaffeemaschine', f_table2:'Tisch fuer 2', f_table4:'Tisch fuer 4', f_table6:'Tisch fuer 6', f_safe:'Safe', f_linen:'Bettwaesche & Handtuecher inklusive', f_hpool:'Beheizter Pool & Sonnendeck', f_deck:'Liegestuehle', f_adapted:'Behindertengerechtes Bad',
     strip1:'Privater Strandzugang', strip2:'Kostenloses WLAN', strip3:'Klimaanlage', strip4:'Voll ausgestattete Kueche', strip5:'Satelliten-TV', strip6:'Safe', strip7:'Bettwaesche & Handtuecher', strip8:'Mediterraner Garten',
     fStay:'Unterkunft', fCamping:'Camping & Mobilheime', fPitches:'Stellplaetze', fBook:'Jetzt buchen', fExplore:'Entdecken', fAmenities:'Ausstattung', fGallery:'Fotogalerie', fBeach:'Strand & Meer', fActive:'Aktiver Urlaub', fInfo:'Informationen', fMap:'Karte & Anfahrt', fContact:'Kontakt', fClimate:'Klima', fAbout:'4-Sterne Camping an der Makarska Riviera.', fCopy:'\u00A9 2026 Medora Orbis Camping. Alle Rechte vorbehalten.', fStars:'4-Sterne zertifiziert \u00B7 Makarska Riviera'
@@ -50,11 +50,11 @@ var T = {
     r1name:'Premium egyhálószobás', r1desc:'Elegáns prémium mobilház pároknak privát medencével.',
     r2name:'Premium kéthálószobás', r2desc:'Tágas prémium ház két hálószobával és medencével.',
     r3name:'Premium háromhálószobás', r3desc:'Legnagyobb prémium ház három hálószobával és medencével.',
-    r4name:'Superior mobilház', r4desc:'Modern mobilház két hálószobával mediterrán környezetben.',
-    r5name:'Superior mobilház 6', r5desc:'Három hálószoba nagyobb családoknak.',
+    r4name:'Superior kéthálószobás', r4desc:'Modern mobilház két hálószobával mediterrán környezetben.',
+    r5name:'Superior háromhálószobás', r5desc:'Három hálószoba nagyobb családoknak.',
     r6name:'Deluxe mobilház', r6desc:'Prémium ház fűtött medencével és napozóterasszal.',
     r7name:'Deluxe mobilház 6', r7desc:'Három hálószoba és fűtött medence nagyobb csoportoknak.',
-    r8name:'Superior mobilház', r8sub:'Akadálymentes hozzáférés', r8desc:'Speciálisan kialakítva korlátozott mozgásképességű vendégek számára.',
+    r8name:'Superior kéthálószobás', r8sub:'Akadálymentes hozzáférés', r8desc:'Speciálisan kialakítva korlátozott mozgásképességű vendégek számára.',
     f_pool:'Privát medence', f_wifi:'Ingyenes Wi-Fi', f_ac:'Légkondicionáló', f_terrace2:'Fedett terasz (2 fő)', f_terrace4:'Fedett terasz (4 fő)', f_terrace6:'Fedett terasz (6 fő)', f_bath1:'Fürdőszoba zuhanyzóval', f_bath2:'2 fürdőszoba zuhanyzóval', f_dbl:'Franciaágy (160x200)', f_twin2:'2 egyszemélyes ágy (80x200)', f_twin2x:'2x egyszemélyes ágy', f_extra:'Pótágy (135x185)', f_tv:'Műholdas TV', f_kit2:'Konyha (2 főzőlap + hűtő)', f_kit4:'Konyha (4 főzőlap + hűtő)', f_micro_ket:'Mikrohullámú sütő és vízforraló', f_micro_cof:'Mikrohullámú sütő és kávéfőző', f_table2:'Asztal 2 főre', f_table4:'Asztal 4 főre', f_table6:'Asztal 6 főre', f_safe:'Széf', f_linen:'Ágynemű és törülközők beleértve', f_hpool:'Fűtött medence és napozóterasz', f_deck:'Napágyak', f_adapted:'Akadálymentes fürdőszoba',
     strip1:'Privát strandhozzáférés', strip2:'Ingyenes Wi-Fi', strip3:'Légkondicionáló', strip4:'Felszerelt konyha', strip5:'Műholdas TV', strip6:'Széf', strip7:'Ágynemű és törülközők', strip8:'Mediterrán kert',
     fStay:'Szállás', fCamping:'Kemping és mobilházak', fPitches:'Parcellák', fBook:'Foglalás', fExplore:'Felfedezés', fAmenities:'Létesítmények', fGallery:'Fotógaléria', fBeach:'Strand és tenger', fActive:'Aktív nyaralás', fInfo:'Információ', fMap:'Térkép és útvonal', fContact:'Kapcsolat', fClimate:'Éghajlat', fAbout:'4 csillagos kemping a Makarska Riviérán.', fCopy:'\u00A9 2026 Medora Orbis Camping. Minden jog fenntartva.', fStars:'4 csillagos \u00B7 Makarska Riviéra'
@@ -65,11 +65,11 @@ var T = {
     r1name:'Casă Premium un dormitor', r1desc:'Casă premium elegantă pentru cupluri cu piscină privată.',
     r2name:'Casă Premium două dormitoare', r2desc:'Casă spațioasă cu două dormitoare și piscină privată.',
     r3name:'Casă Premium trei dormitoare', r3desc:'Cea mai mare casă premium cu trei dormitoare și piscină.',
-    r4name:'Casă mobilă Superior', r4desc:'Casă modernă cu două dormitoare în peisaj mediteranean.',
-    r5name:'Casă mobilă Superior 6', r5desc:'Trei dormitoare pentru familii mai mari.',
+    r4name:'Casă Superior două dormitoare', r4desc:'Casă modernă cu două dormitoare în peisaj mediteranean.',
+    r5name:'Casă Superior trei dormitoare', r5desc:'Trei dormitoare pentru familii mai mari.',
     r6name:'Casă mobilă Deluxe', r6desc:'Casă premium cu piscină încălzită.',
     r7name:'Casă mobilă Deluxe 6', r7desc:'Trei dormitoare și piscină încălzită pentru grupuri.',
-    r8name:'Casă mobilă Superior', r8sub:'Accesibilitate dizabilități', r8desc:'Proiectată pentru oaspeții cu mobilitate redusă.',
+    r8name:'Casă Superior două dormitoare', r8sub:'Accesibilitate dizabilități', r8desc:'Proiectată pentru oaspeții cu mobilitate redusă.',
     f_pool:'Piscină privată', f_wifi:'Wi-Fi gratuit', f_ac:'Aer condiționat', f_terrace2:'Terasă acoperită (2 pers.)', f_terrace4:'Terasă acoperită (4 pers.)', f_terrace6:'Terasă acoperită (6 pers.)', f_bath1:'Baie cu duș și toaletă', f_bath2:'2 băi cu duș și toaletă', f_dbl:'Pat dublu (160x200)', f_twin2:'2 paturi single (80x200)', f_twin2x:'2x paturi single', f_extra:'Pat suplimentar (135x185)', f_tv:'TV prin satelit', f_kit2:'Bucătărie (2 plite + frigider)', f_kit4:'Bucătărie (4 plite + frigider)', f_micro_ket:'Cuptor microunde și fierbător', f_micro_cof:'Cuptor microunde și cafetieră', f_table2:'Masă pentru 2', f_table4:'Masă pentru 4', f_table6:'Masă pentru 6', f_safe:'Seif', f_linen:'Lenjerie și prosoape incluse', f_hpool:'Piscină încălzită și sundeck', f_deck:'Șezlonguri', f_adapted:'Baie adaptată pentru dizabilități',
     strip1:'Acces privat la plajă', strip2:'Wi-Fi gratuit', strip3:'Aer condiționat', strip4:'Bucătărie echipată', strip5:'TV prin satelit', strip6:'Seif', strip7:'Lenjerie și prosoape', strip8:'Grădină mediteraneană',
     fStay:'Cazare', fCamping:'Camping și Case mobile', fPitches:'Parcele', fBook:'Rezervați', fExplore:'Explorați', fAmenities:'Facilități', fGallery:'Galerie foto', fBeach:'Plajă și Mare', fActive:'Vacanță activă', fInfo:'Informații', fMap:'Hartă și Indicații', fContact:'Contact', fClimate:'Climă', fAbout:'Camping de 4 stele pe Riviera Makarska.', fCopy:'\u00A9 2026 Medora Orbis Camping. Toate drepturile rezervate.', fStars:'4 Stele \u00B7 Riviera Makarska'
@@ -80,11 +80,11 @@ var T = {
     r1name:'Преміум з однією спальнею', r1desc:'Стильний преміум будинок для пар з приватним басейном.',
     r2name:'Преміум з двома спальнями', r2desc:'Просторий будинок з двома спальнями та приватним басейном.',
     r3name:'Преміум з трьома спальнями', r3desc:'Найбільший будинок з трьома спальнями та басейном.',
-    r4name:'Superior мобільний будинок', r4desc:'Сучасний будинок з двома спальнями на Адріатиці.',
-    r5name:'Superior мобільний будинок 6', r5desc:'Три спальні для великих сімей.',
+    r4name:'Superior з двома спальнями', r4desc:'Сучасний будинок з двома спальнями на Адріатиці.',
+    r5name:'Superior з трьома спальнями', r5desc:'Три спальні для великих сімей.',
     r6name:'Deluxe мобільний будинок', r6desc:'Преміум будинок з підігрітим басейном.',
     r7name:'Deluxe мобільний будинок 6', r7desc:'Три спальні та підігрітий басейн для великих груп.',
-    r8name:'Superior мобільний будинок', r8sub:'Доступність для інвалідів', r8desc:'Спеціально розроблений для гостей з обмеженою мобільністю.',
+    r8name:'Superior з двома спальнями', r8sub:'Доступність для інвалідів', r8desc:'Спеціально розроблений для гостей з обмеженою мобільністю.',
     f_pool:'Приватний басейн', f_wifi:'Безкоштовний Wi-Fi', f_ac:'Кондиціонер', f_terrace2:'Тераса (2 особи)', f_terrace4:'Тераса (4 особи)', f_terrace6:'Тераса (6 осіб)', f_bath1:'Ванна кімната з душем', f_bath2:'2 ванні кімнати з душем', f_dbl:'Двоспальне ліжко (160x200)', f_twin2:'2 односпальні ліжка (80x200)', f_twin2x:'2x односпальні ліжка', f_extra:'Додаткове ліжко (135x185)', f_tv:'Супутникове ТБ', f_kit2:'Кухня (2 конфорки + холодильник)', f_kit4:'Кухня (4 конфорки + холодильник)', f_micro_ket:'Мікрохвильова піч та чайник', f_micro_cof:'Мікрохвильова піч та кавоварка', f_table2:'Стіл на 2 особи', f_table4:'Стіл на 4 особи', f_table6:'Стіл на 6 осіб', f_safe:'Сейф', f_linen:'Постільна білизна та рушники включені', f_hpool:'Підігрітий басейн та санлек', f_deck:'Шезлонги', f_adapted:'Адаптована ванна для інвалідів',
     strip1:'Приватний пляж', strip2:'Безкоштовний Wi-Fi', strip3:'Кондиціонер', strip4:'Обладнана кухня', strip5:'Супутникове ТБ', strip6:'Сейф', strip7:'Постільна білизна та рушники', strip8:'Середземноморський сад',
     fStay:'Проживання', fCamping:'Кемпінг та мобільні будинки', fPitches:'Майданчики', fBook:'Забронювати', fExplore:'Дослідити', fAmenities:'Зручності', fGallery:'Фотогалерея', fBeach:'Пляж та море', fActive:'Активний відпочинок', fInfo:'Інформація', fMap:'Карта та маршрут', fContact:'Контакт', fClimate:'Клімат', fAbout:'Кемпінг 4 зірки на Макарській Рів\'єрі.', fCopy:'\u00A9 2026 Medora Orbis Camping. Усі права захищені.', fStars:'4 зірки \u00B7 Макарська Рів\'єра'
@@ -97,14 +97,14 @@ var T = {
     r1name:'Dom Premium 1 sypialnia', r1desc:'Elegancki premium domek mobilny dla par lub małych rodzin, z prywatnym basenem i nowoczesnym komfortem.',
     r2name:'Dom Premium 2 sypialnie', r2desc:'Przestronny premium domek z dwiema sypialniami i prywatnym basenem. Idealny dla rodzin.',
     r3name:'Dom Premium 3 sypialnie', r3desc:'Największy premium domek z trzema sypialniami i prywatnym basenem dla sześciu osób.',
-    r4name:'Superior domek mobilny', r4desc:'Nowoczesny domek mobilny z dwiema sypialniami w śródziemnomorskim otoczeniu.',
-    r5name:'Superior domek mobilny 6', r5desc:'Trzy sypialnie dla większych rodzin w śródziemnomorskim otoczeniu.',
+    r4name:'Dom Superior 2 sypialnie', r4desc:'Nowoczesny domek mobilny z dwiema sypialniami w śródziemnomorskim otoczeniu.',
+    r5name:'Dom Superior 3 sypialnie', r5desc:'Trzy sypialnie dla większych rodzin w śródziemnomorskim otoczeniu.',
     r6name:'Deluxe domek mobilny', r6desc:'Premium urządzony domek z dwiema sypialniami, prywatnym podgrzewanym basenem i tarasem.',
     r7name:'Deluxe domek mobilny 6', r7desc:'Trzy sypialnie, prywatny podgrzewany basen i taras dla większych grup.',
-    r8name:'Superior domek mobilny', r8sub:'Dostępność dla wózków inwalidzkich', r8desc:'Specjalnie zaprojektowany dla gości z ograniczoną mobilnością, bez kompromisów w komforcie.',
+    r8name:'Dom Superior 2 sypialnie', r8sub:'Dostępność dla wózków inwalidzkich', r8desc:'Specjalnie zaprojektowany dla gości z ograniczoną mobilnością, bez kompromisów w komforcie.',
     strip1:'Prywatny dostęp do plaży', strip2:'Bezpłatne Wi-Fi', strip3:'Klimatyzacja', strip4:'W pełni wyposażona kuchnia', strip5:'Telewizja satelitarna', strip6:'Sejf', strip7:'Pościel i ręczniki', strip8:'Śródziemnomorski ogród'
   },
-  CS: { bookNav:'Rezervovat', findRoom:'Hledat', adults:'Dospělí', children:'Děti', showing:'Zobrazeno', roomTypes:'typů', showAll:'Zobrazit vše', home:'Domů', pageTitle:'Kemping a mobilní domy', secLbl:'Naše ubytování', secTitle:'Pohodlí bez kompromisů', introPara:'Naše mobilní domy spojují svobodu kempování s plným komfortem. Plně vybavená kuchyňka, klimatizace a TV u Jadranu.', facilities:'Vybavení', bookRoom:'Rezervovat →', noTitle:'Žádné výsledky', noTxt:'Změňte počet hostů nebo', noBtn:'zobrazit vše', stripTitle:'Každý pobyt zahrnuje',
+  CZ: { bookNav:'Rezervovat', findRoom:'Hledat', adults:'Dospělí', children:'Děti', showing:'Zobrazeno', roomTypes:'typů', showAll:'Zobrazit vše', home:'Domů', pageTitle:'Kemping a mobilní domy', secLbl:'Naše ubytování', secTitle:'Pohodlí bez kompromisů', introPara:'Naše mobilní domy spojují svobodu kempování s plným komfortem. Plně vybavená kuchyňka, klimatizace a TV u Jadranu.', facilities:'Vybavení', bookRoom:'Rezervovat →', noTitle:'Žádné výsledky', noTxt:'Změňte počet hostů nebo', noBtn:'zobrazit vše', stripTitle:'Každý pobyt zahrnuje',
     badge_prem:'Premium', badge_sup:'Superior', badge_pool:'U bazénu', badge_hpool:'U vytápěného bazénu', badge_deluxe:'Deluxe', badge_acc:'Přístupný',
     f_kit2:'Kuchyňský kout', f_kit4:'Plná kuchyně', f_ac:'Klimatizace', f_dbl:'Manželská postel', f_bath1:'Koupelna', f_bath2:'2 koupelny', f_deck:'Terasa', f_linen:'Ložní prádlo zahrnuto', f_hpool:'Přístup k vytápěnému bazénu', f_extra:'Extra lůžko', f_adapted:'Bezbariérový', f_micro_cof:'Mikrovlnka a kávovar', f_micro_ket:'Mikrovlnka a varná konvice',
     fStay:'Pobyt', fCamping:'Kemping a mobilní domy', fPitches:'Místa', fBook:'Rezervovat', fExplore:'Objevte', fAmenities:'Vybavení', fGallery:'Fotogalerie', fBeach:'Pláž a moře', fActive:'Aktivní dovolená', fInfo:'Informace', fMap:'Mapa a trasa', fContact:'Kontakt', fClimate:'Klima', fAbout:'Kemp 4 hvězdičky na Makarské riviéře.', fCopy:'© 2026 Medora Orbis Camping. Všechna práva vyhrazena.', fStars:'4 hvězdičky · Makarská riviéra', f_pool:'Soukromý bazén', f_wifi:'Bezplatné Wi-Fi', f_tv:'Satelitní TV', f_terrace2:'Krytá terasa (2 os.)', f_terrace4:'Krytá terasa (4 os.)', f_terrace6:'Krytá terasa (6 os.)', f_twin2:'2 jednolůžka (80x200 cm)', f_twin2x:'2x jednolůžka (80x200 cm)', f_table2:'Stůl a místa pro 2', f_table4:'Stůl a místa pro 4', f_table6:'Stůl a místa pro 6', f_safe:'Trezor',
@@ -112,11 +112,11 @@ var T = {
     r1name:'Premium 1 ložnicový dům', r1desc:'Stylový premium mobilní dům pro páry nebo malé rodiny, se soukromým bazénem a vším moderním komfortem.',
     r2name:'Premium 2 ložnicový dům', r2desc:'Prostorný premium dům se dvěma ložnicemi a soukromým bazénem. Ideální pro rodiny.',
     r3name:'Premium 3 ložnicový dům', r3desc:'Největší premium dům se třemi ložnicemi a soukromým bazénem pro šest osob.',
-    r4name:'Superior mobilní dům', r4desc:'Moderní mobilní dům se dvěma ložnicemi ve středomořské krajině.',
-    r5name:'Superior mobilní dům 6', r5desc:'Tři ložnice pro větší rodiny ve středomořské krajině.',
+    r4name:'Superior 2 ložnicový dům', r4desc:'Moderní mobilní dům se dvěma ložnicemi ve středomořské krajině.',
+    r5name:'Superior 3 ložnicový dům', r5desc:'Tři ložnice pro větší rodiny ve středomořské krajině.',
     r6name:'Deluxe mobilní dům', r6desc:'Luxusně vybavený dům se dvěma ložnicemi, soukromým vytápěným bazénem a sundeck.',
     r7name:'Deluxe mobilní dům 6', r7desc:'Tři ložnice, soukromý vytápěný bazén a sundeck pro větší skupiny.',
-    r8name:'Superior mobilní dům', r8sub:'Bezbariérový přístup', r8desc:'Speciálně navrženo pro hosty s omezenou pohyblivostí, bez kompromisů v komfortu.',
+    r8name:'Superior 2 ložnicový dům', r8sub:'Bezbariérový přístup', r8desc:'Speciálně navrženo pro hosty s omezenou pohyblivostí, bez kompromisů v komfortu.',
     strip1:'Soukromý přístup na pláž', strip2:'Bezplatné Wi-Fi', strip3:'Klimatizace', strip4:'Plně vybavená kuchyně', strip5:'Satelitní TV', strip6:'Trezor', strip7:'Ložní prádlo a ručníky', strip8:'Středomořská zahrada'
   },
   SK: { bookNav:'Rezervovať', findRoom:'Hľadať', adults:'Dospelí', children:'Deti', showing:'Zobrazené', roomTypes:'typov', showAll:'Zobraziť všetko', home:'Domov', pageTitle:'Kemping a mobilné domy', secLbl:'Naše ubytovanie', secTitle:'Komfort bez kompromisov', introPara:'Naše mobilné domy spájajú slobodu kempingu s plným komfortom. Plne vybavená kuchyňa, klimatizácia a TV pri Jadrane.', facilities:'Vybavenie', bookRoom:'Rezervovať →', noTitle:'Žiadne výsledky', noTxt:'Zmeňte počet hostí alebo', noBtn:'zobraziť všetko', stripTitle:'Každý pobyt zahŕňa',
@@ -127,11 +127,11 @@ var T = {
     r1name:'Premium 1 spálňový dom', r1desc:'Štýlový premium mobilný dom pre páry alebo malé rodiny, so súkromným bazénom a moderným komfortom.',
     r2name:'Premium 2 spálňový dom', r2desc:'Priestranný premium dom s dvoma spálňami a súkromným bazénom. Ideálny pre rodiny.',
     r3name:'Premium 3 spálňový dom', r3desc:'Najväčší premium dom s tromi spálňami a súkromným bazénom pre šesť osôb.',
-    r4name:'Superior mobilný dom', r4desc:'Moderný mobilný dom s dvoma spálňami v stredomorskej krajine.',
-    r5name:'Superior mobilný dom 6', r5desc:'Tri spálne pre väčšie rodiny v stredomorskej krajine.',
+    r4name:'Superior 2 spálňový dom', r4desc:'Moderný mobilný dom s dvoma spálňami v stredomorskej krajine.',
+    r5name:'Superior 3 spálňový dom', r5desc:'Tri spálne pre väčšie rodiny v stredomorskej krajine.',
     r6name:'Deluxe mobilný dom', r6desc:'Luxusne vybavený dom s dvoma spálňami, súkromným vyhrievaným bazénom a sundeck.',
     r7name:'Deluxe mobilný dom 6', r7desc:'Tri spálne, súkromný vyhrievaný bazén a sundeck pre väčšie skupiny.',
-    r8name:'Superior mobilný dom', r8sub:'Bezbariérový prístup', r8desc:'Špeciálne navrhnuté pre hostí s obmedzenou pohyblivosťou, bez kompromisov v komforte.',
+    r8name:'Superior 2 spálňový dom', r8sub:'Bezbariérový prístup', r8desc:'Špeciálne navrhnuté pre hostí s obmedzenou pohyblivosťou, bez kompromisov v komforte.',
     strip1:'Súkromný prístup na pláž', strip2:'Bezplatné Wi-Fi', strip3:'Klimatizácia', strip4:'Plne vybavená kuchyňa', strip5:'Satelitná TV', strip6:'Trezor', strip7:'Posteľná bielizeň a uteráky', strip8:'Stredomorská záhrada'
   }
 };
@@ -168,7 +168,7 @@ function applyLang(code) {
 }
 
 // BUILD LANGUAGE MENU
-var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CS','SK'];
+var langCodes = ['EN','HR','DE','HU','RO','UA','PL','CZ','SK'];
 var langMenu = document.getElementById('langMenu');
 langCodes.forEach(function(code) {
   var btn = document.createElement('button');

@@ -6,7 +6,7 @@ var T = {
   RO:{navStay:'Cazare',navActive:'Vacanță activă',navContact:'Contact',bookNow:'Rezervați'},
   UA:{navStay:'Проживання',navActive:'Активний відпочинок',navContact:'Контакт',bookNow:'Забронювати'},
   PL:{navStay:'Pobyt',navActive:'Aktywne wakacje',navContact:'Kontakt',bookNow:'Zarezerwuj'},
-  CS:{navStay:'Pobyt',navActive:'Aktivní dovolená',navContact:'Kontakt',bookNow:'Rezervovat'},
+  CZ:{navStay:'Pobyt',navActive:'Aktivní dovolená',navContact:'Kontakt',bookNow:'Rezervovat'},
   SK:{navStay:'Pobyt',navActive:'Aktívna dovolenka',navContact:'Kontakt',bookNow:'Rezervovať'}
 };
 
@@ -49,7 +49,7 @@ function applyLang(code) {
 }
 
 var langMenu = document.getElementById('langMenu');
-['EN','HR','DE','HU','RO','UA','PL','CS','SK'].forEach(function(code) {
+['EN','HR','DE','HU','RO','UA','PL','CZ','SK'].forEach(function(code) {
   var btn = document.createElement('button');
   btn.className = 'lang-opt' + (code === 'EN' ? ' active' : '');
   btn.textContent = code;
